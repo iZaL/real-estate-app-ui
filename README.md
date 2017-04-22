@@ -4,7 +4,7 @@ React Native iOS implementation of the HomeKey App
 
 This version of the application is built with React Native
 
-This is an experimental project published under ForceDotComLabs, which means that:
+This is an experimental project, which means that:
 
 1. It's work in progress
 1. We need your feedback
