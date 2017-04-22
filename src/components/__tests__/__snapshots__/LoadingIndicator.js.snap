@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders null 1`] = `
+<ActivityIndicator
+  animating={true}
+  color="#ff1144"
+  hidesWhenStopped={true}
+  size="small"
+  style={
+    Object {
+      "paddingVertical": 20,
+    }
+  }
+/>
+`;

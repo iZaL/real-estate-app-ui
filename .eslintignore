@@ -1,0 +1,5 @@
+./node_modules
+__tests__
+ios
+android
+assets

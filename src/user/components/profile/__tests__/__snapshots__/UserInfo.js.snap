@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders User Info 1`] = `
+<RCTScrollView
+  alwaysBounceHorizontal={undefined}
+  alwaysBounceVertical={true}
+  onContentSizeChange={null}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={undefined}
+  onResponderTerminationRequest={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  onScrollShouldSetResponder={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  sendMomentumEvents={false}
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "overflow": "scroll",
+      },
+      Object {
+        "backgroundColor": "white",
+        "flex": 1,
+        "padding": 10,
+        "paddingTop": 20,
+      },
+    ]
+  }
+>
+  <RCTScrollContentView
+    collapsable={false}
+    removeClippedSubviews={undefined}
+    style={
+      Array [
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#484848",
+            "fontSize": 15,
+            "fontWeight": "100",
+          }
+        }
+      >
+        Company Description
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#e3e7ed",
+              "height": 0.5,
+            },
+            Object {
+              "marginVertical": 20,
+            },
+          ]
+        }
+      />
+    </View>
+  </RCTScrollContentView>
+</RCTScrollView>
+`;

@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Notification Component 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fb797e",
+      "height": 64,
+      "justifyContent": "center",
+      "left": 0,
+      "opacity": 1,
+      "padding": 5,
+      "paddingTop": 20,
+      "position": "absolute",
+      "top": 0,
+      "width": 750,
+      "zIndex": 10000,
+    }
+  }
+>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "rgba(255, 255, 255, .8)",
+          "fontSize": 18,
+          "fontWeight": "100",
+          "textShadowColor": "#e3e7ed",
+          "textShadowOffset": Object {
+            "height": 0.2,
+            "width": 0.2,
+          },
+        }
+      }
+    >
+      error message
+    </Text>
+  </View>
+</View>
+`;

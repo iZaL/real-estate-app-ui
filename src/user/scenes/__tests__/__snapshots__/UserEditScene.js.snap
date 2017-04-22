@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders heart 1`] = `
+<RCTScrollView
+  alwaysBounceHorizontal={undefined}
+  alwaysBounceVertical={true}
+  onContentSizeChange={null}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={undefined}
+  onResponderTerminationRequest={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  onScrollShouldSetResponder={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  sendMomentumEvents={false}
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "overflow": "scroll",
+      },
+      Object {
+        "backgroundColor": "white",
+        "flex": 1,
+      },
+    ]
+  }
+>
+  <RCTScrollContentView
+    collapsable={false}
+    removeClippedSubviews={undefined}
+    style={
+      Array [
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 200,
+          },
+          Object {
+            "backgroundColor": "#e3e7ed",
+            "height": 200,
+            "textAlign": "center",
+          },
+          Object {
+            "fontFamily": "FontAwesome",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+        ]
+      }
+    >
+      
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderRadius": 20,
+          "height": 40,
+          "justifyContent": "center",
+          "marginTop": -20,
+          "position": "absolute",
+          "right": 15,
+          "shadowColor": "#5d5f63",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 1,
+          },
+          "shadowOpacity": 0.6,
+          "top": 200,
+          "width": 40,
+          "zIndex": 1000,
+        }
+      }
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+          ]
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#484848",
+                "fontSize": 18,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 20,
+          "paddingTop": 50,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#5d5f63",
+            "fontSize": 15,
+            "fontWeight": "100",
+          }
+        }
+      >
+        Name
+      </Text>
+      <TextInput
+        defaultValue="zal"
+        onChangeText={[Function]}
+        placeholder="Name"
+        placeholderTextColor="#f0f0f0"
+        style={
+          Object {
+            "fontSize": 16,
+            "height": 30,
+            "marginVertical": 5,
+          }
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#e3e7ed",
+              "height": 0.5,
+            },
+            Object {
+              "marginVertical": 20,
+            },
+          ]
+        }
+      />
+    </View>
+  </RCTScrollContentView>
+</RCTScrollView>
+`;

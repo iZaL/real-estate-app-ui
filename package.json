@@ -1,0 +1,62 @@
+{
+  "name": "property",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "flow": "flow",
+    "prettier": "prettier --write --no-bracket-spacing --single-quote --jsx-bracket-same-line --trailing-comma all --print-width 120 'src/**/*.js'"
+  },
+  "dependencies": {
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "qs": "^6.4.0",
+    "react": "16.0.0-alpha.4",
+    "react-native": "0.43.0-rc.5",
+    "react-native-code-push": "Microsoft/react-native-code-push",
+    "react-native-google-places-autocomplete": "^1.2.11",
+    "react-native-image-crop-picker": "^0.12.10",
+    "react-native-maps": "0.13.1",
+    "react-native-swipe-list-view": "^0.4.1",
+    "react-native-swiper": "^1.5.4",
+    "react-native-tab-view": "0.0.58",
+    "react-native-vector-icons": "^4.0.1",
+    "react-native-video": "^1.0.0",
+    "react-native-youtube": "inProgress-team/react-native-youtube",
+    "react-navigation": "^1.0.0-beta.7",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.1",
+    "redux-orm": "^0.9.0-rc.3",
+    "redux-persist": "^4.6.0",
+    "redux-saga": "^0.14.6",
+    "reselect": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-jest": "19.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "flow-bin": "^0.44.0",
+    "jest": "19.0.2",
+    "jest-react-native": "18.0.0",
+    "prettier": "^1.1.0",
+    "react-test-renderer": "^15.5.4"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "<rootDir>/jest/setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation)"
+    ]
+  }
+}

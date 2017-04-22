@@ -1,0 +1,982 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders PropertyDetailScene Component 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 200,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "http://re.dev/uploads/fc462facaed429e87b3b99965e12d977.jpg",
+        }
+      }
+      style={
+        Object {
+          "height": 250,
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+            Object {
+              "translateY": 0,
+            },
+          ],
+          "width": 750,
+        }
+      }
+    />
+  </View>
+  <RCTScrollView
+    alwaysBounceHorizontal={undefined}
+    alwaysBounceVertical={true}
+    onContentSizeChange={null}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={undefined}
+    onResponderTerminationRequest={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    onScrollShouldSetResponder={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    scrollEventThrottle={16}
+    sendMomentumEvents={false}
+    showsVerticalScrollIndicator={false}
+    style={
+      Array [
+        Object {
+          "flexDirection": "column",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "overflow": "scroll",
+        },
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollContentView
+      collapsable={false}
+      removeClippedSubviews={undefined}
+      style={
+        Array [
+          undefined,
+          undefined,
+        ]
+      }
+    >
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+          ]
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "height": 250,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "minHeight": 1084,
+            "padding": 10,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#2c2d30",
+              "fontWeight": "600",
+              "marginBottom": 10,
+            }
+          }
+        >
+          3 bedrooms apartment in Jabriya
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 2,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "paddingVertical": 2,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingLeft": 0,
+                    "paddingRight": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "rgba(0, 0, 0, .5)",
+                        "fontSize": 15,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                    ]
+                  }
+                >
+                  
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#000",
+                      "fontSize": 13,
+                      "fontWeight": "100",
+                      "marginHorizontal": 2,
+                    }
+                  }
+                >
+                  2
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingLeft": 0,
+                    "paddingRight": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "rgba(0, 0, 0, .5)",
+                        "fontSize": 15,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                    ]
+                  }
+                >
+                  
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#000",
+                      "fontSize": 13,
+                      "fontWeight": "100",
+                      "marginHorizontal": 2,
+                    }
+                  }
+                >
+                  1
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingLeft": 0,
+                    "paddingRight": 10,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={false}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "rgba(0, 0, 0, .5)",
+                        "fontSize": 15,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                    ]
+                  }
+                >
+                  
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#000",
+                      "fontSize": 13,
+                      "fontWeight": "100",
+                      "marginHorizontal": 2,
+                    }
+                  }
+                >
+                  1
+                </Text>
+              </View>
+            </View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(0, 0, 0, .5)",
+                    "fontSize": 12,
+                    "fontWeight": "100",
+                    "paddingVertical": 2,
+                  },
+                ]
+              }
+            >
+              Added 
+              2 months ago
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-around",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#2c2d30",
+                    "fontSize": 17,
+                    "fontWeight": "600",
+                    "margin": 10,
+                  }
+                }
+              >
+                200
+                 
+                KD
+              </Text>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "flex-end",
+                  }
+                }
+              >
+                <View
+                  accessibilityComponentType={undefined}
+                  accessibilityLabel={undefined}
+                  accessibilityTraits={undefined}
+                  accessible={true}
+                  hasTVPreferredFocus={undefined}
+                  hitSlop={undefined}
+                  isTVSelectable={true}
+                  onLayout={undefined}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                      },
+                      undefined,
+                    ]
+                  }
+                  testID={undefined}
+                  tvParallaxProperties={undefined}
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={false}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": undefined,
+                          "fontSize": 25,
+                        },
+                        Array [
+                          Object {
+                            "color": "gold",
+                            "height": 25,
+                            "width": 25,
+                          },
+                        ],
+                        Object {
+                          "fontFamily": "FontAwesome",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                      ]
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(0, 0, 0, .5)",
+                    "fontSize": 12,
+                    "fontWeight": "100",
+                    "paddingVertical": 2,
+                  },
+                  Object {
+                    "textAlign": "center",
+                  },
+                ]
+              }
+            >
+               views
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "paddingVertical": 3,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(0, 0, 0, .5)",
+                "fontSize": 12,
+                "fontWeight": "100",
+                "paddingVertical": 2,
+              }
+            }
+          >
+            Added By 
+          </Text>
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                Object {
+                  "flex": 1,
+                },
+              ]
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#484848",
+                }
+              }
+            >
+              Ideas Owners
+               
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginTop": 20,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "paddingVertical": 5,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "100",
+                }
+              }
+            >
+              Area
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "500",
+                  "paddingLeft": 10,
+                }
+              }
+            >
+              220.5
+               metre
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "paddingVertical": 5,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "100",
+                }
+              }
+            >
+              Social Status
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "500",
+                  "paddingLeft": 10,
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "paddingVertical": 5,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "100",
+                }
+              }
+            >
+              Address
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "fontWeight": "500",
+                  "paddingLeft": 10,
+                }
+              }
+            >
+              
+              ,
+               
+              
+              . 
+               
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#e3e7ed",
+                "height": 0.5,
+              },
+              undefined,
+            ]
+          }
+        />
+        <View>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#2c2d30",
+                "fontSize": 14,
+                "marginTop": 10,
+                "textAlign": "center",
+              }
+            }
+          >
+            Description
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#384760",
+                "fontFamily": "Avenir-Light",
+                "fontSize": 15,
+                "marginTop": 10,
+                "textAlign": "justify",
+              }
+            }
+          >
+            Beautiful new apartment from rent in Jabriya near McDonalds
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#e3e7ed",
+                "height": 0.5,
+              },
+              Array [
+                undefined,
+                Object {
+                  "marginVertical": 15,
+                },
+              ],
+            ]
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        />
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#e3e7ed",
+                  "height": 0.5,
+                },
+                Array [
+                  undefined,
+                  Object {
+                    "marginVertical": 15,
+                  },
+                ],
+              ]
+            }
+          />
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#2c2d30",
+                    "fontSize": 14,
+                    "marginTop": 10,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "marginBottom": 10,
+                  },
+                ]
+              }
+            >
+              Near By Places
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#384760",
+                  "fontFamily": "Avenir-Light",
+                  "fontSize": 15,
+                  "textAlign": "justify",
+                }
+              }
+            >
+              Beach Pool
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#384760",
+                  "fontFamily": "Avenir-Light",
+                  "fontSize": 15,
+                  "textAlign": "justify",
+                }
+              }
+            >
+              Sauna
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#e3e7ed",
+                "height": 0.5,
+              },
+              Array [
+                undefined,
+                Object {
+                  "marginVertical": 15,
+                },
+              ],
+            ]
+          }
+        />
+        <View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#2c2d30",
+                    "fontSize": 14,
+                    "marginTop": 10,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "marginBottom": 10,
+                  },
+                ]
+              }
+            >
+              Property Amenities
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#384760",
+                  "fontFamily": "Avenir-Light",
+                  "fontSize": 15,
+                  "textAlign": "justify",
+                }
+              }
+            >
+              Swimming Pool
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#384760",
+                  "fontFamily": "Avenir-Light",
+                  "fontSize": 15,
+                  "textAlign": "justify",
+                }
+              }
+            >
+              Sauna
+            </Text>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#e3e7ed",
+                  "height": 0.5,
+                },
+                Array [
+                  undefined,
+                  Object {
+                    "marginVertical": 15,
+                  },
+                ],
+              ]
+            }
+          />
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#e3e7ed",
+                "height": 0.5,
+              },
+              Array [
+                undefined,
+                Object {
+                  "marginVertical": 15,
+                },
+              ],
+            ]
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "paddingVertical": 5,
+              },
+              Object {
+                "paddingVertical": 5,
+              },
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#5d5f63",
+                  "fontSize": 20,
+                },
+                Object {
+                  "alignSelf": "center",
+                  "height": 20,
+                  "justifyContent": "center",
+                  "width": 20,
+                },
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontWeight": "100",
+              }
+            }
+          >
+            Mobile
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            onPress={[Function]}
+            style={
+              Object {
+                "fontWeight": "500",
+                "paddingLeft": 10,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#e3e7ed",
+                "height": 0.5,
+              },
+              Array [
+                undefined,
+                Object {
+                  "marginVertical": 15,
+                },
+              ],
+            ]
+          }
+        />
+      </View>
+    </RCTScrollContentView>
+  </RCTScrollView>
+</View>
+`;

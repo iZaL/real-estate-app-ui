@@ -1,0 +1,253 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders PropertyAmenities 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#e3e7ed",
+        "flex": 1,
+        "paddingHorizontal": 10,
+        "paddingVertical": 30,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flex": 5,
+      }
+    }
+  >
+    <RCTScrollView
+      alwaysBounceHorizontal={undefined}
+      alwaysBounceVertical={true}
+      automaticallyAdjustContentInsets={false}
+      contentInset={
+        Object {
+          "bottom": 50,
+        }
+      }
+      dataSource={
+        ListViewDataSource {
+          "items": 2,
+        }
+      }
+      enableEmptySections={true}
+      onContentSizeChange={null}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={undefined}
+      onResponderTerminationRequest={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      onScrollShouldSetResponder={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      renderHeader={[Function]}
+      renderRow={[Function]}
+      renderScrollComponent={[Function]}
+      renderSeparator={[Function]}
+      sendMomentumEvents={false}
+      showsVerticalScrollIndicator={false}
+      style={
+        Array [
+          Object {
+            "flexDirection": "column",
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "overflow": "scroll",
+          },
+          Object {
+            "flex": 1,
+            "padding": 10,
+          },
+        ]
+      }
+    >
+      <RCTScrollContentView
+        collapsable={false}
+        removeClippedSubviews={undefined}
+        style={
+          Array [
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        <View />
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "flex": 1,
+              },
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#484848",
+                  "flex": 1,
+                  "fontWeight": "100",
+                }
+              }
+            >
+              Sauna
+            </Text>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "#5d5f63",
+                  "borderRadius": 12,
+                  "borderWidth": 1,
+                  "height": 24,
+                  "justifyContent": "center",
+                  "marginHorizontal": 10,
+                  "width": 24,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "flex": 1,
+              },
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#484848",
+                  "flex": 1,
+                  "fontWeight": "100",
+                }
+              }
+            >
+              swimming pool
+            </Text>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "#5d5f63",
+                  "borderRadius": 12,
+                  "borderWidth": 1,
+                  "height": 24,
+                  "justifyContent": "center",
+                  "marginHorizontal": 10,
+                  "width": 24,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={false}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#388704",
+                      "fontSize": 16,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "FontAwesome",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                  ]
+                }
+              >
+                
+              </Text>
+            </View>
+          </View>
+        </View>
+      </RCTScrollContentView>
+    </RCTScrollView>
+  </View>
+</View>
+`;

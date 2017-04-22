@@ -1,0 +1,616 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Profile Scene 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 200,
+          },
+          undefined,
+          Object {
+            "fontFamily": "FontAwesome",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+        ]
+      }
+    >
+      
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#484848",
+          "fontSize": 20,
+          "fontWeight": "700",
+          "paddingTop": 5,
+        }
+      }
+    >
+      name
+    </Text>
+  </View>
+  <View
+    configureTransition={[Function]}
+    initialLayout={
+      Object {
+        "height": 0,
+        "width": 0,
+      }
+    }
+    loaded={
+      Array [
+        0,
+      ]
+    }
+    navigationState={
+      Object {
+        "index": 0,
+        "routes": Array [
+          Object {
+            "key": "1",
+            "title": "Basic Info",
+          },
+          Object {
+            "key": "2",
+            "title": "Properties",
+          },
+          Object {
+            "key": "3",
+            "title": "Contact",
+          },
+        ],
+      }
+    }
+    onChangePosition={[Function]}
+    onLayout={[Function]}
+    onRequestChangeTab={[Function]}
+    render={[Function]}
+    renderHeader={[Function]}
+    renderPager={[Function]}
+    renderScene={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "elevation": 4,
+            "shadowColor": "black",
+            "shadowOffset": Object {
+              "height": 0.5,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 0.5,
+            "zIndex": 1,
+          }
+        }
+      >
+        <View
+          pointerEvents="none"
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "transform": Array [
+                Object {
+                  "translateX": -0,
+                },
+              ],
+              "width": 0,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#ff1144",
+                "bottom": 0,
+                "height": 2,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+                "width": 0,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "overflow": "scroll",
+            }
+          }
+        >
+          <RCTScrollView
+            alwaysBounceHorizontal={false}
+            alwaysBounceVertical={false}
+            automaticallyAdjustContentInsets={false}
+            bounces={false}
+            contentContainerStyle={
+              Array [
+                Object {
+                  "flexDirection": "row",
+                  "flexWrap": "nowrap",
+                },
+                null,
+              ]
+            }
+            contentOffset={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            horizontal={true}
+            onContentSizeChange={null}
+            onMomentumScrollBegin={[Function]}
+            onMomentumScrollEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={undefined}
+            onResponderTerminationRequest={[Function]}
+            onScroll={[Function]}
+            onScrollBeginDrag={[Function]}
+            onScrollEndDrag={[Function]}
+            onScrollShouldSetResponder={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            scrollEnabled={true}
+            scrollEventThrottle={16}
+            scrollsToTop={false}
+            sendMomentumEvents={true}
+            showsHorizontalScrollIndicator={false}
+            style={
+              Array [
+                Object {
+                  "flexDirection": "row",
+                  "flexGrow": 1,
+                  "flexShrink": 1,
+                  "overflow": "scroll",
+                },
+                undefined,
+              ]
+            }
+          >
+            <RCTScrollContentView
+              collapsable={false}
+              removeClippedSubviews={undefined}
+              style={
+                Array [
+                  Object {
+                    "flexDirection": "row",
+                  },
+                  Array [
+                    Object {
+                      "flexDirection": "row",
+                      "flexWrap": "nowrap",
+                    },
+                    null,
+                  ],
+                ]
+              }
+            >
+              <View
+                accessibilityComponentType={undefined}
+                accessibilityLabel="Basic Info"
+                accessibilityTraits="button"
+                accessible={true}
+                hitSlop={undefined}
+                isTVSelectable={true}
+                onLayout={undefined}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+                testID={undefined}
+                tvParallaxProperties={undefined}
+              >
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flex": 1,
+                        "flexGrow": 1,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "padding": 8,
+                        "width": 0,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "white",
+                            "margin": 8,
+                          },
+                          Object {
+                            "color": "#5d5f63",
+                            "fontWeight": "400",
+                          },
+                        ]
+                      }
+                    >
+                      BASIC INFO
+                    </Text>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessibilityComponentType={undefined}
+                accessibilityLabel="Properties"
+                accessibilityTraits="button"
+                accessible={true}
+                hitSlop={undefined}
+                isTVSelectable={true}
+                onLayout={undefined}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+                testID={undefined}
+                tvParallaxProperties={undefined}
+              >
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flex": 1,
+                        "flexGrow": 1,
+                        "justifyContent": "center",
+                        "opacity": 0.7,
+                        "padding": 8,
+                        "width": 0,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "white",
+                            "margin": 8,
+                          },
+                          Object {
+                            "color": "#5d5f63",
+                            "fontWeight": "400",
+                          },
+                        ]
+                      }
+                    >
+                      PROPERTIES
+                    </Text>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessibilityComponentType={undefined}
+                accessibilityLabel="Contact"
+                accessibilityTraits="button"
+                accessible={true}
+                hitSlop={undefined}
+                isTVSelectable={true}
+                onLayout={undefined}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+                testID={undefined}
+                tvParallaxProperties={undefined}
+              >
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flex": 1,
+                        "flexGrow": 1,
+                        "justifyContent": "center",
+                        "opacity": 0.7,
+                        "padding": 8,
+                        "width": 0,
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "white",
+                            "margin": 8,
+                          },
+                          Object {
+                            "color": "#5d5f63",
+                            "fontWeight": "400",
+                          },
+                        ]
+                      }
+                    >
+                      CONTACT
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </RCTScrollContentView>
+          </RCTScrollView>
+        </View>
+      </View>
+      <RCTScrollView
+        alwaysBounceHorizontal={false}
+        alwaysBounceVertical={false}
+        automaticallyAdjustContentInsets={false}
+        bounces={false}
+        contentContainerStyle={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+        contentOffset={
+          Object {
+            "x": 0,
+            "y": 0,
+          }
+        }
+        directionalLockEnabled={true}
+        horizontal={true}
+        keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps="always"
+        onContentSizeChange={null}
+        onMomentumScrollBegin={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onResponderGrant={[Function]}
+        onResponderReject={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={undefined}
+        onResponderTerminationRequest={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        onScrollShouldSetResponder={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onStartShouldSetResponderCapture={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        pagingEnabled={true}
+        scrollEnabled={undefined}
+        scrollEventThrottle={16}
+        scrollsToTop={false}
+        sendMomentumEvents={true}
+        showsHorizontalScrollIndicator={false}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "overflow": "scroll",
+            },
+            Object {
+              "flexGrow": 1,
+            },
+          ]
+        }
+      >
+        <RCTScrollContentView
+          collapsable={false}
+          removeClippedSubviews={undefined}
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              Object {
+                "flexGrow": 1,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "overflow": "hidden",
+              }
+            }
+            testID={undefined}
+          >
+            <RCTScrollView
+              alwaysBounceHorizontal={undefined}
+              alwaysBounceVertical={true}
+              onContentSizeChange={null}
+              onMomentumScrollBegin={[Function]}
+              onMomentumScrollEnd={[Function]}
+              onResponderGrant={[Function]}
+              onResponderReject={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={undefined}
+              onResponderTerminationRequest={[Function]}
+              onScroll={[Function]}
+              onScrollBeginDrag={[Function]}
+              onScrollEndDrag={[Function]}
+              onScrollShouldSetResponder={[Function]}
+              onStartShouldSetResponder={[Function]}
+              onStartShouldSetResponderCapture={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              sendMomentumEvents={false}
+              style={
+                Array [
+                  Object {
+                    "flexDirection": "column",
+                    "flexGrow": 1,
+                    "flexShrink": 1,
+                    "overflow": "scroll",
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                    "flex": 1,
+                    "padding": 10,
+                    "paddingTop": 20,
+                  },
+                ]
+              }
+            >
+              <RCTScrollContentView
+                collapsable={false}
+                removeClippedSubviews={undefined}
+                style={
+                  Array [
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                <View
+                  style={undefined}
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#484848",
+                        "fontSize": 15,
+                        "fontWeight": "100",
+                      }
+                    }
+                  >
+                    company description
+                  </Text>
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#e3e7ed",
+                          "height": 0.5,
+                        },
+                        Object {
+                          "marginVertical": 20,
+                        },
+                      ]
+                    }
+                  />
+                </View>
+              </RCTScrollContentView>
+            </RCTScrollView>
+          </View>
+          <View
+            style={null}
+            testID={undefined}
+          />
+          <View
+            style={null}
+            testID={undefined}
+          />
+        </RCTScrollContentView>
+      </RCTScrollView>
+    </View>
+  </View>
+</View>
+`;

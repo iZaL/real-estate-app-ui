@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component Actions add to history 1`] = `
+Object {
+  "filters": undefined,
+  "propertyType": undefined,
+  "type": "PROPERTY_SET_FILTERS_REQUEST",
+}
+`;
+
+exports[`App Component Actions changeListingValue action 1`] = `
+Object {
+  "payload": "attributes",
+  "type": "LISTING_UPDATE_ITEM",
+}
+`;
+
+exports[`App Component Actions delete property 1`] = `
+Object {
+  "params": Object {
+    "itemID": "123",
+  },
+  "type": "PROPERTY_DELETE_REQUEST",
+}
+`;
+
+exports[`App Component Actions edit property 1`] = `
+Object {
+  "payload": Object {
+    "_id": "123",
+    "title": "property",
+  },
+  "type": "PROPERTY_EDIT_REQUEST",
+}
+`;
+
+exports[`App Component Actions fetchFavorites action 1`] = `
+Object {
+  "params": Object {
+    "id": 1,
+  },
+  "type": "FAVORITES_REQUEST",
+}
+`;
+
+exports[`App Component Actions fetchProperties action 1`] = `
+Object {
+  "params": Object {
+    "id": 1,
+  },
+  "type": "PROPERTY_REQUEST",
+}
+`;
+
+exports[`App Component Actions remove from history 1`] = `
+Object {
+  "payload": Object {
+    "For Sale": Object {
+      "country": "Kuwait",
+    },
+  },
+  "type": "PROPERTY_REMOVE_ITEM_FROM_HISTORY",
+}
+`;
+
+exports[`App Component Actions reset filter 1`] = `
+Object {
+  "type": "FILTER_RESET",
+}
+`;
+
+exports[`App Component Actions reset filter 2`] = `
+Object {
+  "payload": undefined,
+  "type": "PROPERTY_SAVE_REQUEST",
+}
+`;
+
+exports[`App Component Actions reset property action 1`] = `
+Object {
+  "type": "PROPERTY_RESET",
+}
+`;
+
+exports[`App Component Actions updateFilter action 1`] = `
+Object {
+  "field": undefined,
+  "propertyType": undefined,
+  "type": "FILTER_UPDATE",
+  "value": undefined,
+}
+`;

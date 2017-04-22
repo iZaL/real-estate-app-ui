@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders List 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#e3e7ed",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <RCTScrollView
+      alwaysBounceHorizontal={undefined}
+      alwaysBounceVertical={true}
+      automaticallyAdjustContentInsets={false}
+      contentInset={
+        Object {
+          "bottom": 50,
+        }
+      }
+      dataSource={
+        ListViewDataSource {
+          "items": 1,
+        }
+      }
+      enableEmptySections={true}
+      onContentSizeChange={null}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={undefined}
+      onResponderTerminationRequest={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      onScrollShouldSetResponder={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      removeClippedSubviews={false}
+      renderRow={[Function]}
+      renderScrollComponent={[Function]}
+      sendMomentumEvents={false}
+      showsVerticalScrollIndicator={false}
+      style={
+        Array [
+          Object {
+            "flexDirection": "column",
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "overflow": "scroll",
+          },
+          Object {
+            "backgroundColor": "white",
+            "padding": 10,
+          },
+        ]
+      }
+    >
+      <RCTScrollContentView
+        collapsable={false}
+        removeClippedSubviews={false}
+        style={
+          Array [
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        <View>
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+              ]
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "paddingBottom": 20,
+                  "paddingTop": 20,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "black",
+                      "flex": 1,
+                      "fontSize": 16,
+                      "fontWeight": "600",
+                    },
+                    false,
+                  ]
+                }
+              >
+                a
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={false}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#e3e7ed",
+                      "fontSize": 30,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "Ionicons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                  ]
+                }
+              >
+                
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#e3e7ed",
+                  "height": 0.5,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
+      </RCTScrollContentView>
+    </RCTScrollView>
+  </View>
+</View>
+`;

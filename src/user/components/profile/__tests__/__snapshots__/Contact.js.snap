@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders heart 1`] = `
+<RCTScrollView
+  alwaysBounceHorizontal={undefined}
+  alwaysBounceVertical={true}
+  onContentSizeChange={null}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={undefined}
+  onResponderTerminationRequest={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  onScrollShouldSetResponder={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  sendMomentumEvents={false}
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "overflow": "scroll",
+      },
+      Object {
+        "backgroundColor": "white",
+        "flex": 1,
+        "padding": 10,
+        "paddingTop": 20,
+      },
+    ]
+  }
+>
+  <RCTScrollContentView
+    collapsable={false}
+    removeClippedSubviews={undefined}
+    style={
+      Array [
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    <View>
+      <View
+        style={undefined}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#e3e7ed",
+              "paddingBottom": 5,
+            }
+          }
+        >
+          EMAIL
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": undefined,
+                  "fontSize": 22,
+                },
+                Object {
+                  "height": 20,
+                  "width": 20,
+                },
+                Object {
+                  "fontFamily": "Ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#484848",
+                "fontSize": 16,
+                "fontWeight": "100",
+                "paddingHorizontal": 5,
+              }
+            }
+          >
+            z4ls@live.com
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#e3e7ed",
+              "height": 0.5,
+            },
+            Object {
+              "marginVertical": 20,
+            },
+          ]
+        }
+      />
+    </View>
+  </RCTScrollContentView>
+</RCTScrollView>
+`;
