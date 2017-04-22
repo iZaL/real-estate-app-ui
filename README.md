@@ -10,12 +10,12 @@ This is an experimental project published under ForceDotComLabs, which means tha
 1. We need your feedback
 1. Code contributions are welcome
 
-![iOS Screenshot](/README_files/SS1.png?raw=true)  ![iOS Screenshot](/README_files/SS1.png?raw=true)
-![iOS Screenshot](/README_files/SS2.png?raw=true)  ![iOS Screenshot](/README_files/SS2.png?raw=true)
-![iOS Screenshot](/README_files/SS3.png?raw=true)  ![iOS Screenshot](/README_files/SS3.png?raw=true)
-![iOS Screenshot](/README_files/SS4.png?raw=true)  ![iOS Screenshot](/README_files/SS4.png?raw=true)
-![iOS Screenshot](/README_files/SS5.png?raw=true)  ![iOS Screenshot](/README_files/SS5.png?raw=true)
-![iOS Screenshot](/README_files/SS6.png?raw=true)  ![iOS Screenshot](/README_files/SS6.png?raw=true)
+![iOS Screenshot](/README_files/SS1.png?raw=true = 200x450) 
+![iOS Screenshot](/README_files/SS2.png?raw=true) 
+![iOS Screenshot](/README_files/SS3.png?raw=true) 
+![iOS Screenshot](/README_files/SS4.png?raw=true) 
+![iOS Screenshot](/README_files/SS5.png?raw=true) 
+![iOS Screenshot](/README_files/SS6.png?raw=true) 
 
 ## Installation Instructions
 
