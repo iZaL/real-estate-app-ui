@@ -12,6 +12,12 @@ This is an experimental project, which means that:
 
 ![iOS Screenshot](/README_files/SS.png?raw=true) 
 
+## Watch Video Recording
+
+Watch the recording of the app :
+
+[![iOS Screenshot](README_files/Video.png?raw=true)](https://www.youtube.com/watch?v=P3jIFI0ye3E)
+
 ## Installation Instructions
 
 1. Clone this repository:
