@@ -40,6 +40,10 @@
 		2FCA1CCA956E426BAFC14F27 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D32D06AC68B4BEE8D4FA56B /* Entypo.ttf */; };
 		352B18151EAE3A92007EE34A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 352B18131EAE3A92007EE34A /* Default-568h@2x.png */; };
 		352B18161EAE3A92007EE34A /* Splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 352B18141EAE3A92007EE34A /* Splash@2x.png */; };
+		352B18201EAE3D4D007EE34A /* RSKImageCropper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D00D0B1E52051500F50081 /* RSKImageCropper.framework */; };
+		352B18211EAE3D4D007EE34A /* RSKImageCropper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35D00D0B1E52051500F50081 /* RSKImageCropper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		352B18251EAE3D5A007EE34A /* QBImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359A09DC1E30E43200BA4DB0 /* QBImagePicker.framework */; };
+		352B18261EAE3D5A007EE34A /* QBImagePicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 359A09DC1E30E43200BA4DB0 /* QBImagePicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		359A09D81E30E3F300BA4DB0 /* ImageCropPickerSDK in Resources */ = {isa = PBXBuildFile; fileRef = 359A09D71E30E3F300BA4DB0 /* ImageCropPickerSDK */; };
 		35E0E3001E54B02300F44C1C /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = 35E0E2FF1E54B02300F44C1C /* YTPlayerView-iframe-player.html */; };
 		391DD1612F8D43318CF253FC /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEECDDA0211246CBBE708CFE /* Foundation.ttf */; };
@@ -129,6 +133,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "property-tvOS";
+		};
+		352B18221EAE3D4D007EE34A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBF3577ABC814259A5F1D946 /* RSKImageCropper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A5BE393C1B32B49D00ECDF88;
+			remoteInfo = RSKImageCropper;
 		};
 		3546807B1E2E4A9B00DDE871 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -307,6 +318,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		352B18241EAE3D4D007EE34A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				352B18211EAE3D4D007EE34A /* RSKImageCropper.framework in Embed Frameworks */,
+				352B18261EAE3D5A007EE34A /* QBImagePicker.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
@@ -386,12 +412,14 @@
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
+				352B18201EAE3D4D007EE34A /* RSKImageCropper.framework in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				9F26A4F7F18C44A7A3F7879F /* libimageCropPicker.a in Frameworks */,
 				D5ACD1D319C84E0286B5F69E /* libRNVectorIcons.a in Frameworks */,
 				B6F2D63999C249E8B8323179 /* libAirMaps.a in Frameworks */,
+				352B18251EAE3D5A007EE34A /* QBImagePicker.framework in Frameworks */,
 				276FB8388A7D4B34B65FE60C /* libCodePush.a in Frameworks */,
 				271F33C413EB48DFB168CBC9 /* libz.tbd in Frameworks */,
 				C0C99654C8B441718522AA3E /* libRCTVideo.a in Frameworks */,
@@ -732,10 +760,13 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				352B18241EAE3D4D007EE34A /* Embed Frameworks */,
+				352B18271EAE3F60007EE34A /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				352B18231EAE3D4D007EE34A /* PBXTargetDependency */,
 			);
 			name = property;
 			productName = "Hello World";
@@ -1216,6 +1247,19 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
 		};
+		352B18271EAE3F60007EE34A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1265,6 +1309,11 @@
 			isa = PBXTargetDependency;
 			target = 2D02E47A1E0B4A5D006451C7 /* property-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+		352B18231EAE3D4D007EE34A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSKImageCropper;
+			targetProxy = 352B18221EAE3D4D007EE34A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
