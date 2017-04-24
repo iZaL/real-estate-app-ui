@@ -19,17 +19,17 @@ export default class Header extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    padding: 10,
+    paddingTop: 10,
     justifyContent: 'center',
     alignItems: 'center',
+    minHeight:100,
+    backgroundColor:colors.smokeGreyLight
     // backgroundColor:'green'
   },
   text: {
     color: colors.darkGrey,
     fontWeight: '600',
     fontSize: 20,
-    padding: 30,
     textAlign: 'center',
   },
 });

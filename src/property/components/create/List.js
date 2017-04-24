@@ -62,7 +62,7 @@ export default class List extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.smokeGreyLight,
+    backgroundColor: 'white',
   },
   menuContainer: {
     justifyContent: 'flex-end',

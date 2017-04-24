@@ -89,7 +89,7 @@ export default class PropertyEditScene extends Component {
     let hasError = false;
     let {meta} = this.props.listing.attributes;
 
-    let requiredFields = ['price', 'description', 'email', 'phone1'];
+    let requiredFields = ['price', 'description', 'phone1'];
 
     requiredFields.map(item => {
       if (!meta[item]) {
