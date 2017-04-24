@@ -76,9 +76,9 @@ let priceForSale = {
 };
 
 let categoriesArr = {
-  [ForSale]: ['Villa', 'Apartment', 'Chalet'],
-  [ForRent]: ['Villa', 'Apartment', 'Chalet', 'Office Space'],
-  [ForShare]: ['Private Room', 'Master Room', 'Shared Room'],
+  [ForSale]: ['Villa', 'House', 'Apartment', 'Chalet', 'Land & Farm', 'Store', 'Storage', 'Office'],
+  [ForRent]: ['Villa', 'House', 'Apartment', 'Chalet', 'Land & Farm', 'Store', 'Storage', 'Office'],
+  [ForShare]: ['Villa', 'House', 'Apartment', 'Chalet', 'Land & Farm', 'Store', 'Storage', 'Office'],
 };
 
 let pricesArr = {

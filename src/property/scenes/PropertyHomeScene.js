@@ -43,13 +43,13 @@ export default class PropertyHomeScene extends Component {
     let {scrollY} = this.state;
 
     let logoScale = scrollY.interpolate({
-      inputRange: [-150, 0, 150],
+      inputRange: [-50, 0, 50],
       outputRange: [1.5, 1, 1],
     });
 
     let logoTranslateY = scrollY.interpolate({
-      inputRange: [-150, 0, 100],
-      outputRange: [40, 0, -40],
+      inputRange: [-150, 0, 150],
+      outputRange: [0, 0, 0],
     });
 
     let countryImage = CountryBackgrounds[country.abbr];
@@ -137,13 +137,13 @@ export default class PropertyHomeScene extends Component {
             </Text>
             <Text>
               {filters &&
-                filters.searchString &&
-                <Ionicons
-                  name="ios-close-outline"
-                  size={30}
-                  color={colors.smokeGreyDark}
-                  style={[styles.searchIcon, {height: 30}]}
-                />}
+              filters.searchString &&
+              <Ionicons
+                name="ios-close-outline"
+                size={30}
+                color={colors.smokeGreyDark}
+                style={[styles.searchIcon, {height: 30}]}
+              />}
             </Text>
           </View>
         </TouchableHighlight>
@@ -193,8 +193,8 @@ export default class PropertyHomeScene extends Component {
 
               {isEmpty(searchHistory)
                 ? <TouchableHighlight
-                    onPress={()=>{}}
-                    underlayColor="transparent"
+                  onPress={()=>{}}
+                  underlayColor="transparent"
                 >
                   <View
                     style={{
@@ -211,7 +211,7 @@ export default class PropertyHomeScene extends Component {
                       }}
                     />
                   </View>
-                  </TouchableHighlight>
+                </TouchableHighlight>
                 : <HistoryList collection={searchHistory} setFilter={setFilter} removeFilter={removeFilter} />}
             </View>
           </View>
@@ -222,7 +222,7 @@ export default class PropertyHomeScene extends Component {
   }
 }
 
-const HeroHeight = 300;
+const HeroHeight = 250;
 
 const styles = StyleSheet.create({
   container: {
@@ -243,9 +243,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 50,
     backgroundColor: 'white',
-    height: 100,
-    zIndex: 1000,
     marginHorizontal: 10,
+    opacity:.95,
+    zIndex: 1000,
   },
   searchTabs: {
     flex: 1,
@@ -254,7 +254,6 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     flex: 1,
-
     paddingVertical: 10,
   },
   tab: {
@@ -263,6 +262,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderBottomColor: colors.lightGrey,
     borderBottomWidth: 1,
+    padding:10
   },
   tabActive: {
     borderBottomColor: colors.accent,

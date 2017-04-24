@@ -1,5 +1,5 @@
 const CountryBackgrounds = {
-  KW: require('./../../assets/country-bg/KW.jpg'),
+  KW: require('./../../assets/country-bg/KW.png'),
   OM: require('./../../assets/country-bg/OM.jpg'),
   BH: require('./../../assets/country-bg/BH.jpg'),
   AE: require('./../../assets/country-bg/AE.jpg'),
