@@ -52,7 +52,7 @@ Watch the recording of the app :
 
 To Run tests type :
  ```
-    npm run tests
+    npm run test
  ```
 
 MIT License

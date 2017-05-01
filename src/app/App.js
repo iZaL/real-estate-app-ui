@@ -8,6 +8,7 @@ import * as NavigationService from '../components/NavigationService';
 import AppNotification from './../app/AppNotification';
 import Splash from './../app/Splash';
 import CodePush from 'react-native-code-push';
+import {CODEPUSH_ENABLED} from './../env';
 
 class App extends Component {
   static propTypes = {
@@ -15,7 +16,11 @@ class App extends Component {
   };
 
   componentDidMount() {
-    CodePush.sync();
+
+    if(CODEPUSH_ENABLED) {
+      CodePush.sync();
+    }
+
     this.props.dispatch(ACTIONS.boot());
     NavigationService.setNavigator(this.navigator);
   }
