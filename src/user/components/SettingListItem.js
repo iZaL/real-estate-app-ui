@@ -17,13 +17,21 @@ export default class SettingListItem extends Component {
   render() {
     const {title, icon, route, loadScene} = this.props;
     return (
-      <TouchableHighlight onPress={() => loadScene(route)} underlayColor="transparent" style={styles.container}>
+      <TouchableHighlight
+        onPress={() => loadScene(route)}
+        underlayColor="transparent"
+        style={styles.container}>
         <View style={styles.rowContainer}>
           <View style={{flex: 9}}>
             <Text style={styles.title}>{title}</Text>
           </View>
           <View style={{flex: 1, alignItems: 'center'}}>
-            <FontAwesome style={styles.icon} name={icon} color={colors.darkGrey} size={20} />
+            <FontAwesome
+              style={styles.icon}
+              name={icon}
+              color={colors.darkGrey}
+              size={20}
+            />
           </View>
         </View>
       </TouchableHighlight>

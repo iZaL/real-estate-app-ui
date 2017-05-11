@@ -17,7 +17,11 @@ if (__DEV__) {
     duration: true,
   });
 
-  Store = createStore(rootReducer, applyMiddleware(logger, sagaMiddleware), autoRehydrate());
+  Store = createStore(
+    rootReducer,
+    applyMiddleware(logger, sagaMiddleware),
+    autoRehydrate(),
+  );
 
   if (module.hot) {
     module.hot.accept(() => {
@@ -26,7 +30,11 @@ if (__DEV__) {
     });
   }
 } else {
-  Store = createStore(rootReducer, applyMiddleware(sagaMiddleware), autoRehydrate());
+  Store = createStore(
+    rootReducer,
+    applyMiddleware(sagaMiddleware),
+    autoRehydrate(),
+  );
 }
 
 sagaMiddleware.run(rootSaga);

@@ -28,7 +28,12 @@ export default class NavBack extends Component {
             }}
             underlayColor="transparent">
             {icon
-              ? <Ionicons name={icon} size={33} color={colors.accent} style={[styles.icon]} />
+              ? <Ionicons
+                  name={icon}
+                  size={33}
+                  color={colors.accent}
+                  style={[styles.icon]}
+                />
               : <Text style={[styles.title, style]}>{text}</Text>}
           </TouchableHighlight>}
       </View>

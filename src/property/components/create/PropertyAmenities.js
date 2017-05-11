@@ -2,7 +2,13 @@
  * @flow
  */
 import React, {PropTypes} from 'react';
-import {ListView, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
+import {
+  ListView,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import colors from '../../../common/colors';
 import Separator from './../../../components/Separator';
@@ -22,13 +28,22 @@ export default class PropertyAmenities extends React.Component {
   renderRow = item => {
     const {updateListing, selected} = this.props;
     return (
-      <TouchableHighlight style={{flex: 1}} onPress={() => updateListing(item)} underlayColor="transparent" key={item}>
+      <TouchableHighlight
+        style={{flex: 1}}
+        onPress={() => updateListing(item)}
+        underlayColor="transparent"
+        key={item}>
         <View style={styles.row}>
           <Text style={styles.title}>{item}</Text>
           <View style={styles.checkbox}>
             {selected &&
               selected.includes(item) &&
-              <FontAwesome key={item} name="check" size={16} color={colors.green} />}
+              <FontAwesome
+                key={item}
+                name="check"
+                size={16}
+                color={colors.green}
+              />}
           </View>
         </View>
       </TouchableHighlight>
@@ -56,7 +71,9 @@ export default class PropertyAmenities extends React.Component {
             showsVerticalScrollIndicator={false}
             contentInset={{bottom: 50}}
             renderHeader={() => <View />}
-            renderSeparator={(sectionId, rowId) => <Separator style={{marginVertical: 10}} key={rowId} />}
+            renderSeparator={(sectionId, rowId) => (
+              <Separator style={{marginVertical: 10}} key={rowId} />
+            )}
           />
         </View>
         {footer}

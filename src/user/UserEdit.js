@@ -24,7 +24,12 @@ class UserEdit extends Component {
 
   static navigationOptions = {
     header: ({state, setParams}) => ({
-      right: <NavButton title="Done" onPress={() => state.params.handleRightButtonPress()} />,
+      right: (
+        <NavButton
+          title="Done"
+          onPress={() => state.params.handleRightButtonPress()}
+        />
+      ),
     }),
   };
 

@@ -1,5 +1,13 @@
 import React from 'react';
-import {Dimensions, Image, StatusBar, StyleSheet, Text, View, TouchableHighlight} from 'react-native';
+import {
+  Dimensions,
+  Image,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+  TouchableHighlight,
+} from 'react-native';
 import colors from './../../common/colors';
 import Swiper from 'react-native-swiper';
 
@@ -47,7 +55,11 @@ export default class SplashScene extends React.Component {
                 Search properties across gulf countries
               </Text>
             }>
-            <Image resizeMode="contain" style={styles.image} source={require('./../../../assets/splash/screen1.png')} />
+            <Image
+              resizeMode="contain"
+              style={styles.image}
+              source={require('./../../../assets/splash/screen1.png')}
+            />
           </View>
           <View
             style={styles.slide}
@@ -56,7 +68,11 @@ export default class SplashScene extends React.Component {
                 Robust filters for quick search !!!
               </Text>
             }>
-            <Image resizeMode="contain" style={styles.image} source={require('./../../../assets/splash/screen2.png')} />
+            <Image
+              resizeMode="contain"
+              style={styles.image}
+              source={require('./../../../assets/splash/screen2.png')}
+            />
           </View>
           <View
             style={styles.slide}
@@ -65,7 +81,11 @@ export default class SplashScene extends React.Component {
                 Browse through thousands of properties
               </Text>
             }>
-            <Image resizeMode="contain" style={styles.image} source={require('./../../../assets/splash/screen4.png')} />
+            <Image
+              resizeMode="contain"
+              style={styles.image}
+              source={require('./../../../assets/splash/screen4.png')}
+            />
           </View>
 
           <View
@@ -81,7 +101,11 @@ export default class SplashScene extends React.Component {
                 </Text>
               </TouchableHighlight>
             }>
-            <Image resizeMode="contain" style={styles.image} source={require('./../../../assets/splash/screen3.png')} />
+            <Image
+              resizeMode="contain"
+              style={styles.image}
+              source={require('./../../../assets/splash/screen3.png')}
+            />
           </View>
 
         </Swiper>

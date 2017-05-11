@@ -273,7 +273,9 @@ export default function propertyReducer(state = initialState, action = {}) {
     case ACTION_TYPES.PROPERTY_DELETE_REQUEST:
       return {
         ...state,
-        results: state.results.filter(itemID => itemID !== action.params.itemID),
+        results: state.results.filter(
+          itemID => itemID !== action.params.itemID,
+        ),
       };
 
     default:

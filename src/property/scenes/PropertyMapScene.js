@@ -1,5 +1,12 @@
 import React, {Component, PropTypes} from 'react';
-import {Dimensions, Image, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
+import {
+  Dimensions,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import MapView from 'react-native-maps';
 import colors from './../../common/colors';
 import PropertyIcons from './../components/PropertyIcons';
@@ -43,13 +50,20 @@ export default class PropertyMapScene extends Component {
                   onPress={() => loadScene(property)}
                   underlayColor="transparent">
                   <View style={styles.mapContent}>
-                    <Image source={{uri: property.images[0]}} style={styles.image} resizeMode="contain" />
+                    <Image
+                      source={{uri: property.images[0]}}
+                      style={styles.image}
+                      resizeMode="contain"
+                    />
                     <View style={styles.rightCol}>
                       <Text style={styles.title}>{property.meta.title}</Text>
                       <Text style={styles.price}>
-                        {property.meta.price}{country.currency}
+                        {property.price}
                       </Text>
-                      <PropertyIcons services={property.meta || []} items={['bedroom', 'bathroom', 'parking']} />
+                      <PropertyIcons
+                        services={property.meta || []}
+                        items={['bedroom', 'bathroom', 'parking']}
+                      />
                       <Text style={styles.lightText}>
                         Added {moment(property.created_at).fromNow()}
                       </Text>

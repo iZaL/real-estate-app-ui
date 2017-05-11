@@ -1,5 +1,11 @@
 import React, {Component, PropTypes} from 'react';
-import {StyleSheet, Text, TextInput, TouchableHighlight, View} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import colors from './../../common/colors';
 import NavBar from './../../components/NavBar';
 import NavButton from './../../components/NavButton';
@@ -15,12 +21,25 @@ export default class ForgotScene extends Component {
   };
 
   render() {
-    const {email, onFieldChange, onForgotPassword, onRightButtonPress} = this.props;
+    const {
+      email,
+      onFieldChange,
+      onForgotPassword,
+      onRightButtonPress,
+    } = this.props;
 
     return (
       <View style={{flex: 1}}>
 
-        <NavBar right={<NavButton icon="ios-close" onPress={() => onRightButtonPress()} style={{paddingLeft: 20}} />} />
+        <NavBar
+          right={
+            <NavButton
+              icon="ios-close"
+              onPress={() => onRightButtonPress()}
+              style={{paddingLeft: 20}}
+            />
+          }
+        />
 
         <View style={styles.container}>
 

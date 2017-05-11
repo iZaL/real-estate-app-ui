@@ -90,6 +90,7 @@ class PropertyList extends PureComponent {
       searchType,
       showRelated,
       relatedProperties,
+      countries,
     } = this.props;
     const {searchString} = filters;
 
@@ -98,7 +99,12 @@ class PropertyList extends PureComponent {
     if (mapView) {
       renderingComponent = (
         <View style={styles.container}>
-          {!isFetching && <ResultHint country={country} searchType={searchType} searchLocation={searchString} />}
+          {!isFetching &&
+            <ResultHint
+              country={country}
+              searchType={searchType}
+              searchLocation={searchString}
+            />}
           <PropertyMapScene
             collection={properties.length ? properties : relatedProperties}
             loadScene={this.loadScene}
@@ -116,7 +122,11 @@ class PropertyList extends PureComponent {
           <View style={styles.container}>
 
             {!isRelatedFetching &&
-              <EmptyResult country={country} searchType={searchType} searchLocation={searchString} />}
+              <EmptyResult
+                country={country}
+                searchType={searchType}
+                searchLocation={searchString}
+              />}
 
             {relatedProperties.length > 0 &&
               <PropertyRelatedList
@@ -148,6 +158,7 @@ class PropertyList extends PureComponent {
               isFetching={isFetching}
               fetchProperties={this.fetchProperties}
               country={country}
+              countries={countries}
               refreshProperties={this.refreshProperties}
             />
           </View>
@@ -181,6 +192,7 @@ function mapStateToProps(state) {
     searchType: SELECTORS.getSelectedPropertyType(state),
     filters: SELECTORS.getFilters(state),
     showRelated: SELECTORS.isShowingRelated(state),
+    countries: APP_SELECTORS.getCountries(state),
   };
 }
 

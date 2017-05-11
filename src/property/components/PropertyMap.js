@@ -26,7 +26,9 @@ export default class PropertyMap extends Component {
       <View style={{flex: 1}}>
 
         {sceneType == 'mapScene' &&
-          <TouchableHighlight style={styles.shrinkButton} onPress={() => setSceneType('detailScene')}>
+          <TouchableHighlight
+            style={styles.shrinkButton}
+            onPress={() => setSceneType('detailScene')}>
             <FontAwesome name="arrows" size={25} color={colors.smokeGreyDark} />
           </TouchableHighlight>}
 
@@ -43,8 +45,16 @@ export default class PropertyMap extends Component {
             longitudeDelta: LONGITUDE_DELTA,
           }}>
           {sceneType == 'mapScene'
-            ? <MapView.Marker coordinate={address} onSelect={() => onPinPress()} scrollEnabled={true} />
-            : <MapView.Marker coordinate={address} onSelect={() => setSceneType('mapScene')} scrollEnabled={false} />}
+            ? <MapView.Marker
+                coordinate={address}
+                onSelect={() => onPinPress()}
+                scrollEnabled={true}
+              />
+            : <MapView.Marker
+                coordinate={address}
+                onSelect={() => setSceneType('mapScene')}
+                scrollEnabled={false}
+              />}
         </MapView>
       </View>
     );

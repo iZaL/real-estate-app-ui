@@ -28,7 +28,9 @@ class PropertyCreate extends Component {
   render() {
     let {categories, listing} = this.props;
 
-    let currentCategories = listing.attributes.type ? categories[listing.attributes.type] : [];
+    let currentCategories = listing.attributes.type
+      ? categories[listing.attributes.type]
+      : [];
 
     return (
       <PropertyEditScene

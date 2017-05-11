@@ -2,7 +2,13 @@
  * @flow
  */
 import React, {Component, PropTypes} from 'react';
-import {Dimensions, Image, StyleSheet, TouchableHighlight, View} from 'react-native';
+import {
+  Dimensions,
+  Image,
+  StyleSheet,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import Youtube from 'react-native-youtube';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import colors from './../common/colors';
@@ -57,7 +63,9 @@ export default class YoutubePlayer extends Component {
                 this.hidePlayer();
               }}
             />
-          : <TouchableHighlight onPress={() => this.onThumbnailPress()} underlayColor="transparent">
+          : <TouchableHighlight
+              onPress={() => this.onThumbnailPress()}
+              underlayColor="transparent">
               <View style={{flex: 1}}>
                 <View
                   style={{
@@ -74,9 +82,18 @@ export default class YoutubePlayer extends Component {
                     alignItems: 'center',
                     justifyContent: 'center',
                   }}>
-                  <FontAwesome name="play" color={colors.fadedWhite} size={37.5} style={{marginLeft: 5}} />
+                  <FontAwesome
+                    name="play"
+                    color={colors.fadedWhite}
+                    size={37.5}
+                    style={{marginLeft: 5}}
+                  />
                 </View>
-                <Image source={{uri: imageThumbnail}} style={styles.thumbnailImage} resizeMode="cover" />
+                <Image
+                  source={{uri: imageThumbnail}}
+                  style={styles.thumbnailImage}
+                  resizeMode="cover"
+                />
               </View>
             </TouchableHighlight>}
 

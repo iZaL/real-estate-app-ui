@@ -2,12 +2,20 @@
  * @flow
  */
 import React, {Component, PropTypes} from 'react';
-import {Alert, Dimensions, StyleSheet, TouchableHighlight, View} from 'react-native';
+import {
+  Alert,
+  Dimensions,
+  StyleSheet,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import colors from '../../../common/colors';
 import Footer from './Footer';
 import MapView from 'react-native-maps';
-import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
+import {
+  GooglePlacesAutocomplete,
+} from 'react-native-google-places-autocomplete';
 import {GOOGLE_MAPS_KEY} from './../../../env.js';
 import isEmpty from 'lodash/isEmpty';
 import {CountryPropType} from './../../common/proptypes';
@@ -124,7 +132,10 @@ export default class AddressPicker extends Component {
             getDefaultValue={() => address.city}
           />
 
-          <TouchableHighlight underlayColor="transparent" onPress={() => this.jumpToRegion()} style={styles.textInput}>
+          <TouchableHighlight
+            underlayColor="transparent"
+            onPress={() => this.jumpToRegion()}
+            style={styles.textInput}>
             <Ionicons
               name="ios-paper-plane"
               color={colors.smokeGreyDark}
@@ -157,7 +168,11 @@ export default class AddressPicker extends Component {
               }}
               onRegionChange={this.onRegionChange}>
 
-              <MapView.Marker coordinate={this.mapMarkerRegion()} onDragEnd={e => this.onDragEnd(e)} draggable />
+              <MapView.Marker
+                coordinate={this.mapMarkerRegion()}
+                onDragEnd={e => this.onDragEnd(e)}
+                draggable
+              />
 
             </MapView>
           </View>

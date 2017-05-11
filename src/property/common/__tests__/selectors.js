@@ -3,10 +3,7 @@ import {SELECTORS} from './../selectors';
 import {SELECTORS as APP_SELECTORS} from './../../../app/common/selectors';
 import {createSelector} from 'reselect';
 describe('Property Selectors', () => {
-
   test('getPrices', () => {
-
-
     // const getPrices = createSelector(
     //   propertyPrices,
     //   selectedPropertyType,
@@ -15,13 +12,13 @@ describe('Property Selectors', () => {
     // );
 
     let prices = {
-      'For Share' : {
-        'KW':['11111','1111112','222'],
-        'SA':['312','333321','442244'],
+      'For Share': {
+        KW: ['11111', '1111112', '222'],
+        SA: ['312', '333321', '442244'],
       },
-      'For Sale' : {
-        'KW':['123','11','22'],
-        'SA':['2222','3333','4444'],
+      'For Sale': {
+        KW: ['123', '11', '22'],
+        SA: ['2222', '3333', '4444'],
       },
     };
 
@@ -29,7 +26,7 @@ describe('Property Selectors', () => {
       SELECTORS.getPrices,
       SELECTORS.getSelectedPropertyType,
       APP_SELECTORS.getSelectedCountry,
-      (a, b,c) => a[b][c.abbr]
+      (a, b, c) => a[b][c.abbr],
     );
 
     // expect(
@@ -38,5 +35,4 @@ describe('Property Selectors', () => {
     //   ['123','11','22']
     // );
   });
-
 });

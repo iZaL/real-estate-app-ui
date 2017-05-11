@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight:100,
-    backgroundColor:colors.smokeGreyLight
+    minHeight: 100,
+    backgroundColor: colors.smokeGreyLight,
     // backgroundColor:'green'
   },
   text: {

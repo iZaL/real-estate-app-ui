@@ -37,7 +37,9 @@ export default class PropertyMeta extends Component {
             }}
           />
 
-          <Separator style={[styles.separator, {marginTop: 10, marginBottom: 10}]} />
+          <Separator
+            style={[styles.separator, {marginTop: 10, marginBottom: 10}]}
+          />
 
           <Button
             title="Bath"

@@ -1,12 +1,91 @@
-let salePrice1 = ['Any', '10K', '25K', '50K', '100K', '200K', '300K', '400K', '500K', '1M', '5M', '10M'];
+let salePrice1 = [
+  'Any',
+  '10K',
+  '25K',
+  '50K',
+  '100K',
+  '200K',
+  '300K',
+  '400K',
+  '500K',
+  '1M',
+  '5M',
+  '10M',
+];
 
-let salePrice2 = ['Any', '25K', '50K', '100K', '250K', '500K', '1M', '5M', '10M', '25M', '50M', '100M'];
+let salePrice2 = [
+  'Any',
+  '25K',
+  '50K',
+  '100K',
+  '250K',
+  '500K',
+  '1M',
+  '5M',
+  '10M',
+  '25M',
+  '50M',
+  '100M',
+];
 
-let rentPrice1 = ['Any', '200', '300', '400', '500', '600', '700', '800', '900', '1000', '2000', '5000'];
-let rentPrice2 = ['Any', '1500', '3000', '4000', '5000', '6000', '7000', '8000', '9000', '10K', '15K', '20K'];
+let rentPrice1 = [
+  'Any',
+  '200',
+  '300',
+  '400',
+  '500',
+  '600',
+  '700',
+  '800',
+  '900',
+  '1000',
+  '2000',
+  '5000',
+];
+let rentPrice2 = [
+  'Any',
+  '1500',
+  '3000',
+  '4000',
+  '5000',
+  '6000',
+  '7000',
+  '8000',
+  '9000',
+  '10K',
+  '15K',
+  '20K',
+];
 
-let sharePrice1 = ['Any', '100', '150', '200', '250', '300', '350', '400', '450', '500', '1000', '2500', '5000'];
-let sharePrice2 = ['Any', '500', '750', '1000', '1500', '2000', '3000', '4000', '5000', '10K', '15K', '20K'];
+let sharePrice1 = [
+  'Any',
+  '100',
+  '150',
+  '200',
+  '250',
+  '300',
+  '350',
+  '400',
+  '450',
+  '500',
+  '1000',
+  '2500',
+  '5000',
+];
+let sharePrice2 = [
+  'Any',
+  '500',
+  '750',
+  '1000',
+  '1500',
+  '2000',
+  '3000',
+  '4000',
+  '5000',
+  '10K',
+  '15K',
+  '20K',
+];
 
 let countries = ['KW', 'OM', 'BH', 'SA', 'AE', 'QA'];
 let [KW, OM, BH, SA, AE, QA] = countries;
@@ -76,9 +155,36 @@ let priceForSale = {
 };
 
 let categoriesArr = {
-  [ForSale]: ['Villa', 'House', 'Apartment', 'Chalet', 'Land & Farm', 'Store', 'Storage', 'Office'],
-  [ForRent]: ['Villa', 'House', 'Apartment', 'Chalet', 'Land & Farm', 'Store', 'Storage', 'Office'],
-  [ForShare]: ['Villa', 'House', 'Apartment', 'Chalet', 'Land & Farm', 'Store', 'Storage', 'Office'],
+  [ForSale]: [
+    'Villa',
+    'House',
+    'Apartment',
+    'Chalet',
+    'Land & Farm',
+    'Store',
+    'Storage',
+    'Office',
+  ],
+  [ForRent]: [
+    'Villa',
+    'House',
+    'Apartment',
+    'Chalet',
+    'Land & Farm',
+    'Store',
+    'Storage',
+    'Office',
+  ],
+  [ForShare]: [
+    'Villa',
+    'House',
+    'Apartment',
+    'Chalet',
+    'Land & Farm',
+    'Store',
+    'Storage',
+    'Office',
+  ],
 };
 
 let pricesArr = {
@@ -101,7 +207,16 @@ let searchMetas = {
   parkingArr: ['Any', '1', '1+', '2', '2+', '3', '3+', '4', '4+'],
 };
 
-let amenities = ['Swimming Pool', 'Playground', 'Gym', 'Furnished', 'Furnished Kitchen', 'Central AC', 'Balcony'];
+let amenities = [
+  'Swimming Pool',
+  'Playground',
+  'Gym',
+  'Furnished',
+  'Furnished Kitchen',
+  'Central AC',
+  'Balcony',
+  'Lift',
+];
 
 let nearByPlaces = [
   'Mosque',

@@ -16,7 +16,9 @@ export default class EditProfile extends Component {
   render() {
     const {loadScene, user} = this.props;
     return (
-      <TouchableHighlight onPress={() => loadScene('user')} underlayColor="transparent">
+      <TouchableHighlight
+        onPress={() => loadScene('user')}
+        underlayColor="transparent">
         <View style={styles.container}>
           <View style={styles.leftCol}>
             <Text style={styles.username}>{user.name}</Text>
@@ -25,8 +27,16 @@ export default class EditProfile extends Component {
 
           <View style={styles.rightCol}>
             {user.image
-              ? <Image source={{uri: user.image}} style={styles.logo} resizeMode="cover" />
-              : <FontAwesome name="user-circle-o" color={colors.smokeGreyDark} size={80} />}
+              ? <Image
+                  source={{uri: user.image}}
+                  style={styles.logo}
+                  resizeMode="cover"
+                />
+              : <FontAwesome
+                  name="user-circle-o"
+                  color={colors.smokeGreyDark}
+                  size={80}
+                />}
 
           </View>
         </View>

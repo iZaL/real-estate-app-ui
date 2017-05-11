@@ -2,7 +2,15 @@
  @flow
  */
 import React, {PureComponent, PropTypes} from 'react';
-import {Dimensions, FlatList, Image, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
+import {
+  Dimensions,
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import PropertyIcons from '../components/PropertyIcons';
 import PropertyTags from '../components/PropertyTags';
 import Swiper from 'react-native-swiper';
@@ -34,23 +42,34 @@ export default class PropertyListScene extends PureComponent {
   imageSlider = item => {
     let {loadScene} = this.props;
     return item.images.map((image, i) => (
-      <TouchableHighlight key={i} onPress={() => loadScene(item)} underlayColor="transparent" style={{flex: 1}}>
+      <TouchableHighlight
+        key={i}
+        onPress={() => loadScene(item)}
+        underlayColor="transparent"
+        style={{flex: 1}}>
         <Image style={styles.image} source={{uri: image}} resizeMode="cover" />
       </TouchableHighlight>
     ));
   };
 
   renderRow = ({item, index}) => {
-    const {loadScene, handleFavoritePress, country} = this.props;
+    const {loadScene, handleFavoritePress} = this.props;
 
     return (
       <View style={[styles.row]} key={index}>
 
-        <TouchableHighlight onPress={() => loadScene(item)} underlayColor="transparent">
+        <TouchableHighlight
+          onPress={() => loadScene(item)}
+          underlayColor="transparent">
           <Text style={styles.title}>{item.meta.title}</Text>
         </TouchableHighlight>
 
-        <Swiper loadMinimal loadMinimalSize={1} style={styles.wrapper} loop={false} height={250}>
+        <Swiper
+          loadMinimal
+          loadMinimalSize={1}
+          style={styles.wrapper}
+          loop={false}
+          height={250}>
           {this.imageSlider(item)}
         </Swiper>
 
@@ -64,7 +83,10 @@ export default class PropertyListScene extends PureComponent {
 
           <View style={{flex: 2}}>
 
-            <PropertyIcons services={item.meta || []} items={['bedroom', 'bathroom', 'parking']} />
+            <PropertyIcons
+              services={item.meta || []}
+              items={['bedroom', 'bathroom', 'parking']}
+            />
 
             <Text style={styles.lightText}>
               Added {moment(item.created_at).fromNow()}
@@ -83,10 +105,13 @@ export default class PropertyListScene extends PureComponent {
               }}>
 
               <Text style={styles.price}>
-                {item.meta.price} {country.currency}
+                {item.price}
               </Text>
 
-              <Favorite handleFavoritePress={() => handleFavoritePress(item)} isFavorited={item.isFavorited} />
+              <Favorite
+                handleFavoritePress={() => handleFavoritePress(item)}
+                isFavorited={item.isFavorited}
+              />
 
             </View>
 
@@ -103,7 +128,12 @@ export default class PropertyListScene extends PureComponent {
   };
 
   render() {
-    const {collection, isFetching, fetchProperties, refreshProperties} = this.props;
+    const {
+      collection,
+      isFetching,
+      fetchProperties,
+      refreshProperties,
+    } = this.props;
 
     return (
       <FlatList
@@ -119,7 +149,11 @@ export default class PropertyListScene extends PureComponent {
         onEndReachedThreshold={1}
         onEndReached={() => !isFetching && fetchProperties()}
         ListFooterComponent={() =>
-          isFetching && <LoadingIndicator isFetching={isFetching} style={{backgroundColor: 'white'}} />}
+          isFetching &&
+          <LoadingIndicator
+            isFetching={isFetching}
+            style={{backgroundColor: 'white'}}
+          />}
         ItemSeparatorComponent={() => <Separator />}
         getItemLayout={(data, index) => ({
           length: 348,

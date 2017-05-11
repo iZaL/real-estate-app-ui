@@ -2,7 +2,15 @@
  @flow
  */
 import React, {Component, PropTypes} from 'react';
-import {Animated, Dimensions, Image, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
+import {
+  Animated,
+  Dimensions,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import colors from '../../common/colors';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import isEmpty from 'lodash/isEmpty';
@@ -16,7 +24,7 @@ export default class PropertyHomeScene extends Component {
     changeActiveTab: PropTypes.func.isRequired,
     filters: PropTypes.object.isRequired,
     removeFilter: PropTypes.func.isRequired,
-    loadPropertyScene:PropTypes.func.isRequired
+    loadPropertyScene: PropTypes.func.isRequired,
   };
 
   state = {
@@ -94,7 +102,11 @@ export default class PropertyHomeScene extends Component {
             underlayColor="transparent"
             onPress={() => this.changeTab('For Sale')}
             style={[styles.tab, activeTab === 'For Sale' && styles.tabActive]}>
-            <Text style={[styles.tabTitle, activeTab === 'For Sale' && styles.tabTitleActive]}>
+            <Text
+              style={[
+                styles.tabTitle,
+                activeTab === 'For Sale' && styles.tabTitleActive,
+              ]}>
               BUY
             </Text>
           </TouchableHighlight>
@@ -103,7 +115,11 @@ export default class PropertyHomeScene extends Component {
             underlayColor="transparent"
             onPress={() => this.changeTab('For Rent')}
             style={[styles.tab, activeTab === 'For Rent' && styles.tabActive]}>
-            <Text style={[styles.tabTitle, activeTab === 'For Rent' && styles.tabTitleActive]}>
+            <Text
+              style={[
+                styles.tabTitle,
+                activeTab === 'For Rent' && styles.tabTitleActive,
+              ]}>
               RENT
             </Text>
           </TouchableHighlight>
@@ -112,7 +128,11 @@ export default class PropertyHomeScene extends Component {
             underlayColor="transparent"
             onPress={() => this.changeTab('For Share')}
             style={[styles.tab, activeTab === 'For Share' && styles.tabActive]}>
-            <Text style={[styles.tabTitle, activeTab === 'For Share' && styles.tabTitleActive]}>
+            <Text
+              style={[
+                styles.tabTitle,
+                activeTab === 'For Share' && styles.tabTitleActive,
+              ]}>
               SHARE
             </Text>
           </TouchableHighlight>
@@ -133,17 +153,19 @@ export default class PropertyHomeScene extends Component {
               style={[styles.searchIcon, {height: 25}]}
             />
             <Text style={styles.searchText}>
-              {filters && filters.searchString ? filters.searchString : 'Search'}
+              {filters && filters.searchString
+                ? filters.searchString
+                : 'Search'}
             </Text>
             <Text>
               {filters &&
-              filters.searchString &&
-              <Ionicons
-                name="ios-close-outline"
-                size={30}
-                color={colors.smokeGreyDark}
-                style={[styles.searchIcon, {height: 30}]}
-              />}
+                filters.searchString &&
+                <Ionicons
+                  name="ios-close-outline"
+                  size={30}
+                  color={colors.smokeGreyDark}
+                  style={[styles.searchIcon, {height: 30}]}
+                />}
             </Text>
           </View>
         </TouchableHighlight>
@@ -154,7 +176,15 @@ export default class PropertyHomeScene extends Component {
 
   render() {
     let {scrollY} = this.state;
-    let {searchHistory, setFilter, countries, country, onCountryChange, removeFilter,loadPropertyScene} = this.props;
+    let {
+      searchHistory,
+      setFilter,
+      countries,
+      country,
+      onCountryChange,
+      removeFilter,
+      loadPropertyScene,
+    } = this.props;
     let emptyIcon = require('./../../../assets/logo.png');
 
     return (
@@ -167,9 +197,12 @@ export default class PropertyHomeScene extends Component {
           showsVerticalScrollIndicator={false}
           scrollEventThrottle={16}
           style={StyleSheet.absoluteFill}
-          onScroll={Animated.event([{nativeEvent: {contentOffset: {y: scrollY}}}], {
-            useNativeDriver: true,
-          })}>
+          onScroll={Animated.event(
+            [{nativeEvent: {contentOffset: {y: scrollY}}}],
+            {
+              useNativeDriver: true,
+            },
+          )}>
           <View style={styles.heroSpacer} />
           <View style={styles.contentContainerStyle}>
             <View
@@ -193,26 +226,31 @@ export default class PropertyHomeScene extends Component {
 
               {isEmpty(searchHistory)
                 ? <TouchableHighlight
-                  onPress={()=>{}}
-                  underlayColor="transparent"
-                >
-                  <View
-                    style={{
-                      flex: 1,
-                      alignItems: 'center',
-                      marginVertical: 30,
-                    }}
-                  >
-                    <Image source={emptyIcon} style={{width: 150, height: 150}} />
-                    <Text
+                    onPress={() => {}}
+                    underlayColor="transparent">
+                    <View
                       style={{
-                        color: colors.smokeGreyLight,
-                        fontSize: 20,
-                      }}
-                    />
-                  </View>
-                </TouchableHighlight>
-                : <HistoryList collection={searchHistory} setFilter={setFilter} removeFilter={removeFilter} />}
+                        flex: 1,
+                        alignItems: 'center',
+                        marginVertical: 30,
+                      }}>
+                      <Image
+                        source={emptyIcon}
+                        style={{width: 150, height: 150}}
+                      />
+                      <Text
+                        style={{
+                          color: colors.smokeGreyLight,
+                          fontSize: 20,
+                        }}
+                      />
+                    </View>
+                  </TouchableHighlight>
+                : <HistoryList
+                    collection={searchHistory}
+                    setFilter={setFilter}
+                    removeFilter={removeFilter}
+                  />}
             </View>
           </View>
         </Animated.ScrollView>
@@ -241,10 +279,10 @@ const styles = StyleSheet.create({
   },
   searchBar: {
     position: 'absolute',
-    top: 50,
+    top: 120,
     backgroundColor: 'white',
     marginHorizontal: 10,
-    opacity:.95,
+    opacity: 0.9,
     zIndex: 1000,
   },
   searchTabs: {
@@ -262,7 +300,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderBottomColor: colors.lightGrey,
     borderBottomWidth: 1,
-    padding:10
+    padding: 10,
   },
   tabActive: {
     borderBottomColor: colors.accent,

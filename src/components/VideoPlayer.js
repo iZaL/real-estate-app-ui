@@ -30,7 +30,10 @@ export default class UploadVideo extends Component {
 
     return (
       <View style={[styles.container, style]}>
-        <TouchableHighlight onPress={() => removeMedia()} underlayColor="transparent" style={styles.removeButton}>
+        <TouchableHighlight
+          onPress={() => removeMedia()}
+          underlayColor="transparent"
+          style={styles.removeButton}>
           <FontAwesome
             name="close"
             style={{
@@ -42,7 +45,9 @@ export default class UploadVideo extends Component {
 
         </TouchableHighlight>
 
-        <TouchableHighlight underlayColor="transparent" onPress={() => this.togglePause()}>
+        <TouchableHighlight
+          underlayColor="transparent"
+          onPress={() => this.togglePause()}>
           <View style={{flex: 1}}>
             <View
               style={{

@@ -5,7 +5,15 @@ import Button from './../Button';
 
 test('renders Button', () => {
   const tree = renderer
-    .create(<Button title="Button" onPress={() => {}} selected="a" range={['1', '2']} icon="music" />)
+    .create(
+      <Button
+        title="Button"
+        onPress={() => {}}
+        selected="a"
+        range={['1', '2']}
+        icon="music"
+      />,
+    )
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

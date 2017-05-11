@@ -2,7 +2,13 @@
  * @flow
  */
 import React, {Component, PropTypes} from 'react';
-import {ListView, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
+import {
+  ListView,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import colors from '../../../common/colors';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Separator from './../../../components/Separator';
@@ -19,12 +25,22 @@ export default class List extends Component {
     const {updateListing, field, selected} = this.props;
     return (
       <View key={item}>
-        <TouchableHighlight onPress={() => updateListing(field, item)} underlayColor="transparent">
+        <TouchableHighlight
+          onPress={() => updateListing(field, item)}
+          underlayColor="transparent">
           <View style={styles.row}>
-            <Text style={[styles.title, selected === item && {color: colors.accent}]}>
+            <Text
+              style={[
+                styles.title,
+                selected === item && {color: colors.accent},
+              ]}>
               {item}
             </Text>
-            <Ionicons name="ios-arrow-forward" color={colors.smokeGreyLight} size={30} />
+            <Ionicons
+              name="ios-arrow-forward"
+              color={colors.smokeGreyLight}
+              size={30}
+            />
           </View>
         </TouchableHighlight>
         <Separator />

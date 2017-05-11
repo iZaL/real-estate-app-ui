@@ -13,7 +13,13 @@ class CountryList extends Component {
 
   render() {
     const {countries, country} = this.props;
-    return <CountryListScene countries={countries} onCountrySelect={this.onCountrySelect} country={country} />;
+    return (
+      <CountryListScene
+        countries={countries}
+        onCountrySelect={this.onCountrySelect}
+        country={country}
+      />
+    );
   }
 }
 

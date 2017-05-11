@@ -2,7 +2,10 @@ import {call, fork, put, select, takeLatest} from 'redux-saga/effects';
 import {NavigationActions} from 'react-navigation';
 
 import {ACTION_TYPES} from './actions';
-import {ACTION_TYPES as APP_ACTION_TYPES, ACTIONS as APP_ACTIONS} from './../../app/common/actions';
+import {
+  ACTION_TYPES as APP_ACTION_TYPES,
+  ACTIONS as APP_ACTIONS,
+} from './../../app/common/actions';
 import {ACTION_TYPES as PROPERTY_ACTIONS} from '../../property/common/actions';
 import {API, AUTH_STORAGE_KEY} from './api';
 import {SELECTORS} from './selectors';
@@ -84,7 +87,9 @@ function* updatePassword(action) {
     const response = yield call(API.updatePassword, action.params);
 
     if (action.params.password !== action.params.password_confirmation) {
-      return yield put(APP_ACTIONS.setNotification('Password does not match', 'error'));
+      return yield put(
+        APP_ACTIONS.setNotification('Password does not match', 'error'),
+      );
     }
 
     yield put({

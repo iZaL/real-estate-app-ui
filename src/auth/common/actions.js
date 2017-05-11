@@ -17,11 +17,10 @@ export const ACTION_TYPES = {
   PASSWORD_UPDATE_FAILURE: 'PASSWORD_UPDATE_FAILURE',
 };
 
-function login(credentials, navigation) {
+function login(credentials) {
   return {
     type: ACTION_TYPES.LOGIN_REQUEST,
     credentials,
-    navigation: navigation,
   };
 }
 
@@ -34,20 +33,20 @@ function logout() {
 function forgotPassword(params) {
   return {
     type: ACTION_TYPES.FORGOT_PASSWORD_REQUEST,
-    params: params,
+    params,
   };
 }
 
 function recoverPassword(params) {
   return {
     type: ACTION_TYPES.RECOVER_PASSWORD_REQUEST,
-    params: params,
+    params,
   };
 }
 function updatePassword(params) {
   return {
     type: ACTION_TYPES.PASSWORD_UPDATE_REQUEST,
-    params: params,
+    params,
   };
 }
 

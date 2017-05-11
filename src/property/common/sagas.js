@@ -53,7 +53,7 @@ function* fetchProperties() {
         });
       }
 
-      if(!nextPageUrl) {
+      if (!nextPageUrl) {
         yield put({
           type: ACTION_TYPES.PROPERTY_ADD_ITEM_TO_HISTORY_REQUEST,
           payload: {
@@ -190,7 +190,9 @@ function* fetchFavorites(action) {
     const params = Qs.stringify({api_token: apiToken, country});
 
     if (nextPageFavoritesUrl === undefined) {
-      urlParams = isEmpty(action.params) ? `/?${params}` : `/?${action.params}&${params}`;
+      urlParams = isEmpty(action.params)
+        ? `/?${params}`
+        : `/?${action.params}&${params}`;
     } else {
       urlParams = nextPageFavoritesUrl;
     }
@@ -322,7 +324,11 @@ function* saveProperty(action) {
     // if(params.video) {
     //   formData.append("video", params.video);
     // }
-    const imageResponse = yield call(API.uploadImage, response.data._id, formData);
+    const imageResponse = yield call(
+      API.uploadImage,
+      response.data._id,
+      formData,
+    );
 
     yield put({
       type: ACTION_TYPES.PROPERTY_SAVE_SUCCESS,
@@ -356,7 +362,10 @@ function* propertyMonitor() {
 }
 
 function* propertyRelatedMonitor() {
-  yield takeLatest(ACTION_TYPES.PROPERTY_RELATED_REQUEST, fetchRelatedProperties);
+  yield takeLatest(
+    ACTION_TYPES.PROPERTY_RELATED_REQUEST,
+    fetchRelatedProperties,
+  );
 }
 function* myPropertyMonitor() {
   yield takeLatest(ACTION_TYPES.MY_PROPERTY_REQUEST, fetchMyProperties);
@@ -387,7 +396,10 @@ function* propertyIncrementViewCount() {
 }
 
 function* propertyHistoryMonitor() {
-  yield takeLatest(ACTION_TYPES.PROPERTY_ADD_ITEM_TO_HISTORY_REQUEST, addItemToHistory);
+  yield takeLatest(
+    ACTION_TYPES.PROPERTY_ADD_ITEM_TO_HISTORY_REQUEST,
+    addItemToHistory,
+  );
 }
 
 export default (PROPERTY_SAGA = [

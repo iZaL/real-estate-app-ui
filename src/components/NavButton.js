@@ -7,7 +7,10 @@ export default class NavButton extends React.Component {
   static propTypes = {
     // style:View.propTypes.style,
     text: React.PropTypes.string,
-    icon: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.element]),
+    icon: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.element,
+    ]),
     onPress: React.PropTypes.func.isRequired,
   };
 

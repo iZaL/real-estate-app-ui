@@ -2,7 +2,16 @@
  @flow
  */
 import React, {Component, PropTypes} from 'react';
-import {Dimensions, Image, ScrollView, StyleSheet, Text, TextInput, TouchableHighlight, View} from 'react-native';
+import {
+  Dimensions,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import colors from '../../common/colors';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Separator from '../../components/Separator';
@@ -20,7 +29,16 @@ export default class UserEditScene extends Component {
   };
 
   render() {
-    const {user, uploaded, pickImage, onFieldChange, name, image, description, address} = this.props;
+    const {
+      user,
+      uploaded,
+      pickImage,
+      onFieldChange,
+      name,
+      image,
+      description,
+      address,
+    } = this.props;
 
     return (
       <ScrollView style={styles.container}>
@@ -29,11 +47,21 @@ export default class UserEditScene extends Component {
           ? <Image source={{uri: image}} style={styles.logo} />
           : user.image
               ? <Image source={{uri: user.image}} style={styles.logo} />
-              : <FontAwesome name="picture-o" color="white" size={200} style={styles.emptyImageIcon} />}
+              : <FontAwesome
+                  name="picture-o"
+                  color="white"
+                  size={200}
+                  style={styles.emptyImageIcon}
+                />}
 
         <View style={styles.editIconWrapper}>
           <TouchableHighlight onPress={pickImage} underlayColor="transparent">
-            <FontAwesome name="camera" color={colors.darkGrey} size={18} style={styles.editIcon} />
+            <FontAwesome
+              name="camera"
+              color={colors.darkGrey}
+              size={18}
+              style={styles.editIcon}
+            />
           </TouchableHighlight>
 
         </View>

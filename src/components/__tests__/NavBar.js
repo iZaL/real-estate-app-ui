@@ -6,7 +6,13 @@ import {Text} from 'react-native';
 
 test('renders null', () => {
   const tree = renderer
-    .create(<NavBar left={<Text>left icon</Text>} middle={<Text>title</Text>} right={<Text>right icon</Text>} />)
+    .create(
+      <NavBar
+        left={<Text>left icon</Text>}
+        middle={<Text>title</Text>}
+        right={<Text>right icon</Text>}
+      />,
+    )
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

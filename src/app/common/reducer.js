@@ -1,5 +1,7 @@
 import {ACTION_TYPES} from './actions';
-import {ACTION_TYPES as PROPERTY_ACTION_TYPES} from './../../property/common/actions';
+import {
+  ACTION_TYPES as PROPERTY_ACTION_TYPES,
+} from './../../property/common/actions';
 
 export const COUNTRY_KEY = 'COUNTRY';
 export const BOOTSTRAPPED = 'BOOTSTRAPPED';

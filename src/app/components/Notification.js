@@ -1,10 +1,21 @@
 import React from 'react';
-import {Animated, Dimensions, Easing, StyleSheet, Text, TouchableHighlight, StatusBar} from 'react-native';
+import {
+  Animated,
+  Dimensions,
+  Easing,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  StatusBar,
+} from 'react-native';
 import colors from './../../common/colors';
 
 export default class Notification extends React.Component {
   static propTypes = {
-    message: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.array]),
+    message: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.array,
+    ]),
     messageType: React.PropTypes.string,
     actions: React.PropTypes.object.isRequired,
   };
@@ -49,7 +60,12 @@ export default class Notification extends React.Component {
     const {messageType, message} = this.props;
 
     return (
-      <Animated.View style={[styles.container, styles[messageType], {opacity: this.fadeAnim}]}>
+      <Animated.View
+        style={[
+          styles.container,
+          styles[messageType],
+          {opacity: this.fadeAnim},
+        ]}>
         <TouchableHighlight onPress={() => this.hideMessage()}>
           <Text style={styles.title}>{message}</Text>
         </TouchableHighlight>

@@ -1,5 +1,11 @@
 import React, {Component} from 'react';
-import {StyleSheet, SwipeableListView, Text, TouchableHighlight, View} from 'react-native';
+import {
+  StyleSheet,
+  SwipeableListView,
+  Text,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import Separator from '../../components/Separator';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import colors from '../../common/colors';
@@ -49,17 +55,27 @@ export default class HistoryList extends Component {
               flexDirection: 'row',
               alignItems: 'center',
             }}>
-            <Ionicons name="ios-search" color={colors.smokeGreyLight} size={25} style={styles.searchIcon} />
+            <Ionicons
+              name="ios-search"
+              color={colors.smokeGreyLight}
+              size={25}
+              style={styles.searchIcon}
+            />
             <View style={{flex: 1, paddingHorizontal: 10}}>
               <Text style={styles.title}>
-                {filter.category === 'Any' ? 'Property ' : `${filter.category} `}
+                {filter.category === 'Any'
+                  ? 'Property '
+                  : `${filter.category} `}
                 {`${type}`}
                 {' '}
                 in
                 {' '}
                 {filter.searchString ? filter.searchString : filter.country}
               </Text>
-              <PropertyIcons services={filter || []} items={['bedroom', 'bathroom', 'parking']} />
+              <PropertyIcons
+                services={filter || []}
+                items={['bedroom', 'bathroom', 'parking']}
+              />
               <Text style={styles.title}>
                 <Text style={{fontWeight: '500'}}>Price:</Text>
                 {' '}

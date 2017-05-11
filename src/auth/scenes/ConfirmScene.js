@@ -1,5 +1,11 @@
 import React, {Component, PropTypes} from 'react';
-import {StyleSheet, Text, TextInput, TouchableHighlight, View} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import colors from './../../common/colors';
 import NavBar from './../../components/NavBar';
 import NavButton from './../../components/NavButton';
@@ -15,11 +21,25 @@ export default class ConfirmScene extends Component {
   };
 
   render() {
-    const {onFieldChange, confirmationCode, onRecoverPassword, onForgotPassword, onRightButtonPress} = this.props;
+    const {
+      onFieldChange,
+      confirmationCode,
+      onRecoverPassword,
+      onForgotPassword,
+      onRightButtonPress,
+    } = this.props;
 
     return (
       <View style={{flex: 1}}>
-        <NavBar right={<NavButton icon="ios-close" onPress={() => onRightButtonPress()} style={{paddingLeft: 20}} />} />
+        <NavBar
+          right={
+            <NavButton
+              icon="ios-close"
+              onPress={() => onRightButtonPress()}
+              style={{paddingLeft: 20}}
+            />
+          }
+        />
 
         <View style={styles.container}>
 
@@ -36,9 +56,15 @@ export default class ConfirmScene extends Component {
           <TouchableHighlight
             onPress={() => onRecoverPassword()}
             underlayColor="transparent"
-            style={[styles.button, styles.center, {marginTop: 50}, !confirmationCode && {opacity: 0.3}]}
+            style={[
+              styles.button,
+              styles.center,
+              {marginTop: 50},
+              !confirmationCode && {opacity: 0.3},
+            ]}
             disabled={!confirmationCode}>
-            <Text style={[styles.buttonText, styles.textCenter, {color: 'black'}]}>
+            <Text
+              style={[styles.buttonText, styles.textCenter, {color: 'black'}]}>
               CONFIRM
             </Text>
           </TouchableHighlight>

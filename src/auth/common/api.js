@@ -6,7 +6,9 @@ export const AUTH_STORAGE_KEY = 'AUTH_TOKEN_!@###';
 
 function login(params, token) {
   if (isNull(token) && isNull(params)) return;
-  const url = isNull(token) ? `${API_URL}/auth/login` : `${API_URL}/auth/login?api_token=${token}`;
+  const url = isNull(token)
+    ? `${API_URL}/auth/login`
+    : `${API_URL}/auth/login?api_token=${token}`;
   return fetchAPI(url, 'POST', params);
 }
 

@@ -2,7 +2,13 @@
  @flow
  */
 import React, {Component, PropTypes} from 'react';
-import {ListView, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
+import {
+  ListView,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import colors from '../../common/colors';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {CountryPropType} from '../../property/common/proptypes';
@@ -23,7 +29,9 @@ export default class CountryListScene extends Component {
     let {onCountrySelect, country} = this.props;
     return (
       <View style={styles.row} key={item}>
-        <TouchableHighlight onPress={() => onCountrySelect(item)} underlayColor="transparent">
+        <TouchableHighlight
+          onPress={() => onCountrySelect(item)}
+          underlayColor="transparent">
           <View style={styles.rowContent}>
             <Text
               style={[

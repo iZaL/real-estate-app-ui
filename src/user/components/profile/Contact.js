@@ -23,7 +23,11 @@ export default class Contact extends Component {
 
               <Text style={styles.label}>MOBILE</Text>
               <View style={styles.content}>
-                <Ionicons name="md-phone-portrait" size={20} style={styles.icon} />
+                <Ionicons
+                  name="md-phone-portrait"
+                  size={20}
+                  style={styles.icon}
+                />
                 <Text style={styles.name}>{user.mobile}</Text>
               </View>
             </View>
@@ -49,7 +53,11 @@ export default class Contact extends Component {
             <View style={styles.rowContainer}>
               <Text style={styles.label}>COMPANY ADDRESS</Text>
               <View style={styles.content}>
-                <Ionicons name="ios-pin-outline" size={22} style={styles.icon} />
+                <Ionicons
+                  name="ios-pin-outline"
+                  size={22}
+                  style={styles.icon}
+                />
                 <Text style={styles.name}>{user.company.address}</Text>
               </View>
             </View>

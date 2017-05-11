@@ -2,7 +2,14 @@
  @flow
  */
 import React, {Component, PropTypes} from 'react';
-import {FlatList, Image, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
+import {
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import colors from '../../common/colors';
 import moment from 'moment';
 import Separator from './../../components/Separator';
@@ -31,17 +38,24 @@ export default class PropertyManagerScene extends Component {
       <View style={styles.row}>
 
         <View style={{flex: 4}}>
-          <TouchableHighlight onPress={() => loadScene(item)} underlayColor="transparent" key={index}>
+          <TouchableHighlight
+            onPress={() => loadScene(item)}
+            underlayColor="transparent"
+            key={index}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
 
-              <Image style={styles.image} source={{uri: item.images[0]}} resizeMode="cover" />
+              <Image
+                style={styles.image}
+                source={{uri: item.images[0]}}
+                resizeMode="cover"
+              />
 
               <View style={{flex: 1, paddingLeft: 10}}>
 
                 <Text style={styles.title}>{item.meta.title}</Text>
 
                 <Text style={styles.price}>
-                  {item.meta.price} {country.currency}
+                  {item.price}
                 </Text>
 
                 <Text style={styles.lightText}>
@@ -57,7 +71,8 @@ export default class PropertyManagerScene extends Component {
 
           </TouchableHighlight>
         </View>
-        <View style={{flex: 1, alignItems: 'flex-end', justifyContent: 'center'}}>
+        <View
+          style={{flex: 1, alignItems: 'flex-end', justifyContent: 'center'}}>
           <TouchableHighlight
             style={styles.buttonContainer}
             underlayColor="transparent"
@@ -69,7 +84,12 @@ export default class PropertyManagerScene extends Component {
             style={styles.buttonContainer}
             underlayColor="transparent"
             onPress={() => deleteProperty(item)}>
-            <Ionicons name="ios-trash" size={40} color={colors.red} style={{height: 35}} />
+            <Ionicons
+              name="ios-trash"
+              size={40}
+              color={colors.red}
+              style={{height: 35}}
+            />
           </TouchableHighlight>
         </View>
 
@@ -93,7 +113,11 @@ export default class PropertyManagerScene extends Component {
         onEndReachedThreshold={1}
         onEndReached={() => !isFetching && fetchProperties()}
         ListFooterComponent={() =>
-          isFetching && <LoadingIndicator isFetching={isFetching} style={{backgroundColor: 'white'}} />}
+          isFetching &&
+          <LoadingIndicator
+            isFetching={isFetching}
+            style={{backgroundColor: 'white'}}
+          />}
         ItemSeparatorComponent={() => <Separator />}
         shouldItemUpdate={this._shouldItemUpdate}
         getItemLayout={(data, index) => ({

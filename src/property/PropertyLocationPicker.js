@@ -71,4 +71,6 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PropertyLocationPicker);
+export default connect(mapStateToProps, mapDispatchToProps)(
+  PropertyLocationPicker,
+);

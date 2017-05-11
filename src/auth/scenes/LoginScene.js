@@ -1,5 +1,11 @@
 import React, {Component, PropTypes} from 'react';
-import {StyleSheet, Text, TextInput, TouchableHighlight, View} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import colors from './../../common/colors';
 import NavBar from './../../components/NavBar';
 import NavButton from './../../components/NavButton';
@@ -31,7 +37,15 @@ export default class LoginScene extends Component {
     return (
       <View style={{flex: 1}}>
 
-        <NavBar right={<NavButton icon="ios-close" onPress={() => onRightButtonPress()} style={{paddingLeft: 20}} />} />
+        <NavBar
+          right={
+            <NavButton
+              icon="ios-close"
+              onPress={() => onRightButtonPress()}
+              style={{paddingLeft: 20}}
+            />
+          }
+        />
 
         <View style={styles.container}>
 
@@ -67,7 +81,11 @@ export default class LoginScene extends Component {
             </Text>
           </TouchableHighlight>
 
-          <Text style={[styles.textCenter, {paddingTop: 30, paddingBottom: 30, color: 'white'}]}>
+          <Text
+            style={[
+              styles.textCenter,
+              {paddingTop: 30, paddingBottom: 30, color: 'white'},
+            ]}>
             or
           </Text>
 
@@ -76,7 +94,8 @@ export default class LoginScene extends Component {
             underlayColor="transparent"
             style={[styles.button, styles.center, {opacity: 0.5}]}
             disabled={busy}>
-            <Text style={[styles.buttonText, styles.textCenter, {color: 'black'}]}>
+            <Text
+              style={[styles.buttonText, styles.textCenter, {color: 'black'}]}>
               CREATE AN ACCOUNT
             </Text>
           </TouchableHighlight>

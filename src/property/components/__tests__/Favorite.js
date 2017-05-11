@@ -4,6 +4,8 @@ import renderer from 'react-test-renderer';
 import Favorite from './../Favorite';
 
 test('renders heart', () => {
-  const tree = renderer.create(<Favorite isFavorited={true} handleFavoritePress={() => {}} />).toJSON();
+  const tree = renderer
+    .create(<Favorite isFavorited={true} handleFavoritePress={() => {}} />)
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

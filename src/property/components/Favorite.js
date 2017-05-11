@@ -17,7 +17,11 @@ export default class Favorite extends Component {
             handleFavoritePress();
           }}
           underlayColor="transparent">
-          <FontAwesome name={isFavorited ? 'star' : 'star-o'} size={25} style={[styles.icon]} />
+          <FontAwesome
+            name={isFavorited ? 'star' : 'star-o'}
+            size={25}
+            style={[styles.icon]}
+          />
         </TouchableHighlight>
       </View>
     );

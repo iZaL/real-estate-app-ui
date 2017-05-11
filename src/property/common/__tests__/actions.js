@@ -59,18 +59,26 @@ describe('App Component Actions', () => {
   });
 
   test('add to history', () => {
-    expect(ACTIONS.setFilters({'For Sale': {country: 'Kuwait'}})).toMatchSnapshot();
+    expect(
+      ACTIONS.setFilters({'For Sale': {country: 'Kuwait'}}),
+    ).toMatchSnapshot();
   });
 
   test('remove from history', () => {
-    expect(ACTIONS.removeFromHistory({'For Sale': {country: 'Kuwait'}})).toMatchSnapshot();
+    expect(
+      ACTIONS.removeFromHistory({'For Sale': {country: 'Kuwait'}}),
+    ).toMatchSnapshot();
   });
 
   test('edit property', () => {
-    expect(ACTIONS.editProperty({_id: '123', title: 'property'})).toMatchSnapshot();
+    expect(
+      ACTIONS.editProperty({_id: '123', title: 'property'}),
+    ).toMatchSnapshot();
   });
 
   test('delete property', () => {
-    expect(ACTIONS.deleteProperty({_id: '123', title: 'property'})).toMatchSnapshot();
+    expect(
+      ACTIONS.deleteProperty({_id: '123', title: 'property'}),
+    ).toMatchSnapshot();
   });
 });

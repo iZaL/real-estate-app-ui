@@ -1,7 +1,9 @@
 import appReducer from '../reducer';
 import propertyReducer from '../../../property/common/reducer';
 import {ACTION_TYPES} from '../actions';
-import {ACTION_TYPES as PROPERTY_ACTION_TYPES} from '../../../property/common/actions';
+import {
+  ACTION_TYPES as PROPERTY_ACTION_TYPES,
+} from '../../../property/common/actions';
 
 const initialState = {
   bootstrapped: false,
@@ -15,7 +17,9 @@ describe('App Component Store', () => {
   });
 
   test('app bootstraps', () => {
-    expect(appReducer(initialState, {type: ACTION_TYPES.BOOT_SUCCESS})).toEqual({
+    expect(
+      appReducer(initialState, {type: ACTION_TYPES.BOOT_SUCCESS}),
+    ).toEqual({
       booted: true,
       bootstrapped: false,
       selectedCountry: 'Kuwait',

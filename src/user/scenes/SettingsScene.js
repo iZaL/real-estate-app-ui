@@ -23,7 +23,12 @@ export default class SettingsScene extends Component {
 
         {isAuthenticated && <EditProfile loadScene={loadScene} user={user} />}
 
-        <SettingListItem title="Upload Property" route="propertyCreate" loadScene={loadScene} icon="plus-square-o" />
+        <SettingListItem
+          title="Upload Property"
+          route="propertyCreate"
+          loadScene={loadScene}
+          icon="plus-square-o"
+        />
 
         <Separator />
 
@@ -39,11 +44,26 @@ export default class SettingsScene extends Component {
 
         {isAuthenticated
           ? <View>
-              <SettingListItem title="My Properties" route="manageProperties" loadScene={loadScene} icon="key" />
+              <SettingListItem
+                title="My Properties"
+                route="manageProperties"
+                loadScene={loadScene}
+                icon="key"
+              />
               <Separator />
-              <SettingListItem title="Logout" route="logout" loadScene={loadScene} icon="key" />
+              <SettingListItem
+                title="Logout"
+                route="logout"
+                loadScene={loadScene}
+                icon="key"
+              />
             </View>
-          : <SettingListItem title="Login" route="login" loadScene={loadScene} icon="key" />}
+          : <SettingListItem
+              title="Login"
+              route="login"
+              loadScene={loadScene}
+              icon="key"
+            />}
       </ScrollView>
     );
   }

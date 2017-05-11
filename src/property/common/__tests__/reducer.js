@@ -1,4 +1,7 @@
-import propertyReducer, {propertyOptionsReducer,propertyHistoryReducer} from '../../common/reducer';
+import propertyReducer, {
+  propertyOptionsReducer,
+  propertyHistoryReducer,
+} from '../../common/reducer';
 import {ACTION_TYPES} from './../../common/actions';
 
 import {
@@ -95,7 +98,9 @@ describe('Property Component Store', () => {
   };
 
   test('property request', () => {
-    expect(propertyReducer(initialState, {type: ACTION_TYPES.PROPERTY_REQUEST})).toEqual({
+    expect(
+      propertyReducer(initialState, {type: ACTION_TYPES.PROPERTY_REQUEST}),
+    ).toEqual({
       ...initialState,
       isFetching: true,
       error: null,
@@ -135,7 +140,9 @@ describe('Property Component Store', () => {
       nextPageUrl: 'http://abc.com',
     };
 
-    expect(propertyReducer(state, {type: ACTION_TYPES.PROPERTY_RESET})).toEqual({
+    expect(
+      propertyReducer(state, {type: ACTION_TYPES.PROPERTY_RESET}),
+    ).toEqual({
       ...state,
       results: [],
       nextPageUrl: undefined,
@@ -164,7 +171,11 @@ describe('Property Component Store', () => {
   });
 
   test('filter reset', () => {
-    expect(propertyHistoryReducer(initialFiltersState, {type: ACTION_TYPES.FILTER_RESET})).toEqual({
+    expect(
+      propertyHistoryReducer(initialFiltersState, {
+        type: ACTION_TYPES.FILTER_RESET,
+      }),
+    ).toEqual({
       ...initialFiltersState,
     });
   });
@@ -733,7 +744,6 @@ describe('Property Component Store', () => {
   });
 
   test('Edit Property', () => {
-
     let initialState = {
       ...initialState,
     };
@@ -799,7 +809,6 @@ describe('Property Component Store', () => {
   });
 
   test('Property Clears Add Listing on Save Success', () => {
-
     let saved_attributes = {
       type: 'For Sale',
       category: 'Chalet',
@@ -829,10 +838,10 @@ describe('Property Component Store', () => {
 
     let state = {
       ...initialState,
-      addListing:{
-        stage:7,
+      addListing: {
+        stage: 7,
         ...initialState.addListing,
-        attributes:saved_attributes
+        attributes: saved_attributes,
       },
     };
 
@@ -845,19 +854,17 @@ describe('Property Component Store', () => {
       }),
     ).toEqual({
       ...state,
-      addListing:{
+      addListing: {
         ...state.addListing,
-        stage:1,
-        attributes:{
-          ...attributes
-        }
-      }
+        stage: 1,
+        attributes: {
+          ...attributes,
+        },
+      },
     });
   });
-
 
   test('Property Clears Edit Listing on Update Success', () => {
-
     let saved_attributes = {
       type: 'For Sale',
       category: 'Chalet',
@@ -887,10 +894,10 @@ describe('Property Component Store', () => {
 
     let state = {
       ...initialState,
-      editListing:{
-        stage:7,
+      editListing: {
+        stage: 7,
         ...initialState.editListing,
-        attributes:saved_attributes
+        attributes: saved_attributes,
       },
     };
 
@@ -903,21 +910,19 @@ describe('Property Component Store', () => {
       }),
     ).toEqual({
       ...state,
-      editListing:{
+      editListing: {
         ...state.editListing,
-        stage:1,
-        attributes:{
-          ...attributes
-        }
-      }
+        stage: 1,
+        attributes: {
+          ...attributes,
+        },
+      },
     });
   });
 
-
   test('Property Edit Gets the Correct Value While Editing', () => {
-
     let saving_property = {
-      _id:'123',
+      _id: '123',
       type: 'For Sale',
       category: 'Chalet',
       address: {
@@ -955,12 +960,11 @@ describe('Property Component Store', () => {
       }),
     ).toEqual({
       ...state,
-      editListing:{
+      editListing: {
         ...state.editListing,
-        stage:1,
-        attributes:saving_property
-      }
+        stage: 1,
+        attributes: saving_property,
+      },
     });
-  })
-
+  });
 });

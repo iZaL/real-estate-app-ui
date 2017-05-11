@@ -1,5 +1,8 @@
 import appReducer from '../app/common/reducer';
-import propertyReducer, {propertyHistoryReducer, propertyOptionsReducer} from '../property/common/reducer';
+import propertyReducer, {
+  propertyHistoryReducer,
+  propertyOptionsReducer,
+} from '../property/common/reducer';
 import ormReducer from './ormReducer';
 import authReducer from '../auth/common/reducer';
 import userReducer from '../user/common/reducer';

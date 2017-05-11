@@ -40,11 +40,18 @@ class AnimatedPicker extends Component {
     const {items, changeItem, selectedItem, offset} = this.props;
     return (
       <View style={{flex: 1}}>
-        <TouchableHighlight onPress={this.closeModal} underlayColor="transparent" style={styles.closeButton}>
+        <TouchableHighlight
+          onPress={this.closeModal}
+          underlayColor="transparent"
+          style={styles.closeButton}>
           <Ionicons name="ios-close" size={30} color="black" />
         </TouchableHighlight>
-        <Picker selectedValue={selectedItem} onValueChange={item => changeItem('gender', item)}>
-          {items.map(item => <Picker.Item key={item} value={item} label={item} />)}
+        <Picker
+          selectedValue={selectedItem}
+          onValueChange={item => changeItem('gender', item)}>
+          {items.map(item => (
+            <Picker.Item key={item} value={item} label={item} />
+          ))}
         </Picker>
       </View>
     );
@@ -82,8 +89,23 @@ export default class PropertyInfo extends Component {
   };
 
   render() {
-    const {onFieldChange, attributes, header, footer, genders, country} = this.props;
-    const {description, price, area, gender, phone1, phone2, email} = attributes.meta;
+    const {
+      onFieldChange,
+      attributes,
+      header,
+      footer,
+      genders,
+      country,
+    } = this.props;
+    const {
+      description,
+      price,
+      area,
+      gender,
+      phone1,
+      phone2,
+      email,
+    } = attributes.meta;
 
     let priceTitle;
     switch (attributes.type) {
@@ -98,9 +120,14 @@ export default class PropertyInfo extends Component {
     return (
       <View style={{flex: 1}}>
 
-        <ScrollView style={styles.container} contentInset={{bottom: 60}} ref="scrollView">
+        <ScrollView
+          style={styles.container}
+          contentInset={{bottom: 60}}
+          ref="scrollView">
 
-          <KeyboardAvoidingView behavior="position" keyboardVerticalOffset={-200}>
+          <KeyboardAvoidingView
+            behavior="position"
+            keyboardVerticalOffset={-200}>
 
             {header}
 
@@ -123,7 +150,8 @@ export default class PropertyInfo extends Component {
                 onChange={event => {
                   this.setState({
                     text: event.nativeEvent.text,
-                    descriptionHeight: event.nativeEvent.contentSize.height + 10,
+                    descriptionHeight: event.nativeEvent.contentSize.height +
+                      10,
                   });
                 }}
                 multiline={true}
@@ -147,7 +175,7 @@ export default class PropertyInfo extends Component {
                 style={[styles.textInput]}
                 onChangeText={value => onFieldChange('price', value)}
                 value={price.toString()}
-                maxLength={6}
+                maxLength={10}
                 placeholderTextColor={colors.gray}
                 placeholder="Price"
                 keyboardType="numeric"

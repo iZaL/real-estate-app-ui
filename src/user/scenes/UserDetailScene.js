@@ -2,9 +2,17 @@
  @flow
  */
 import React, {Component, PropTypes} from 'react';
-import {Dimensions, Image, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
+import {
+  Dimensions,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import colors from '../../common/colors';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import moment from 'moment';
 
 export default class UserDetailScene extends Component {
   static propTypes = {
@@ -17,18 +25,34 @@ export default class UserDetailScene extends Component {
     return (
       <View style={styles.container}>
         {user.image
-          ? <Image source={{uri: user.image}} style={styles.logo} resizeMode="cover" />
-          : <FontAwesome name="picture-o" color="white" size={200} style={styles.emptyImageIcon} />}
+          ? <Image
+              source={{uri: user.image}}
+              style={styles.logo}
+              resizeMode="cover"
+            />
+          : <FontAwesome
+              name="picture-o"
+              color="white"
+              size={200}
+              style={styles.emptyImageIcon}
+            />}
 
         <View style={styles.editIconWrapper}>
           <TouchableHighlight onPress={loadScene} underlayColor="transparent">
-            <FontAwesome name="pencil" color={colors.darkGrey} size={18} style={styles.editIcon} />
+            <FontAwesome
+              name="pencil"
+              color={colors.darkGrey}
+              size={18}
+              style={styles.editIcon}
+            />
           </TouchableHighlight>
         </View>
 
         <View style={styles.content}>
           <Text style={styles.username}>{user.name}</Text>
-          <Text style={styles.date}>Member Since May 2015</Text>
+          <Text style={styles.date}>
+            Member Since {moment(user.created_at).format('MMMM D YYYY')}
+          </Text>
         </View>
 
       </View>

@@ -2,7 +2,13 @@
  * @flow
  */
 import React, {Component, PropTypes} from 'react';
-import {ListView, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
+import {
+  ListView,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import colors from '../../../common/colors';
 import {CountryPropType} from './../../common/proptypes';
 
@@ -30,7 +36,11 @@ export default class List extends Component {
             onSelect(item);
           }}
           underlayColor="transparent">
-          <Text style={[styles.price, selected === item && {color: colors.tomato, fontWeight: '500'}]}>
+          <Text
+            style={[
+              styles.price,
+              selected === item && {color: colors.tomato, fontWeight: '500'},
+            ]}>
             {item}
 
             <Text style={styles.hint}>

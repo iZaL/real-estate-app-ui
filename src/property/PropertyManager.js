@@ -65,7 +65,11 @@ class PropertyList extends PureComponent {
               justifyContent: 'center',
             },
           ]}>
-          <Image source={emptyIcon} style={{width: 200, height: 200}} resizeMode="contain" />
+          <Image
+            source={emptyIcon}
+            style={{width: 200, height: 200}}
+            resizeMode="contain"
+          />
         </View>
       );
     }

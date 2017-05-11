@@ -8,7 +8,9 @@ import {CountryPropType} from './../../common/proptypes';
 
 const CountryFlagIcon = ({country}) => {
   let countryFlag = CountryFlags[country.abbr];
-  return <Image source={countryFlag} style={styles.container} resizeMode="contain" />;
+  return (
+    <Image source={countryFlag} style={styles.container} resizeMode="contain" />
+  );
 };
 
 CountryFlagIcon.propTypes = {

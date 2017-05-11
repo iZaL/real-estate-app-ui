@@ -2,7 +2,16 @@
  @flow
  */
 import React, {Component, PropTypes} from 'react';
-import {Animated, Dimensions, StyleSheet, Text, TouchableHighlight, View, Linking, Alert} from 'react-native';
+import {
+  Animated,
+  Dimensions,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  View,
+  Linking,
+  Alert,
+} from 'react-native';
 import PropertyIcons from '../components/PropertyIcons';
 import Favorite from '../components/Favorite';
 import colors from '../../common/colors';
@@ -97,7 +106,15 @@ export default class PropertyDetailScene extends Component {
   };
 
   render() {
-    let {property, handleFavoritePress, loadProfile, onPinPress, sceneType, setSceneType, country} = this.props;
+    let {
+      property,
+      handleFavoritePress,
+      loadProfile,
+      onPinPress,
+      sceneType,
+      setSceneType,
+      country,
+    } = this.props;
 
     let {scrollY} = this.state;
 
@@ -114,7 +131,13 @@ export default class PropertyDetailScene extends Component {
       }
 
       case 'galleryScene': {
-        return <Gallery images={property.images} setSceneType={setSceneType} sceneType={sceneType} />;
+        return (
+          <Gallery
+            images={property.images}
+            setSceneType={setSceneType}
+            sceneType={sceneType}
+          />
+        );
       }
 
       default: {
@@ -127,10 +150,15 @@ export default class PropertyDetailScene extends Component {
               showsVerticalScrollIndicator={false}
               scrollEventThrottle={16}
               style={[StyleSheet.absoluteFill]}
-              onScroll={Animated.event([{nativeEvent: {contentOffset: {y: scrollY}}}], {
-                useNativeDriver: true,
-              })}>
-              <TouchableHighlight onPress={() => setSceneType('galleryScene')} underlayColor="transparent">
+              onScroll={Animated.event(
+                [{nativeEvent: {contentOffset: {y: scrollY}}}],
+                {
+                  useNativeDriver: true,
+                },
+              )}>
+              <TouchableHighlight
+                onPress={() => setSceneType('galleryScene')}
+                underlayColor="transparent">
                 <View style={styles.heroSpacer} />
               </TouchableHighlight>
 
@@ -147,7 +175,10 @@ export default class PropertyDetailScene extends Component {
 
                   <View style={{flex: 2}}>
 
-                    <PropertyIcons services={property.meta || []} items={['bedroom', 'bathroom', 'parking']} />
+                    <PropertyIcons
+                      services={property.meta || []}
+                      items={['bedroom', 'bathroom', 'parking']}
+                    />
 
                     <Text style={[styles.lightText]}>
                       Added {moment(property.created_at).fromNow()}
@@ -166,11 +197,12 @@ export default class PropertyDetailScene extends Component {
                       }}>
 
                       <Text style={styles.price}>
-                        {property.meta.price} {country.currency}
+                        {property.price}
                       </Text>
 
                       <Favorite
-                        handleFavoritePress={() => handleFavoritePress(property)}
+                        handleFavoritePress={() =>
+                          handleFavoritePress(property)}
                         isFavorited={property.isFavorited}
                       />
 
@@ -251,13 +283,17 @@ export default class PropertyDetailScene extends Component {
 
                 {property.nearByPlaces &&
                   <View>
-                    <Separator style={[styles.separator, {marginVertical: 15}]} />
+                    <Separator
+                      style={[styles.separator, {marginVertical: 15}]}
+                    />
 
                     <View style={{flex: 1, alignItems: 'center'}}>
                       <Text style={[styles.descTitle, {marginBottom: 10}]}>
                         Near By Places
                       </Text>
-                      {property.nearByPlaces.map(place => <Text key={place} style={styles.amenity}>{place}</Text>)}
+                      {property.nearByPlaces.map(place => (
+                        <Text key={place} style={styles.amenity}>{place}</Text>
+                      ))}
                     </View>
                   </View>}
 
@@ -276,11 +312,13 @@ export default class PropertyDetailScene extends Component {
                       ))}
                     </View>
 
-                    <Separator style={[styles.separator, {marginVertical: 15}]} />
+                    <Separator
+                      style={[styles.separator, {marginVertical: 15}]}
+                    />
 
                   </View>}
 
-                {property.meta.email &&
+                {!!property.meta.email &&
                   <View style={[styles.infoRow]}>
                     <FontAwesome
                       name="envelope-o"
@@ -325,7 +363,9 @@ export default class PropertyDetailScene extends Component {
 
                 {!!property.meta.phone2 &&
                   <View>
-                    <Separator style={[styles.separator, {marginVertical: 15}]} />
+                    <Separator
+                      style={[styles.separator, {marginVertical: 15}]}
+                    />
 
                     <View style={[styles.infoRow, {paddingVertical: 5}]}>
                       <FontAwesome

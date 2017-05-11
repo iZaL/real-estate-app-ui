@@ -21,7 +21,11 @@ export default class ProfileScene extends Component {
 
   state = {
     index: 0,
-    routes: [{key: '1', title: 'Basic Info'}, {key: '2', title: 'Properties'}, {key: '3', title: 'Contact'}],
+    routes: [
+      {key: '1', title: 'Basic Info'},
+      {key: '2', title: 'Properties'},
+      {key: '3', title: 'Contact'},
+    ],
   };
 
   handleChangeTab = index => {

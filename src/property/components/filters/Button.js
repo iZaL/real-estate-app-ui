@@ -40,7 +40,14 @@ export default class Button extends Component {
   };
 
   render() {
-    const {title, titleStyle, selected, icon, incrementText, decrementText} = this.props;
+    const {
+      title,
+      titleStyle,
+      selected,
+      icon,
+      incrementText,
+      decrementText,
+    } = this.props;
 
     return (
       <View style={styles.container}>
@@ -49,7 +56,12 @@ export default class Button extends Component {
         </Text>
         <View style={styles.infoWrapper}>
           <View style={styles.iconWrapper}>
-            <FontAwesome name={icon} color="black" size={20} style={styles.icon} />
+            <FontAwesome
+              name={icon}
+              color="black"
+              size={20}
+              style={styles.icon}
+            />
             <Text style={[styles.title, titleStyle]}>{title}</Text>
           </View>
           <View style={styles.selected}>

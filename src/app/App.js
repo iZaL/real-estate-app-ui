@@ -16,8 +16,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-
-    if(CODEPUSH_ENABLED) {
+    if (CODEPUSH_ENABLED) {
       CodePush.sync();
     }
 

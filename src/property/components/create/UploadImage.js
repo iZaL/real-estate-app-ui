@@ -2,7 +2,13 @@
  * @flow
  */
 import React, {Component, PropTypes} from 'react';
-import {Image, ListView, StyleSheet, TouchableHighlight, View} from 'react-native';
+import {
+  Image,
+  ListView,
+  StyleSheet,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import colors from '../../../common/colors';
 import ImagePicker from 'react-native-image-crop-picker';
@@ -84,7 +90,10 @@ export default class UploadImage extends Component {
 
         {header}
 
-        <TouchableHighlight style={styles.cameraIcon} onPress={() => this.pickImage()} underlayColor="transparent">
+        <TouchableHighlight
+          style={styles.cameraIcon}
+          onPress={() => this.pickImage()}
+          underlayColor="transparent">
           <FontAwesome name="camera" size={100} color={colors.white} />
         </TouchableHighlight>
 

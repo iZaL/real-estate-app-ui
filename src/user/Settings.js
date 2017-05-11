@@ -52,13 +52,23 @@ class SettingList extends Component {
 
   render() {
     const {isAuthenticated, user, country} = this.props;
-    return <SettingsScene isAuthenticated={isAuthenticated} user={user} country={country} loadScene={this.loadScene} />;
+    return (
+      <SettingsScene
+        isAuthenticated={isAuthenticated}
+        user={user}
+        country={country}
+        loadScene={this.loadScene}
+      />
+    );
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators({...AUTH_ACTIONS, ...PROPERTY_ACTIONS, ...APP_ACTIONS}, dispatch),
+    actions: bindActionCreators(
+      {...AUTH_ACTIONS, ...PROPERTY_ACTIONS, ...APP_ACTIONS},
+      dispatch,
+    ),
   };
 }
 

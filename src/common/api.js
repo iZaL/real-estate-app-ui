@@ -26,7 +26,9 @@ export function fetchAPI(url, method = 'GET', body = null, isBlob = false) {
     )
     .then(({status, statusType, json}) => {
       if (status !== 200 || !json.success) {
-        const unknownError = json.errors ? json.errors : `Unknown Error. ${statusType}`;
+        const unknownError = json.errors
+          ? json.errors
+          : `Unknown Error. ${statusType}`;
         const errorMsg = json.message ? json.message : unknownError;
         return Promise.reject(errorMsg);
       }

@@ -36,12 +36,16 @@ export default class UploadVideo extends Component {
 
         {header}
 
-        <TouchableHighlight style={styles.cameraIcon} onPress={() => this.pickVideo()} underlayColor="transparent">
+        <TouchableHighlight
+          style={styles.cameraIcon}
+          onPress={() => this.pickVideo()}
+          underlayColor="transparent">
           <FontAwesome name="video-camera" size={100} color={colors.white} />
         </TouchableHighlight>
 
         <View style={styles.menuContainer}>
-          {video && <VideoPlayer video={video} removeMedia={this.removeVideo} />}
+          {video &&
+            <VideoPlayer video={video} removeMedia={this.removeVideo} />}
         </View>
 
         {footer}

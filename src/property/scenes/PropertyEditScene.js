@@ -94,7 +94,10 @@ export default class PropertyEditScene extends Component {
     requiredFields.map(item => {
       if (!meta[item]) {
         hasError = true;
-        return this.props.actions.setNotification(`${item} is required`, 'error');
+        return this.props.actions.setNotification(
+          `${item} is required`,
+          'error',
+        );
       }
     });
 
@@ -186,7 +189,9 @@ export default class PropertyEditScene extends Component {
                 />
               : navigateBack
           }
-          middle={<Text style={{fontWeight: '500', fontSize: 17}}>{navBarTitle}</Text>}
+          middle={
+            <Text style={{fontWeight: '500', fontSize: 17}}>{navBarTitle}</Text>
+          }
         />
 
         {stage === 1 &&
@@ -212,7 +217,11 @@ export default class PropertyEditScene extends Component {
             country={country}
             address={attributes.address}
             category="Apartment"
-            header={<Header title={'Where is your ' + attributes.category + ' located?'} />}
+            header={
+              <Header
+                title={'Where is your ' + attributes.category + ' located?'}
+              />
+            }
             updateAddress={this.updateAddress}
             updateListing={this.goToNextStage}
           />}
@@ -222,7 +231,15 @@ export default class PropertyEditScene extends Component {
             meta={attributes.meta}
             filters={metas}
             updateMeta={this.updateMeta}
-            header={<Header title={'Just a little bit more about your ' + attributes.category + ''} />}
+            header={
+              <Header
+                title={
+                  'Just a little bit more about your ' +
+                    attributes.category +
+                    ''
+                }
+              />
+            }
             footer={<Footer updateListing={this.goToNextStage} />}
           />}
 
@@ -230,7 +247,9 @@ export default class PropertyEditScene extends Component {
           <UploadImage
             images={attributes.images}
             updateImage={this.updateImage}
-            header={<Header title={'Upload ' + attributes.category + ' Images'} />}
+            header={
+              <Header title={'Upload ' + attributes.category + ' Images'} />
+            }
             footer={<Footer updateListing={this.goToNextStage} />}
           />}
 
@@ -260,7 +279,11 @@ export default class PropertyEditScene extends Component {
             updateListing={this.updateAmenities}
             header={<Header title="Select Amenities" />}
             footer={
-              <Footer updateListing={this.saveProperty} title={saving ? 'Saving ...' : 'Save'} disabled={saving} />
+              <Footer
+                updateListing={this.saveProperty}
+                title={saving ? 'Saving ...' : 'Save'}
+                disabled={saving}
+              />
             }
           />}
       </Animated.View>

@@ -1,5 +1,11 @@
 import React, {Component, PropTypes} from 'react';
-import {StyleSheet, Text, TextInput, TouchableHighlight, View} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import colors from './../../common/colors';
 import NavBar from './../../components/NavBar';
 import NavButton from './../../components/NavButton';
@@ -15,11 +21,25 @@ export default class PasswordUpdateScene extends Component {
   };
 
   render() {
-    const {onFieldChange, password, confirmedPassword, onUpdatePassword, onRightButtonPress} = this.props;
+    const {
+      onFieldChange,
+      password,
+      confirmedPassword,
+      onUpdatePassword,
+      onRightButtonPress,
+    } = this.props;
 
     return (
       <View style={{flex: 1}}>
-        <NavBar right={<NavButton icon="ios-close" onPress={() => onRightButtonPress()} style={{paddingLeft: 20}} />} />
+        <NavBar
+          right={
+            <NavButton
+              icon="ios-close"
+              onPress={() => onRightButtonPress()}
+              style={{paddingLeft: 20}}
+            />
+          }
+        />
 
         <View style={styles.container}>
 
@@ -37,7 +57,8 @@ export default class PasswordUpdateScene extends Component {
           <Text style={styles.label}>CONFIRM NEW PASSWORD</Text>
           <TextInput
             style={[styles.textInput]}
-            onChangeText={value => onFieldChange('password_confirmation', value)}
+            onChangeText={value =>
+              onFieldChange('password_confirmation', value)}
             value={confirmedPassword}
             maxLength={40}
             placeholderTextColor="gray"
@@ -48,9 +69,15 @@ export default class PasswordUpdateScene extends Component {
           <TouchableHighlight
             onPress={() => onUpdatePassword()}
             underlayColor="transparent"
-            style={[styles.button, styles.center, {marginTop: 50}, (!password || !confirmedPassword) && {opacity: 0.3}]}
+            style={[
+              styles.button,
+              styles.center,
+              {marginTop: 50},
+              (!password || !confirmedPassword) && {opacity: 0.3},
+            ]}
             disabled={!password || !confirmedPassword}>
-            <Text style={[styles.buttonText, styles.textCenter, {color: 'black'}]}>
+            <Text
+              style={[styles.buttonText, styles.textCenter, {color: 'black'}]}>
               UPDATE PASSWORD
             </Text>
           </TouchableHighlight>

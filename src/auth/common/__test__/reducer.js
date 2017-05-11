@@ -18,11 +18,15 @@ describe('App Component Store', () => {
   };
 
   test('should return the initial state', () => {
-    expect(authReducer(initialState, {type: 'UNDEFINED'})).toEqual(initialState);
+    expect(authReducer(initialState, {type: 'UNDEFINED'})).toEqual(
+      initialState,
+    );
   });
 
   test('login request', () => {
-    expect(authReducer(initialState, {type: ACTION_TYPES.LOGIN_REQUEST})).toEqual({
+    expect(
+      authReducer(initialState, {type: ACTION_TYPES.LOGIN_REQUEST}),
+    ).toEqual({
       ...initialState,
       isAuthenticated: false,
       userID: null,
@@ -64,14 +68,18 @@ describe('App Component Store', () => {
   });
 
   test('register request', () => {
-    expect(authReducer(initialState, {type: ACTION_TYPES.REGISTER_REQUEST})).toEqual({
+    expect(
+      authReducer(initialState, {type: ACTION_TYPES.REGISTER_REQUEST}),
+    ).toEqual({
       ...initialState,
       register: {...initialState.register, busy: true},
     });
   });
 
   test('register success', () => {
-    expect(authReducer(initialState, {type: ACTION_TYPES.REGISTER_SUCCESS})).toEqual({
+    expect(
+      authReducer(initialState, {type: ACTION_TYPES.REGISTER_SUCCESS}),
+    ).toEqual({
       ...initialState,
       register: {...initialState.register, busy: false},
     });

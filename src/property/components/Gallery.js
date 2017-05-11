@@ -1,7 +1,13 @@
 /** @flow */
 
 import React, {Component, PropTypes} from 'react';
-import {Dimensions, Image, StyleSheet, TouchableHighlight, View} from 'react-native';
+import {
+  Dimensions,
+  Image,
+  StyleSheet,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import Swiper from 'react-native-swiper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -13,7 +19,9 @@ export default class Gallery extends Component {
   };
 
   renderGallery = image => {
-    return <Image source={{uri: image}} style={styles.cover} resizeMode="contain" />;
+    return (
+      <Image source={{uri: image}} style={styles.cover} resizeMode="contain" />
+    );
   };
 
   render() {
@@ -21,10 +29,15 @@ export default class Gallery extends Component {
     return (
       <View style={styles.container}>
         {sceneType == 'galleryScene' &&
-          <TouchableHighlight style={styles.shrinkButton} onPress={() => setSceneType('detailScene')}>
+          <TouchableHighlight
+            style={styles.shrinkButton}
+            onPress={() => setSceneType('detailScene')}>
             <Ionicons name="ios-close" size={40} color="white" />
           </TouchableHighlight>}
-        <Swiper style={[styles.gallery]} showsButtons buttonWrapperStyle={styles.navButtons}>
+        <Swiper
+          style={[styles.gallery]}
+          showsButtons
+          buttonWrapperStyle={styles.navButtons}>
           {images.map((image, i) => {
             return (
               <View style={styles.album} key={i}>

@@ -85,10 +85,14 @@ class PropertyDetail extends Component {
   };
 
   openMaps(property, buttonIndex) {
-    let address = encodeURIComponent(`${property.address.city},${property.address.state},${property.address.country}`);
+    let address = encodeURIComponent(
+      `${property.address.city},${property.address.state},${property.address.country}`,
+    );
     switch (buttonIndex) {
       case 0:
-        Linking.openURL(`http://maps.apple.com/?dll=${property.address.latitude},${property.address.longitude}`);
+        Linking.openURL(
+          `http://maps.apple.com/?dll=${property.address.latitude},${property.address.longitude}`,
+        );
         break;
       case 1:
         const nativeGoogleUrl = `comgooglemaps://?daddr=${property.address.latitude},${property.address.longitude}&center=${property.address.latitude},${property.address.longitude}&zoom=14&views=traffic&directionsmode=driving`;

@@ -1,5 +1,11 @@
 import React, {Component, PropTypes} from 'react';
-import {StyleSheet, Text, TextInput, TouchableHighlight, View} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableHighlight,
+  View,
+} from 'react-native';
 import colors from './../../common/colors';
 import NavBar from './../../components/NavBar';
 import NavButton from './../../components/NavButton';
@@ -33,7 +39,15 @@ export default class RegisterScene extends Component {
 
     return (
       <View style={{flex: 1}}>
-        <NavBar right={<NavButton icon="ios-close" onPress={() => onRightButtonPress()} style={{paddingLeft: 20}} />} />
+        <NavBar
+          right={
+            <NavButton
+              icon="ios-close"
+              onPress={() => onRightButtonPress()}
+              style={{paddingLeft: 20}}
+            />
+          }
+        />
 
         <View style={styles.container}>
 
@@ -82,7 +96,8 @@ export default class RegisterScene extends Component {
           <Text style={styles.label}>CONFIRM PASSWORD</Text>
           <TextInput
             style={[styles.textInput]}
-            onChangeText={value => onFieldChange('password_confirmation', value)}
+            onChangeText={value =>
+              onFieldChange('password_confirmation', value)}
             value={password_confirmation}
             maxLength={40}
             placeholderTextColor="gray"
@@ -100,7 +115,11 @@ export default class RegisterScene extends Component {
             </Text>
           </TouchableHighlight>
 
-          <Text style={[styles.textCenter, {paddingTop: 30, paddingBottom: 30, color: 'white'}]}>
+          <Text
+            style={[
+              styles.textCenter,
+              {paddingTop: 30, paddingBottom: 30, color: 'white'},
+            ]}>
             or
           </Text>
 
@@ -108,7 +127,8 @@ export default class RegisterScene extends Component {
             onPress={() => handleLoginRoute()}
             underlayColor="transparent"
             style={[styles.button, styles.center, {opacity: 0.5}]}>
-            <Text style={[styles.buttonText, styles.textCenter, {color: 'black'}]}>
+            <Text
+              style={[styles.buttonText, styles.textCenter, {color: 'black'}]}>
               Login
             </Text>
           </TouchableHighlight>

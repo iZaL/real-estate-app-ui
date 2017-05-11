@@ -28,7 +28,10 @@ export default class CountryPicker extends Component {
       <TouchableWithoutFeedback onPress={this._handleToggleMenu}>
         <Animated.View
           pointerEvents={this.props.menuIsVisible ? 'auto' : 'none'}
-          style={[StyleSheet.absoluteFill, {backgroundColor: 'black', opacity: opacity}]}
+          style={[
+            StyleSheet.absoluteFill,
+            {backgroundColor: 'black', opacity: opacity},
+          ]}
         />
       </TouchableWithoutFeedback>
     );
@@ -96,7 +99,9 @@ export default class CountryPicker extends Component {
     return (
       <View style={{padding: 10}}>
 
-        <TouchableWithoutFeedback hitSlop={{left: 40, top: 30, right: 40, bottom: 10}} onPress={this._handleToggleMenu}>
+        <TouchableWithoutFeedback
+          hitSlop={{left: 40, top: 30, right: 40, bottom: 10}}
+          onPress={this._handleToggleMenu}>
           <View
             style={{
               flexDirection: 'row',
@@ -118,7 +123,10 @@ export default class CountryPicker extends Component {
 
           </View>
         </TouchableWithoutFeedback>
-        <Modal style={styles.menuModal} visible={this.props.menuIsVisible} collapsible={false}>
+        <Modal
+          style={styles.menuModal}
+          visible={this.props.menuIsVisible}
+          collapsible={false}>
           {this._renderMenuOverlay()}
           {this._renderMenu()}
         </Modal>

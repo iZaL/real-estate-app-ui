@@ -3,7 +3,9 @@ import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import colors from '../../common/colors';
 import {GOOGLE_MAPS_KEY} from '../../env.js';
-import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
+import {
+  GooglePlacesAutocomplete,
+} from 'react-native-google-places-autocomplete';
 import NavBar from './../../components/NavBar';
 import NavButton from './../../components/NavButton';
 import Separator from './../../components/Separator';
@@ -19,12 +21,22 @@ export default class LocationSearchScene extends Component {
   };
 
   render() {
-    const {onSearch, searchString, country, onRightButtonPress, onLeftButtonPress} = this.props;
+    const {
+      onSearch,
+      searchString,
+      country,
+      onRightButtonPress,
+      onLeftButtonPress,
+    } = this.props;
     return (
       <View style={{flex: 1}}>
         <NavBar
           right={
-            <NavButton title="Done" onPress={() => onRightButtonPress(this.googlePlaces)} style={{paddingLeft: 10}} />
+            <NavButton
+              title="Done"
+              onPress={() => onRightButtonPress(this.googlePlaces)}
+              style={{paddingLeft: 10}}
+            />
           }
           middle={
             <Text style={{fontWeight: '500', fontSize: 17}}>
@@ -45,7 +57,12 @@ export default class LocationSearchScene extends Component {
           <View style={{flex: 1}}>
             <View style={styles.wrapper}>
 
-              <Ionicons name="ios-search" size={18} color={colors.darkGrey} style={styles.icon} />
+              <Ionicons
+                name="ios-search"
+                size={18}
+                color={colors.darkGrey}
+                style={styles.icon}
+              />
               <GooglePlacesAutocomplete
                 placeholder="Search"
                 minLength={3}

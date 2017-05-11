@@ -3,7 +3,9 @@ import {call, put, select, takeLatest, fork} from 'redux-saga/effects';
 import {getItem as getStoredItem, setItem} from '../../common/storage';
 import {API as AUTH_API, AUTH_STORAGE_KEY} from '../../auth/common/api';
 import {ACTION_TYPES as AUTH_ACTION_TYPES} from '../../auth/common/actions';
-import {ACTION_TYPES as PROPERTY_ACTION_TYPES} from '../../property/common/actions';
+import {
+  ACTION_TYPES as PROPERTY_ACTION_TYPES,
+} from '../../property/common/actions';
 import {ACTION_TYPES} from './actions';
 import {COUNTRY_KEY, BOOTSTRAPPED} from './reducer';
 
@@ -68,4 +70,8 @@ function* changeCountryMonitor() {
   yield takeLatest(ACTION_TYPES.CHANGE_COUNTRY, changeCountrySaga);
 }
 
-export default (APP_SAGA = [fork(bootMonitor), fork(bootstrapMonitor), fork(changeCountryMonitor)]);
+export default (APP_SAGA = [
+  fork(bootMonitor),
+  fork(bootstrapMonitor),
+  fork(changeCountryMonitor),
+]);

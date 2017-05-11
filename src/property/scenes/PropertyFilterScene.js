@@ -2,7 +2,15 @@
  * @flow
  */
 import React, {Component, PropTypes} from 'react';
-import {Animated, ScrollView, StyleSheet, Text, TouchableHighlight, TouchableWithoutFeedback, View} from 'react-native';
+import {
+  Animated,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 import colors from '../../common/colors';
 import List from '../components/filters/List';
 import Button from '../components/filters/Button';
@@ -15,7 +23,11 @@ import NavButton from '../../components/NavButton';
 import CountryPicker from '../components/filters/CountryPicker';
 import {CountryPropType} from '../common/proptypes';
 
-import {TabBar, TabViewAnimated, TabViewPagerScroll} from 'react-native-tab-view';
+import {
+  TabBar,
+  TabViewAnimated,
+  TabViewPagerScroll,
+} from 'react-native-tab-view';
 
 export default class PropertyFilterScene extends Component {
   static propTypes = {
@@ -36,7 +48,7 @@ export default class PropertyFilterScene extends Component {
     onTypeChange: PropTypes.func.isRequired,
     propertyType: PropTypes.string.isRequired,
     mapView: PropTypes.bool.isRequired,
-    searchMetas:PropTypes.object.isRequired
+    searchMetas: PropTypes.object.isRequired,
   };
 
   toggleMenuVisible = value => {
@@ -53,7 +65,11 @@ export default class PropertyFilterScene extends Component {
       menuIsVisible: false,
       tabs: {
         index: selectedIndex,
-        routes: [{key: '1', title: 'For Sale'}, {key: '2', title: 'For Rent'}, {key: '3', title: 'For Share'}],
+        routes: [
+          {key: '1', title: 'For Sale'},
+          {key: '2', title: 'For Rent'},
+          {key: '3', title: 'For Share'},
+        ],
       },
     };
   }
@@ -110,7 +126,15 @@ export default class PropertyFilterScene extends Component {
   };
 
   renderScene = () => {
-    let {priceFrom, priceTo, bedroom, bathroom, parking, category, sortBy} = this.props.filters;
+    let {
+      priceFrom,
+      priceTo,
+      bedroom,
+      bathroom,
+      parking,
+      category,
+      sortBy,
+    } = this.props.filters;
 
     let {
       onPriceFromSelect,
@@ -133,9 +157,19 @@ export default class PropertyFilterScene extends Component {
         automaticallyAdjustContentInsets={false}
         contentInset={{bottom: 80}}>
 
-        <List selected={sortBy} onSelect={onSortSelect} ranges={sortOptions} title="Sort By" />
+        <List
+          selected={sortBy}
+          onSelect={onSortSelect}
+          ranges={sortOptions}
+          title="Sort By"
+        />
 
-        <List selected={category} onSelect={onCategorySelect} ranges={categories} title="Property Type" />
+        <List
+          selected={category}
+          onSelect={onCategorySelect}
+          ranges={categories}
+          title="Property Type"
+        />
 
         <Separator style={{marginBottom: 20}} />
 
@@ -206,7 +240,13 @@ export default class PropertyFilterScene extends Component {
   };
 
   renderPager = (props: *) => {
-    return <TabViewPagerScroll {...props} swipeEnabled={false} animationEnabled={true} />;
+    return (
+      <TabViewPagerScroll
+        {...props}
+        swipeEnabled={false}
+        animationEnabled={true}
+      />
+    );
   };
 
   renderSearchBar = () => {
@@ -222,7 +262,12 @@ export default class PropertyFilterScene extends Component {
           paddingVertical: 10,
           alignItems: 'center',
         }}>
-        <Ionicons name="ios-search" size={24} color={colors.darkGrey} style={{height: 24, width: 24}} />
+        <Ionicons
+          name="ios-search"
+          size={24}
+          color={colors.darkGrey}
+          style={{height: 24, width: 24}}
+        />
         <TouchableWithoutFeedback onPress={() => onShowSearch()}>
           <View
             style={{
@@ -256,8 +301,14 @@ export default class PropertyFilterScene extends Component {
                     }}>
                     {searchString}
                   </Text>
-                  <TouchableHighlight onPress={() => onSearch('')} style={styles.closeButtonContainer}>
-                    <Ionicons name="ios-close-circle-outline" size={16} color={colors.tomato} />
+                  <TouchableHighlight
+                    onPress={() => onSearch('')}
+                    style={styles.closeButtonContainer}>
+                    <Ionicons
+                      name="ios-close-circle-outline"
+                      size={16}
+                      color={colors.tomato}
+                    />
                   </TouchableHighlight>
                 </View>}
           </View>
@@ -267,7 +318,12 @@ export default class PropertyFilterScene extends Component {
           onPress={() => onMapViewChange()}
           underlayColor="transparent"
           hitSlop={{top: 10, left: 10, bottom: 10, right: 10}}>
-          <FontAwesome name="globe" size={24} color={mapView ? 'green' : 'gray'} style={styles.globeIcon} />
+          <FontAwesome
+            name="globe"
+            size={24}
+            color={mapView ? 'green' : 'gray'}
+            style={styles.globeIcon}
+          />
 
         </TouchableHighlight>
       </View>
@@ -290,7 +346,13 @@ export default class PropertyFilterScene extends Component {
       <View style={{flex: 1, backgroundColor: 'white'}}>
 
         <NavBar
-          right={<NavButton icon="ios-close" onPress={onNavigateBack} style={{paddingLeft: 20}} />}
+          right={
+            <NavButton
+              icon="ios-close"
+              onPress={onNavigateBack}
+              style={{paddingLeft: 20}}
+            />
+          }
           left={
             <CountryPicker
               {...this.state}
@@ -318,7 +380,10 @@ export default class PropertyFilterScene extends Component {
           mapView
         />
 
-        <TouchableHighlight underlayColor="transparent" onPress={onSearchPress} style={styles.footer}>
+        <TouchableHighlight
+          underlayColor="transparent"
+          onPress={onSearchPress}
+          style={styles.footer}>
           <Text style={styles.footerText}>
             Apply Filter
           </Text>
