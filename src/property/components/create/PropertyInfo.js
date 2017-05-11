@@ -185,25 +185,6 @@ export default class PropertyInfo extends Component {
               <Separator style={{marginVertical: 10}} />
 
               <Text style={styles.label}>
-                Email
-                <Text style={styles.required}>
-                  *
-                </Text>
-              </Text>
-              <TextInput
-                style={[styles.textInput]}
-                onChangeText={value => onFieldChange('email', value)}
-                value={email}
-                maxLength={30}
-                placeholderTextColor={colors.gray}
-                placeholder="Your Email"
-                keyboardType="email-address"
-                returnKeyType="done"
-              />
-
-              <Separator style={{marginVertical: 10}} />
-
-              <Text style={styles.label}>
                 Mobile
                 <Text style={styles.required}>
                   *
@@ -221,6 +202,24 @@ export default class PropertyInfo extends Component {
               />
 
               <Separator style={{marginVertical: 10}} />
+
+
+              <Text style={styles.label}>
+                Email
+              </Text>
+              <TextInput
+                style={[styles.textInput]}
+                onChangeText={value => onFieldChange('email', value)}
+                value={email}
+                maxLength={30}
+                placeholderTextColor={colors.gray}
+                placeholder="Your Email"
+                keyboardType="email-address"
+                returnKeyType="done"
+              />
+
+              <Separator style={{marginVertical: 10}} />
+
 
               <Text style={styles.label}>Space (metre)</Text>
               <TextInput
@@ -240,7 +239,7 @@ export default class PropertyInfo extends Component {
               <TextInput
                 style={[styles.textInput]}
                 onChangeText={value => onFieldChange('phone2', value)}
-                value={phone2 && phone2.toString()}
+                value={phone2 ? phone2.toString() : ''}
                 maxLength={12}
                 placeholderTextColor={colors.gray}
                 placeholder="Phone Number "

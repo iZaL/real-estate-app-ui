@@ -1,8 +1,8 @@
 import orm from '../../common/orm';
-import {createSelector} from 'reselect';
-import {createSelector as ormSelector} from 'redux-orm';
-import {SELECTORS as APP_SELECTORS} from './../../app/common/selectors';
-import {SELECTORS as AUTH_SELECTORS} from './../../auth/common/selectors';
+import { createSelector } from 'reselect';
+import { createSelector as ormSelector } from 'redux-orm';
+import { SELECTORS as APP_SELECTORS } from './../../app/common/selectors';
+import { SELECTORS as AUTH_SELECTORS } from './../../auth/common/selectors';
 
 const ormReducer = state => state.ormReducer;
 
@@ -25,8 +25,8 @@ const propertySearchHistory = state => state.propertyHistoryReducer;
 const getPropertyID = (state, props) =>
   props.navigation.state.params.property._id;
 
-const filterResults = ({Property, User}, results, countries) =>
-  results.map(id => {
+const filterResults = ({ Property, User }, results, countries) =>
+  results.map((id) => {
     const property = Property.withId(id).ref;
     return Object.assign({}, property, {
       user: User.withId(property.user).ref,
@@ -60,7 +60,7 @@ const getMyProperties = createSelector(
   ormReducer,
   AUTH_SELECTORS.getCurrentUserID,
   APP_SELECTORS.getCountriesObject,
-  ormSelector(orm, ({Property, User}, userID, countries) =>
+  ormSelector(orm, ({ Property, User }, userID, countries) =>
     Property.all()
       .toRefArray()
       .filter(property => property.user === userID)
@@ -80,7 +80,7 @@ const getMyProperties = createSelector(
 const getFavorites = createSelector(
   ormReducer,
   APP_SELECTORS.getCountriesObject,
-  ormSelector(orm, ({Property, User}, countries) =>
+  ormSelector(orm, ({ Property, User }, countries) =>
     Property.all()
       .toRefArray()
       .filter(property => property.isFavorited)
@@ -101,7 +101,7 @@ const getProperty = createSelector(
   ormReducer,
   getPropertyID,
   APP_SELECTORS.getCountriesObject,
-  ormSelector(orm, ({Property, User}, id, countries) => {
+  ormSelector(orm, ({ Property, User }, id, countries) => {
     const property = Property.withId(id).ref;
     return Object.assign({}, property, {
       user: User.withId(property.user).ref,
@@ -161,7 +161,7 @@ const propertySearchMetas = state => state.propertyOptionsReducer.searchMetas;
 const propertyCategories = state => state.propertyOptionsReducer.categories;
 const propertyPrices = state => state.propertyOptionsReducer.prices;
 
-//Options Selectors
+// Options Selectors
 const getSelectedPropertyType = createSelector(
   selectedPropertyType,
   type => type,
