@@ -282,11 +282,15 @@ const styles = StyleSheet.create({
     top: 210,
     backgroundColor: 'white',
     marginHorizontal: 10,
-    // opacity: 0.9,
+    opacity: 1,
     zIndex: 1000,
-    shadowOffset:{width:1,height:1},
-    shadowColor:'black',
-    shadowRadius:1
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 5,
+    shadowOpacity: 1.0
   },
   searchTabs: {
     flex: 1,
