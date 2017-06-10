@@ -260,7 +260,7 @@ export default class PropertyHomeScene extends Component {
   }
 }
 
-const HeroHeight = 250;
+const HeroHeight = 350;
 
 const styles = StyleSheet.create({
   container: {
@@ -279,11 +279,14 @@ const styles = StyleSheet.create({
   },
   searchBar: {
     position: 'absolute',
-    top: 120,
+    top: 210,
     backgroundColor: 'white',
     marginHorizontal: 10,
-    opacity: 0.9,
+    // opacity: 0.9,
     zIndex: 1000,
+    shadowOffset:{width:1,height:1},
+    shadowColor:'black',
+    shadowRadius:1
   },
   searchTabs: {
     flex: 1,
