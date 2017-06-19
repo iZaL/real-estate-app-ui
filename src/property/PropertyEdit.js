@@ -11,11 +11,10 @@ import {SELECTORS as APP_SELECTORS} from './../app/common/selectors';
 import PropertyEditScene from './scenes/PropertyEditScene';
 
 class PropertyEdit extends Component {
-  static navigationOptions = {
-    header: ({state, setParams}) => ({
-      visible: false,
-    }),
-  };
+
+  static navigationOptions = ({navigation})=>({
+    header: null,
+  });
 
   updateStore = payload => {
     return this.props.actions.changeEditingListingValue(payload);

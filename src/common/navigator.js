@@ -24,18 +24,15 @@ const PropertyTab = StackNavigator(
   {
     PropertyHomeScene: {
       screen: PropertyHome,
-      // navigationOptions: {
-      //   title: () => 'Property Search',
-      // },
     },
     LocationSearch: {
       screen: PropertyLocationPicker,
     },
     PropertyListScene: {
       screen: PropertyList,
-      // navigationOptions: {
-      //   title: () => 'Property Search',
-      // },
+      navigationOptions: {
+        title:'Property Search',
+      },
     },
     PropertyDetailScene: {
       screen: PropertyDetail,
@@ -63,9 +60,9 @@ const FavoriteTab = StackNavigator(
     },
     PropertyDetailScene: {
       screen: PropertyDetail,
-      // navigationOptions: {
-      //   title: ({state}) => `${state.params.property.meta.title}!`,
-      // },
+      navigationOptions: ({ navigation }) => ({
+        title: `${navigation.state.params.property.meta.title}!`,
+      }),
     },
     ProfileScene: {
       screen: Profile,
@@ -81,9 +78,9 @@ const PropertyCreateTab = StackNavigator(
   {
     PropertyCreateScene: {
       screen: PropertyCreate,
-      // navigationOptions: {
-      //   title: () => 'Add Property',
-      // },
+      navigationOptions: {
+        title:'Add Property',
+      },
     },
   },
   {
@@ -95,15 +92,15 @@ const SettingTab = StackNavigator(
   {
     SettingsScene: {
       screen: Settings,
-      // navigationOptions: {
-      //   title: () => 'Settings',
-      // },
+      navigationOptions: {
+        title: 'Settings',
+      },
     },
     CountryListScene: {
       screen: CountryList,
-      // navigationOptions: {
-      //   title: () => 'Choose Country',
-      // },
+      navigationOptions: {
+        title:'Choose Country',
+      },
     },
     UserDetailScene: {
       screen: UserDetail,
@@ -115,15 +112,15 @@ const SettingTab = StackNavigator(
     },
     PropertyManager: {
       screen: PropertyManager,
-      // navigationOptions: {
-      //   title: () => 'Manage Your Listings',
-      // },
+      navigationOptions: {
+        title:'Manage Your Listings',
+      },
     },
     PropertyDetailScene: {
       screen: PropertyDetail,
-      // navigationOptions: {
-      //   title: ({state}) => `${state.params.property.meta.title}!`,
-      // },
+      navigationOptions: ({ navigation }) => ({
+        title: `${navigation.state.params.property.meta.title}!`,
+      }),
     },
     PropertyEditScene: {
       screen: PropertyEdit,

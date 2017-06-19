@@ -11,6 +11,7 @@ import {SELECTORS as APP_SELECTORS} from './../app/common/selectors';
 import PropertyEditScene from './scenes/PropertyEditScene';
 
 class PropertyCreate extends Component {
+
   static navigationOptions = ({navigation})=>({
     header: null,
   });
