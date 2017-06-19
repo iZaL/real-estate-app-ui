@@ -335,6 +335,7 @@ const styles = StyleSheet.create({
     color: colors.smokeGreyDark,
     paddingLeft: 10,
     fontSize: 17,
+    textAlign:'left'
   },
   searchHistory: {
     flex: 1,
@@ -344,6 +345,7 @@ const styles = StyleSheet.create({
     color: colors.darkGrey,
     fontWeight: '500',
     fontSize: 18,
+    textAlign:'left'
   },
   hero: {
     position: 'absolute',

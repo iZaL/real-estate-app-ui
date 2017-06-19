@@ -12,6 +12,7 @@ import PropertyDetail from './../property/PropertyDetail';
 import PropertyCreate from './../property/PropertyCreate';
 import PropertyEdit from './../property/PropertyEdit';
 import Settings from './../user/Settings';
+import SelectLanguage from './../app/SelectLanguage';
 import Profile from './../user/Profile';
 import UserDetail from './../user/UserDetail';
 import UserEdit from './../user/UserEdit';
@@ -128,6 +129,8 @@ const SettingTab = StackNavigator(
     ProfileScene: {
       screen: Profile,
     },
+    SelectLanguageScene: {screen: SelectLanguage},
+
   },
   {
     headerBackTitle:null,

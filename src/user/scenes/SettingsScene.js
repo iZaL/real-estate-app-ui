@@ -42,6 +42,15 @@ export default class SettingsScene extends Component {
 
         <Separator />
 
+        <SettingListItem
+          title="Change Language"
+          route="languageSelect"
+          loadScene={loadScene}
+          icon="calendar-minus-o"
+        />
+        <Separator />
+
+
         {isAuthenticated
           ? <View>
               <SettingListItem

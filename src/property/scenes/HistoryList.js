@@ -171,6 +171,7 @@ let styles = StyleSheet.create({
     color: colors.smokeGreyDark,
     fontWeight: '100',
     fontSize: 13,
+    textAlign:'left'
   },
   historyContainer: {
     paddingTop: 10,
