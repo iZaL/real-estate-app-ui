@@ -17,9 +17,7 @@ class PropertyHome extends Component {
   };
 
   static navigationOptions = {
-    header: () => ({
-      visible: false,
-    }),
+    header: null
   };
 
   changePropertyType = value => {
