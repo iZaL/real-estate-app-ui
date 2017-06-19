@@ -7,7 +7,9 @@ import {
   ACTION_TYPES as PROPERTY_ACTION_TYPES,
 } from '../../property/common/actions';
 import {ACTION_TYPES} from './actions';
-import {COUNTRY_KEY, BOOTSTRAPPED} from './reducer';
+import {COUNTRY_KEY, BOOTSTRAPPED, LANGUAGE_STORAGE_KEY} from './reducer';
+import RNRestart from 'react-native-restart';
+import {I18nManager} from 'react-native';
 
 function* bootstrap(action) {
   if (action.value === true) {
@@ -20,6 +22,8 @@ function* bootApp() {
   let currentCountry = yield call(getStoredItem, COUNTRY_KEY);
   let bootstrapped = yield call(getStoredItem, BOOTSTRAPPED);
   let state = yield select();
+
+  let currentLanguage = yield call(getStoredItem, LANGUAGE_STORAGE_KEY);
 
   if (isNull(bootstrapped)) {
     yield put({type: ACTION_TYPES.BOOTSTRAPPED, value: false});
@@ -43,6 +47,34 @@ function* bootApp() {
     }
   }
 
+  if (!isNull(currentLanguage)) {
+    yield put({
+      type: ACTION_TYPES.SET_LANGUAGE_SUCCESS,
+      language: currentLanguage,
+    });
+  }
+
+  if (currentLanguage === 'en') {
+    I18nManager.allowRTL(false);
+    I18nManager.forceRTL(false);
+  } else {
+    I18nManager.allowRTL(true);
+    I18nManager.forceRTL(true);
+  }
+
+  if (I18nManager.isRTL && currentLanguage === 'en') {
+    I18nManager.allowRTL(false);
+    RNRestart.Restart();
+  }
+
+
+  if (!I18nManager.isRTL && currentLanguage === 'ar') {
+    I18nManager.allowRTL(true);
+    I18nManager.forceRTL(true);
+    RNRestart.Restart();
+  }
+
+
   yield put({type: ACTION_TYPES.COUNTRY_CHANGED, country: currentCountry});
   yield put({type: ACTION_TYPES.BOOT_SUCCESS});
 }
@@ -59,6 +91,20 @@ function* changeCountrySaga(action) {
   yield put({type: PROPERTY_ACTION_TYPES.PROPERTY_REQUEST});
 }
 
+function* setLanguage(action) {
+  let state = yield select();
+  let currentLanguage = state.appReducer.language;
+
+  if (currentLanguage === action.language) return;
+
+  yield call(setItem, LANGUAGE_STORAGE_KEY, action.language);
+
+  yield put({
+    type: ACTION_TYPES.SET_LANGUAGE_SUCCESS,
+    language: action.language,
+  });
+}
+
 function* bootMonitor() {
   yield takeLatest(ACTION_TYPES.BOOT_REQUEST, bootApp);
 }
@@ -70,8 +116,15 @@ function* changeCountryMonitor() {
   yield takeLatest(ACTION_TYPES.CHANGE_COUNTRY, changeCountrySaga);
 }
 
+export function* setLanguageMonitor() {
+  yield takeLatest(ACTION_TYPES.SET_LANGUAGE_REQUEST, setLanguage);
+}
+
+
 export default (APP_SAGA = [
   fork(bootMonitor),
   fork(bootstrapMonitor),
   fork(changeCountryMonitor),
+  fork(setLanguageMonitor),
+
 ]);

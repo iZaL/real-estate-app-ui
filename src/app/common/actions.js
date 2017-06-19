@@ -6,6 +6,8 @@ export const ACTION_TYPES = {
   COUNTRY_CHANGED: 'COUNTRY_CHANGED',
   DISMISS_NOTIFICATION: 'DISMISS_NOTIFICATION',
   SET_NOTIFICATION: 'SET_NOTIFICATION',
+  SET_LANGUAGE_REQUEST: 'SET_LANGUAGE_REQUEST',
+  SET_LANGUAGE_SUCCESS: 'SET_LANGUAGE_SUCCESS',
 };
 
 function boot() {
@@ -24,6 +26,12 @@ function setBootstrapped(value) {
   return {
     type: ACTION_TYPES.BOOTSTRAPPED,
     value,
+  };
+}
+function setLanguage(value) {
+  return {
+    type: ACTION_TYPES.SET_LANGUAGE_REQUEST,
+    language: value,
   };
 }
 
@@ -49,4 +57,5 @@ export const ACTIONS = {
   dismissNotification,
   setNotification,
   setBootstrapped,
+  setLanguage,
 };

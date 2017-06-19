@@ -5,11 +5,13 @@ import {
 
 export const COUNTRY_KEY = 'COUNTRY';
 export const BOOTSTRAPPED = 'BOOTSTRAPPED';
+export const LANGUAGE_STORAGE_KEY = 'APP_LOCALE';
 
 // // reducer
 const initialState = {
   bootstrapped: false,
   booted: false,
+  language: 'ar',
   selectedCountry: 'Kuwait',
   countries: {
     Kuwait: {
@@ -105,6 +107,11 @@ export default function appReducer(state = initialState, action = {}) {
       return {
         ...state,
         selectedCountry: action.filters.country,
+      };
+    case ACTION_TYPES.SET_LANGUAGE_SUCCESS:
+      return {
+        ...state,
+        language: action.language,
       };
     default:
       return state;

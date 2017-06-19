@@ -7,6 +7,7 @@ import Navigator from './../common/navigator';
 import * as NavigationService from '../components/NavigationService';
 import AppNotification from './../app/AppNotification';
 import Splash from './../app/Splash';
+import SelectLanguage from './../app/SelectLanguage';
 import CodePush from 'react-native-code-push';
 import {CODEPUSH_ENABLED} from './../env';
 
@@ -29,7 +30,7 @@ class App extends Component {
     if (!app.booted) return null;
 
     if (!app.bootstrapped) {
-      return <Splash />;
+      return <SelectLanguage />;
     }
 
     return (
