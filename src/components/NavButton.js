@@ -5,7 +5,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default class NavButton extends React.Component {
   static propTypes = {
-    // style:View.propTypes.style,
     text: React.PropTypes.string,
     icon: React.PropTypes.oneOfType([
       React.PropTypes.string,
@@ -30,14 +29,14 @@ export default class NavButton extends React.Component {
         activeOpacity={0.4}
         style={styles.container}>
         {icon
-          ? typeof icon == 'string'
-              ? <Ionicons
-                  name={icon}
-                  size={iconSize ? iconSize : 40}
-                  color={colors.accent}
-                  style={[styles.icon, style]}
-                />
-              : icon
+          ? typeof icon === 'string'
+            ? <Ionicons
+              name={icon}
+              size={iconSize ? iconSize : 40}
+              color={colors.accent}
+              style={[styles.icon, style]}
+            />
+            : icon
           : <Text style={[styles.title, style]}>{title}</Text>}
       </TouchableHighlight>
     );
@@ -52,7 +51,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingLeft: 15,
     paddingRight: 15,
-    // backgroundColor:'black',
   },
   title: {
     color: colors.accent,

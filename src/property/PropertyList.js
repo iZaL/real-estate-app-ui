@@ -17,6 +17,7 @@ import PropertyRelatedList from './components/PropertyRelatedList';
 import EmptyResult from './components/EmptyResult';
 import isEmpty from 'lodash/isEmpty';
 import ResultHint from './components/ResultHint';
+import {isRTL} from "../app/common/locale";
 
 class PropertyList extends PureComponent {
   static propTypes = {
@@ -29,8 +30,8 @@ class PropertyList extends PureComponent {
     return {
       headerLeft: (
         <NavButton
-          icon="ios-arrow-back"
-          style={{width: 33, height: 33, marginLeft: -5}}
+          icon={isRTL ? 'ios-arrow-forward' : 'ios-arrow-back'}
+          style={{width: 33, height: 33, marginLeft: -20,marginRight: -20}}
           iconSize={33}
           onPress={() => navigation.state.params && navigation.state.params.handleLeftButtonPress()}
         />

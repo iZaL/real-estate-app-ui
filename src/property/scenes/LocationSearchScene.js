@@ -10,6 +10,7 @@ import NavBar from './../../components/NavBar';
 import NavButton from './../../components/NavButton';
 import Separator from './../../components/Separator';
 import {CountryPropType} from './../../property/common/proptypes';
+import {isRTL} from "../../app/common/locale";
 
 export default class LocationSearchScene extends Component {
   static propTypes = {
@@ -45,8 +46,8 @@ export default class LocationSearchScene extends Component {
           }
           left={
             <NavButton
-              icon="ios-arrow-back"
-              style={{width: 33, height: 33, marginLeft: -5}}
+              icon={isRTL ? 'ios-arrow-forward' : 'ios-arrow-back'}
+              style={{width: 33, height: 33, marginLeft: -40}}
               iconSize={33}
               onPress={() => onLeftButtonPress()}
             />
