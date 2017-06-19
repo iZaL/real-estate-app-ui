@@ -20,7 +20,7 @@
     "react-native-code-push": "^2.1.0-beta",
     "react-native-google-places-autocomplete": "^1.2.11",
     "react-native-image-crop-picker": "^0.12.10",
-    "react-native-maps": "0.13.1",
+    "react-native-maps": "^0.15.2",
     "react-native-swipe-list-view": "^0.4.1",
     "react-native-swiper": "^1.5.4",
     "react-native-tab-view": "0.0.58",
