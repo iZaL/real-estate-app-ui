@@ -24,23 +24,24 @@ class PropertyList extends PureComponent {
     actions: PropTypes.object.isRequired,
   };
 
-  static navigationOptions = {
-    header: ({state, setParams}) => ({
-      left: (
+
+  static navigationOptions = ({navigation}) => {
+    return {
+      headerLeft: (
         <NavButton
           icon="ios-arrow-back"
           style={{width: 33, height: 33, marginLeft: -5}}
           iconSize={33}
-          onPress={() => state.params && state.params.handleLeftButtonPress()}
+          onPress={() => navigation.state.params && navigation.state.params.handleLeftButtonPress()}
         />
       ),
-      right: (
+      headerRight: (
         <NavButton
           icon={<FontAwesome name="sliders" size={25} color={colors.accent} />}
-          onPress={() => state.params && state.params.handleRightButtonPress()}
+          onPress={() => navigation.state.params && navigation.state.params.handleRightButtonPress()}
         />
-      ),
-    }),
+      )
+    }
   };
 
   componentDidMount() {

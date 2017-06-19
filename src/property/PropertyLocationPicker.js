@@ -13,9 +13,7 @@ class PropertyLocationPicker extends Component {
   state = {};
 
   static navigationOptions = {
-    header: () => ({
-      visible: false,
-    }),
+    header: null
   };
 
   loadPropertyScene = value => {
