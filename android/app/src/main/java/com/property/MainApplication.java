@@ -7,7 +7,6 @@ import com.facebook.react.ReactApplication;
 import com.inprogress.reactnativeyoutube.ReactNativeYouTube;
 import com.brentvatne.react.ReactVideoPackage;
 import com.microsoft.codepush.react.CodePush;
-import com.airbnb.android.react.maps.MapsPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import com.facebook.react.ReactInstanceManager;
@@ -40,7 +39,6 @@ public class MainApplication extends Application implements ReactApplication {
             new ReactNativeYouTube(),
             new ReactVideoPackage(),
             new CodePush(null, getApplicationContext(), BuildConfig.DEBUG),
-            new MapsPackage(),
             new VectorIconsPackage(),
             new PickerPackage()
       );

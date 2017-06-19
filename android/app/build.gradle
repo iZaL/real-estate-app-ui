@@ -130,7 +130,6 @@ dependencies {
     compile project(':react-native-youtube')
     compile project(':react-native-video')
     compile project(':react-native-code-push')
-    compile project(':react-native-maps')
     compile project(':react-native-vector-icons')
     compile project(':react-native-image-crop-picker')
     compile fileTree(dir: "libs", include: ["*.jar"])
