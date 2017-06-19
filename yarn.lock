@@ -3952,6 +3952,10 @@ react-native-maps@^0.15.2:
   version "0.15.2"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.15.2.tgz#4f63b9501b25d124f0ef1839529e54a6461c2c49"
 
+react-native-restart@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-restart/-/react-native-restart-0.0.2.tgz#693353bb1092f96a36c6a2706da22954784cf8b1"
+
 react-native-swipe-list-view@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/react-native-swipe-list-view/-/react-native-swipe-list-view-0.4.1.tgz#f4b0288e090fc86f743bc30b45df829de729bcd7"

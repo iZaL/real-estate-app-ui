@@ -22,6 +22,7 @@
     "react-native-i18n": "^2.0.1",
     "react-native-image-crop-picker": "^0.12.10",
     "react-native-maps": "^0.15.2",
+    "react-native-restart": "^0.0.2",
     "react-native-swipe-list-view": "^0.4.1",
     "react-native-swiper": "^1.5.4",
     "react-native-tab-view": "0.0.58",
