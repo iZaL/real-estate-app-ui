@@ -15,11 +15,11 @@ class PropertyDetail extends Component {
     actions: PropTypes.object.isRequired,
   };
 
-  static navigationOptions = {
-    header: (navigation, defaultHeader) => ({
-      ...defaultHeader,
-      visible: navigation.state.params.visibility,
-    }),
+  static navigationOptions = ({navigation}) => {
+    return {
+      header: navigation.state.params.visibility,
+      title: navigation.state.params.title,
+    };
   };
 
   state = {
@@ -33,7 +33,7 @@ class PropertyDetail extends Component {
 
   componentDidMount() {
     this.props.navigation.setParams({
-      visibility: true,
+      visibility: undefined,
     });
     this.props.actions.incrementViews(this.props.property._id);
   }
@@ -56,7 +56,7 @@ class PropertyDetail extends Component {
   setSceneType = type => {
     if (type === 'detailScene') {
       this.props.navigation.setParams({
-        visibility: true,
+        visibility: undefined,
       });
     } else {
       this.props.navigation.setParams({
