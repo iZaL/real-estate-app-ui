@@ -15,9 +15,9 @@ if (__DEV__) {
     GOOGLE_MAPS_ANDROID_KEY: 'AIzaSyCpQX4H0QPxVgKuNMZ0ELG_ymgT8RHcKh4',
     CODEPUSH_ENABLED: false,
   };
-  // XMLHttpRequest = GLOBAL.originalXMLHttpRequest
-  //   ? GLOBAL.originalXMLHttpRequest
-  //   : GLOBAL.XMLHttpRequest;
+  XMLHttpRequest = GLOBAL.originalXMLHttpRequest
+    ? GLOBAL.originalXMLHttpRequest
+    : GLOBAL.XMLHttpRequest;
 } else {
   module.exports = {
     ...defaults,

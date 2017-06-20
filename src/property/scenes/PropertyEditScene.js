@@ -161,8 +161,6 @@ export default class PropertyEditScene extends Component {
     let {attributes, stage} = listing;
     let containerOpacity = this.fadeAnim;
 
-    console.log('l',listing);
-
     let navigateBack;
     if (canGoBack) {
       navigateBack = (

@@ -30,13 +30,13 @@ export default class NavButton extends React.Component {
         style={styles.container}>
         {icon
           ? typeof icon === 'string'
-            ? <Ionicons
-              name={icon}
-              size={iconSize ? iconSize : 40}
-              color={colors.accent}
-              style={[styles.icon, style]}
-            />
-            : icon
+              ? <Ionicons
+                  name={icon}
+                  size={iconSize ? iconSize : 40}
+                  color={colors.accent}
+                  style={[styles.icon, style]}
+                />
+              : icon
           : <Text style={[styles.title, style]}>{title}</Text>}
       </TouchableHighlight>
     );

@@ -50,7 +50,6 @@ export default class SettingsScene extends Component {
         />
         <Separator />
 
-
         {isAuthenticated
           ? <View>
               <SettingListItem

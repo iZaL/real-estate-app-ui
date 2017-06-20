@@ -211,7 +211,9 @@ export default class PropertyHomeScene extends Component {
                 justifyContent: 'space-between',
                 alignItems: 'center',
               }}>
-              <Text style={[styles.historyTitle]}>{I18n.t('search_history')}</Text>
+              <Text style={[styles.historyTitle]}>
+                {I18n.t('search_history')}
+              </Text>
               <CountryPicker
                 {...this.state}
                 toggleMenuVisible={this.toggleMenuVisible}
@@ -279,10 +281,10 @@ const styles = StyleSheet.create({
     shadowColor: '#000000',
     shadowOffset: {
       width: 0,
-      height: 3
+      height: 3,
     },
     shadowRadius: 5,
-    shadowOpacity: 1.0
+    shadowOpacity: 1.0,
   },
   searchTabs: {
     flex: 1,
@@ -327,7 +329,7 @@ const styles = StyleSheet.create({
     color: colors.smokeGreyDark,
     paddingLeft: 10,
     fontSize: 17,
-    textAlign:'left'
+    textAlign: 'left',
   },
   searchHistory: {
     flex: 1,
@@ -337,7 +339,7 @@ const styles = StyleSheet.create({
     color: colors.darkGrey,
     fontWeight: '500',
     fontSize: 18,
-    textAlign:'left'
+    textAlign: 'left',
   },
   hero: {
     position: 'absolute',

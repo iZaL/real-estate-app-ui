@@ -10,7 +10,7 @@ import NavBar from './../../components/NavBar';
 import NavButton from './../../components/NavButton';
 import Separator from './../../components/Separator';
 import {CountryPropType} from './../../property/common/proptypes';
-import {isRTL} from "../../app/common/locale";
+import {isRTL} from '../../app/common/locale';
 
 export default class LocationSearchScene extends Component {
   static propTypes = {

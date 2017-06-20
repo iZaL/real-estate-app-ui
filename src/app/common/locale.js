@@ -2,7 +2,7 @@ import React from 'react';
 import {I18nManager} from 'react-native';
 import I18n from 'react-native-i18n';
 
-I18n.fallbacks = false;
+I18n.fallbacks = true;
 I18n.defaultLocale = 'en';
 I18n.locale = I18nManager.isRTL ? 'ar' : 'en';
 

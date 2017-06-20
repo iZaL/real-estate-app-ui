@@ -29,8 +29,8 @@ class UserEdit extends Component {
           title="Done"
           onPress={() => navigation.state.params.handleRightButtonPress()}
         />
-      )
-    }
+      ),
+    };
   };
 
   componentDidMount() {

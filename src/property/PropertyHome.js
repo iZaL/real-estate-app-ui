@@ -18,7 +18,7 @@ class PropertyHome extends Component {
   };
 
   static navigationOptions = {
-    header: null
+    header: null,
   };
 
   changePropertyType = value => {
@@ -60,7 +60,6 @@ class PropertyHome extends Component {
   };
 
   render() {
-    console.log('locale',I18n.locale);
     let {searchHistory, propertyType, filters, countries, country} = this.props;
     return (
       <PropertyHomeScene

@@ -22,6 +22,7 @@ import NavBar from '../../components/NavBar';
 import NavButton from '../../components/NavButton';
 import CountryPicker from '../components/filters/CountryPicker';
 import {CountryPropType} from '../common/proptypes';
+import I18n from './../../app/common/locale';
 
 import {
   TabBar,
@@ -44,7 +45,7 @@ export default class PropertyFilterScene extends Component {
     onCountryChange: PropTypes.func.isRequired,
     onCategorySelect: PropTypes.func.isRequired,
     countries: PropTypes.array.isRequired,
-    categories: PropTypes.array.isRequired,
+    categories: PropTypes.object.isRequired,
     onTypeChange: PropTypes.func.isRequired,
     propertyType: PropTypes.string.isRequired,
     mapView: PropTypes.bool.isRequired,
@@ -66,9 +67,9 @@ export default class PropertyFilterScene extends Component {
       tabs: {
         index: selectedIndex,
         routes: [
-          {key: '1', title: 'For Sale'},
-          {key: '2', title: 'For Rent'},
-          {key: '3', title: 'For Share'},
+          {key: '1', title: I18n.t('for_sale')},
+          {key: '2', title: I18n.t('for_rent')},
+          {key: '3', title: I18n.t('for_share')},
         ],
       },
     };
@@ -91,13 +92,13 @@ export default class PropertyFilterScene extends Component {
   getTabIndex() {
     let selectedIndex;
     switch (this.props.propertyType) {
-      case 'For Sale':
+      case I18n.t('for_sale'):
         selectedIndex = 0;
         break;
-      case 'For Rent':
+      case I18n.t('for_rent'):
         selectedIndex = 1;
         break;
-      case 'For Share':
+      case I18n.t('for_share'):
         selectedIndex = 2;
         break;
       default:
@@ -111,13 +112,13 @@ export default class PropertyFilterScene extends Component {
     let selectedType;
     switch (index) {
       case 0:
-        selectedType = 'For Sale';
+        selectedType = I18n.t('for_sale');
         break;
       case 1:
-        selectedType = 'For Rent';
+        selectedType = I18n.t('for_rent');
         break;
       case 2:
-        selectedType = 'For Share';
+        selectedType = I18n.t('for_share');
         break;
       default:
         break;
@@ -161,27 +162,27 @@ export default class PropertyFilterScene extends Component {
           selected={sortBy}
           onSelect={onSortSelect}
           ranges={sortOptions}
-          title="Sort By"
+          title={I18n.t('sort_by')}
         />
 
         <List
           selected={category}
           onSelect={onCategorySelect}
           ranges={categories}
-          title="Property Type"
+          title={I18n.t('property_type')}
         />
 
         <Separator style={{marginBottom: 20}} />
 
         <List
-          title="Price Range"
+          title={I18n.t('price_range')}
           ranges={prices}
           selected={priceFrom}
           onSelect={onPriceFromSelect}
           hint={country.currency}
         />
         <List
-          title="to"
+          title={I18n.t('to')}
           ranges={prices}
           selected={priceTo}
           onSelect={onPriceToSelect}
@@ -196,7 +197,7 @@ export default class PropertyFilterScene extends Component {
         <Separator style={{marginBottom: 20}} />
 
         <Button
-          title="Bed"
+          title={I18n.t('bed')}
           icon="bed"
           onPress={value => onMetaSelect('bedroom', value)}
           range={bedroomsArr}
@@ -206,7 +207,7 @@ export default class PropertyFilterScene extends Component {
         <Separator style={{marginTop: 20, marginBottom: 20}} />
 
         <Button
-          title="Bath"
+          title={I18n.t('bath')}
           icon="bath"
           onPress={value => onMetaSelect('bathroom', value)}
           range={bathroomsArr}
@@ -216,7 +217,7 @@ export default class PropertyFilterScene extends Component {
         <Separator style={{marginTop: 20, marginBottom: 20}} />
 
         <Button
-          title="Parking"
+          title={I18n.t('parking')}
           icon="car"
           onPress={value => onMetaSelect('parking', value)}
           range={parkingArr}
@@ -284,8 +285,8 @@ export default class PropertyFilterScene extends Component {
                     fontWeight: '500',
                     color: colors.white,
                   }}>
-                  Search by Location
-                </Text>
+                {I18n.t('Search by Location')}
+              </Text>
               : <View
                   style={{
                     flexDirection: 'row',
@@ -385,7 +386,7 @@ export default class PropertyFilterScene extends Component {
           onPress={onSearchPress}
           style={styles.footer}>
           <Text style={styles.footerText}>
-            Apply Filter
+            {I18n.t('apply_filter')}
           </Text>
         </TouchableHighlight>
 

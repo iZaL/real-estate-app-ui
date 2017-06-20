@@ -1,4 +1,5 @@
 import I18n from './../../app/common/locale';
+
 let salePrice1 = [
   'Any',
   '10K',
@@ -91,7 +92,7 @@ let sharePrice2 = [
 let countries = ['KW', 'OM', 'BH', 'SA', 'AE', 'QA'];
 let [KW, OM, BH, SA, AE, QA] = countries;
 
-let propertyTypes = ['For Sale', 'For Rent', 'For Share'];
+let propertyTypes = [I18n.t('for_sale'), I18n.t('for_rent'), I18n.t('for_share')];
 let [ForSale, ForRent, ForShare] = propertyTypes;
 
 let sortOptions = ['New', 'Price(Low-High)', 'Price(High-Low)', 'Old'];
@@ -155,70 +156,70 @@ let priceForSale = {
   [QA]: salePrice2,
 };
 
-let categoriesArr_en = {
+let categoriesArr = {
   [ForSale]: [
-    'Villa',
-    'House',
-    'Apartment',
-    'Chalet',
-    'Land & Farm',
-    'Store',
-    'Storage',
-    'Office',
+    I18n.t('villa'),
+    I18n.t('house'),
+    I18n.t('apartment'),
+    I18n.t('chalet'),
+    I18n.t('land_farm'),
+    I18n.t('store'),
+    I18n.t('storage'),
+    I18n.t('office'),
   ],
   [ForRent]: [
-    'Villa',
-    'House',
-    'Apartment',
-    'Chalet',
-    'Land & Farm',
-    'Store',
-    'Storage',
-    'Office',
+    I18n.t('villa'),
+    I18n.t('house'),
+    I18n.t('apartment'),
+    I18n.t('chalet'),
+    I18n.t('land_farm'),
+    I18n.t('store'),
+    I18n.t('storage'),
+    I18n.t('office'),
   ],
   [ForShare]: [
-    'Villa',
-    'House',
-    'Apartment',
-    'Chalet',
-    'Land & Farm',
-    'Store',
-    'Storage',
-    'Office',
+    I18n.t('villa'),
+    I18n.t('house'),
+    I18n.t('apartment'),
+    I18n.t('chalet'),
+    I18n.t('land_farm'),
+    I18n.t('store'),
+    I18n.t('storage'),
+    I18n.t('office'),
   ],
 };
-let categoriesArr_ar = {
-  [ForSale]: [
-    'شسيشس',
-    'ششسي',
-    'Aparشسيtment',
-    'Chalشسيشسيشet',
-    'شيشيشسي',
-    'Store',
-    'Storage',
-    'Office',
-  ],
-  [ForRent]: [
-    'Villa',
-    'House',
-    'Apartment',
-    'Chalet',
-    'Land & Farm',
-    'Store',
-    'Storage',
-    'Office',
-  ],
-  [ForShare]: [
-    'Villa',
-    'House',
-    'Apartment',
-    'Chalet',
-    'Land & Farm',
-    'Store',
-    'Storage',
-    'Office',
-  ],
-};
+// let categoriesArr_ar = {
+//   [ForSale]: [
+//     'شسيشس',
+//     'ششسي',
+//     'Aparشسيtment',
+//     'Chalشسيشسيشet',
+//     'شيشيشسي',
+//     'Store',
+//     'Storage',
+//     'Office',
+//   ],
+//   [ForRent]: [
+//     'Villa',
+//     'House',
+//     'Apartment',
+//     'Chalet',
+//     'Land & Farm',
+//     'Store',
+//     'Storage',
+//     'Office',
+//   ],
+//   [ForShare]: [
+//     'Villa',
+//     'House',
+//     'Apartment',
+//     'Chalet',
+//     'Land & Farm',
+//     'Store',
+//     'Storage',
+//     'Office',
+//   ],
+// };
 // let categoriesArr = {
 //   [ForSale]: [
 //     'Villa',
@@ -325,7 +326,7 @@ let attributes = {
 };
 
 module.exports = {
-  'ar' : {
+  ar: {
     filters,
     amenities,
     nearByPlaces,
@@ -335,10 +336,10 @@ module.exports = {
     searchMetas,
     addMetas,
     sortOptions,
-    categories: categoriesArr_ar,
+    categories: categoriesArr,
     prices: pricesArr,
   },
-  'en' : {
+  en: {
     filters,
     amenities,
     nearByPlaces,
@@ -348,7 +349,7 @@ module.exports = {
     searchMetas,
     addMetas,
     sortOptions,
-    categories: categoriesArr_ar,
+    categories: categoriesArr,
     prices: pricesArr,
-  }
+  },
 };

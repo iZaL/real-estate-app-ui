@@ -11,6 +11,7 @@ import {ACTIONS} from './common/actions';
 import {ACTIONS as APP_ACTIONS} from './../app/common/actions';
 import {SELECTORS} from './common/selectors';
 import {SELECTORS as APP_SELECTORS} from './../app/common/selectors';
+import I18n from './../app/common/locale';
 
 class PropertyFilter extends Component {
   state = {
@@ -37,6 +38,9 @@ class PropertyFilter extends Component {
   };
 
   onCategorySelect = value => {
+
+    let item = this.props.ca
+
     this.updateFilterProps('category', value);
   };
 
@@ -112,7 +116,9 @@ class PropertyFilter extends Component {
     const {searchMode} = this.state;
 
     let currentCategories = categories[propertyType];
-    let categoriesWithAny = currentCategories.concat('Any').reverse();
+    console.log('c',currentCategories);
+    let categoriesWithAny = currentCategories.concat(I18n.t('any')).reverse();
+    // let categoriesWithAny = currentCategories;
 
     return (
       <View style={{flex: 1}}>

@@ -67,13 +67,11 @@ function* bootApp() {
     RNRestart.Restart();
   }
 
-
   if (!I18nManager.isRTL && currentLanguage === 'ar') {
     I18nManager.allowRTL(true);
     I18nManager.forceRTL(true);
     RNRestart.Restart();
   }
-
 
   yield put({type: ACTION_TYPES.COUNTRY_CHANGED, country: currentCountry});
   yield put({type: ACTION_TYPES.BOOT_SUCCESS});
@@ -120,11 +118,9 @@ export function* setLanguageMonitor() {
   yield takeLatest(ACTION_TYPES.SET_LANGUAGE_REQUEST, setLanguage);
 }
 
-
 export default (APP_SAGA = [
   fork(bootMonitor),
   fork(bootstrapMonitor),
   fork(changeCountryMonitor),
   fork(setLanguageMonitor),
-
 ]);

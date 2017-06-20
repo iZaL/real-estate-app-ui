@@ -93,7 +93,9 @@ export default class HistoryList extends Component {
                 {' '}
                 |
                 {' '}
-                {filter.total ? filter.total + ' ' + I18n.t('properties_found') : I18n.t('no_properties_found') }
+                {filter.total
+                  ? filter.total + ' ' + I18n.t('properties_found')
+                  : I18n.t('no_properties_found')}
               </Text>
 
             </View>
@@ -170,7 +172,7 @@ let styles = StyleSheet.create({
     color: colors.smokeGreyDark,
     fontWeight: '100',
     fontSize: 13,
-    textAlign:'left'
+    textAlign: 'left',
   },
   historyContainer: {
     paddingTop: 10,

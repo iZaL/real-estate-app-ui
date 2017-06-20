@@ -203,7 +203,6 @@ export default class PropertyInfo extends Component {
 
               <Separator style={{marginVertical: 10}} />
 
-
               <Text style={styles.label}>
                 Email
               </Text>
@@ -219,7 +218,6 @@ export default class PropertyInfo extends Component {
               />
 
               <Separator style={{marginVertical: 10}} />
-
 
               <Text style={styles.label}>Space (metre)</Text>
               <TextInput

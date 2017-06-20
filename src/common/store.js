@@ -52,9 +52,7 @@ persistStore(
     ],
     storage: AsyncStorage,
   },
-  () => {
-    // console.log('rehydration complete')
-  },
+  () => {},
 );
 
 export default Store;

@@ -33,12 +33,12 @@ const PropertyTab = StackNavigator(
     PropertyListScene: {
       screen: PropertyList,
       navigationOptions: {
-        title:I18n.t('property_search'),
+        title: I18n.t('property_search'),
       },
     },
     PropertyDetailScene: {
       screen: PropertyDetail,
-      navigationOptions: ({ navigation }) => ({
+      navigationOptions: ({navigation}) => ({
         title: `${navigation.state.params.property.meta.title}!`,
       }),
     },
@@ -47,8 +47,10 @@ const PropertyTab = StackNavigator(
     },
   },
   {
-    headerBackTitle:null,
+    headerBackTitle: null,
     headerMode: 'screen',
+    initialRouteName: 'PropertyListScene',
+
   },
 );
 
@@ -57,12 +59,12 @@ const FavoriteTab = StackNavigator(
     FavoritesScene: {
       screen: PropertyFavorites,
       navigationOptions: {
-        title:I18n.t('favorites'),
+        title: I18n.t('favorites'),
       },
     },
     PropertyDetailScene: {
       screen: PropertyDetail,
-      navigationOptions: ({ navigation }) => ({
+      navigationOptions: ({navigation}) => ({
         title: `${navigation.state.params.property.meta.title}!`,
       }),
     },
@@ -71,7 +73,7 @@ const FavoriteTab = StackNavigator(
     },
   },
   {
-    headerBackTitle:null,
+    headerBackTitle: null,
     headerMode: 'screen',
   },
 );
@@ -81,7 +83,7 @@ const PropertyCreateTab = StackNavigator(
     PropertyCreateScene: {
       screen: PropertyCreate,
       navigationOptions: {
-        title:I18n.t('add_property'),
+        title: I18n.t('add_property'),
       },
     },
   },
@@ -101,7 +103,7 @@ const SettingTab = StackNavigator(
     CountryListScene: {
       screen: CountryList,
       navigationOptions: {
-        title:I18n.t('choose_country'),
+        title: I18n.t('choose_country'),
       },
     },
     UserDetailScene: {
@@ -115,12 +117,12 @@ const SettingTab = StackNavigator(
     PropertyManager: {
       screen: PropertyManager,
       navigationOptions: {
-        title:I18n.t('manage_your_listings'),
+        title: I18n.t('manage_your_listings'),
       },
     },
     PropertyDetailScene: {
       screen: PropertyDetail,
-      navigationOptions: ({ navigation }) => ({
+      navigationOptions: ({navigation}) => ({
         title: `${navigation.state.params.property.meta.title}!`,
       }),
     },
@@ -131,10 +133,9 @@ const SettingTab = StackNavigator(
       screen: Profile,
     },
     SelectLanguageScene: {screen: SelectLanguage},
-
   },
   {
-    headerBackTitle:null,
+    headerBackTitle: null,
     headerMode: 'screen',
   },
 );
@@ -165,8 +166,7 @@ const Tabs = TabNavigator(
             style={{color: focused ? colors.accent : colors.smokeGreyDark}}
           />
         ),
-      }
-,
+      },
     },
     CreateTab: {
       screen: PropertyCreateTab,
@@ -179,7 +179,7 @@ const Tabs = TabNavigator(
             style={{color: focused ? colors.accent : colors.smokeGreyDark}}
           />
         ),
-      }
+      },
     },
     SettingsTab: {
       screen: SettingTab,
