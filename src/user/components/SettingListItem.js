@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
   title: {
     color: colors.darkGrey,
     fontWeight: '200',
+    textAlign:'left'
   },
   icon: {
     fontWeight: '100',

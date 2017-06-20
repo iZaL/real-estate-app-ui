@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
+import {isRTL} from "../app/common/locale";
 
 const NavBar = ({style, left, right, middle}) => (
   <View style={[styles.navBar, style]}>
@@ -29,7 +30,8 @@ const styles = StyleSheet.create({
     height: 64,
     backgroundColor: '#EFEFF2',
     paddingTop: 20,
-    flexDirection: 'row',
+    flexDirection: isRTL ? 'row' : 'row-reverse',
+    writingDirection: isRTL ? 'rtl' : 'ltr'
   },
   left: {
     minWidth: 60,

@@ -10,6 +10,7 @@ import colors from './../../common/colors';
 import NavBar from './../../components/NavBar';
 import NavButton from './../../components/NavButton';
 import Separator from './../../components/Separator';
+import {isRTL} from "../../app/common/locale";
 
 export default class ForgotScene extends Component {
   static propTypes = {
@@ -83,6 +84,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 2,
     fontWeight: '100',
+    textAlign:'left'
   },
   textCenter: {
     alignSelf: 'center',
@@ -98,6 +100,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     fontSize: 14,
     color: 'black',
+    textAlign:isRTL ? 'right' : 'left'
   },
   title: {
     fontSize: 20,

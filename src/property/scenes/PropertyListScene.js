@@ -189,6 +189,8 @@ const styles = StyleSheet.create({
     margin: 10,
     fontWeight: '500',
     fontSize: 15,
+    textAlign:'left'
+
   },
   image: {
     flex: 1,
@@ -225,5 +227,7 @@ const styles = StyleSheet.create({
     color: colors.fadedBlack,
     fontWeight: '100',
     fontSize: 12,
+    textAlign:'left'
+
   },
 });

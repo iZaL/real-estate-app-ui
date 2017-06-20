@@ -12,6 +12,7 @@ import {
 import colors from '../../../common/colors';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Separator from './../../../components/Separator';
+import {isRTL} from "../../../app/common/locale";
 
 export default class List extends Component {
   static propTypes = {
@@ -37,7 +38,7 @@ export default class List extends Component {
               {item}
             </Text>
             <Ionicons
-              name="ios-arrow-forward"
+              name={isRTL ? 'ios-arrow-back' : 'ios-arrow-forward'}
               color={colors.smokeGreyLight}
               size={30}
             />
@@ -112,6 +113,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontWeight: '600',
     fontSize: 16,
+    textAlign:'left'
   },
   stage: {
     color: colors.darkGrey,

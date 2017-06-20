@@ -232,6 +232,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     backgroundColor: 'white',
+    textAlign:'left'
   },
   textInputWrapper: {
     marginTop: 10,

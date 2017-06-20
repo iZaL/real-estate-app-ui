@@ -14,6 +14,7 @@ import NavButton from './../../components/NavButton';
 import Header from './../components/create/Header';
 import Footer from './../components/create/Footer';
 import {CountryPropType} from './../common/proptypes';
+import {isRTL} from "../../app/common/locale";
 
 export default class PropertyEditScene extends Component {
   static propTypes = {
@@ -182,7 +183,7 @@ export default class PropertyEditScene extends Component {
           left={
             stage > 1
               ? <NavButton
-                  icon="ios-arrow-back"
+                  icon={isRTL ? 'ios-arrow-forward' : 'ios-arrow-back'}
                   iconSize={33}
                   onPress={() => this.goToPrevStage()}
                   style={{height: 33, width: 30, marginLeft: -5}}

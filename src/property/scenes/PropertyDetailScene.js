@@ -22,6 +22,7 @@ import moment from 'moment';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Separator from './../../components/Separator';
 import {CountryPropType} from './../common/proptypes';
+import I18n from './../../app/common/locale';
 
 export default class PropertyDetailScene extends Component {
   static propTypes = {
@@ -181,7 +182,7 @@ export default class PropertyDetailScene extends Component {
                     />
 
                     <Text style={[styles.lightText]}>
-                      Added {moment(property.created_at).fromNow()}
+                      {I18n.t('added')} {moment(property.created_at).fromNow()}
                     </Text>
 
                   </View>
@@ -209,7 +210,7 @@ export default class PropertyDetailScene extends Component {
                     </View>
 
                     <Text style={[styles.lightText, {textAlign: 'center'}]}>
-                      {property.views} views
+                      {property.views} {I18n.t('views')}
                     </Text>
 
                   </View>
@@ -224,7 +225,7 @@ export default class PropertyDetailScene extends Component {
                       alignItems: 'center',
                       paddingVertical: 3,
                     }}>
-                    <Text style={styles.lightText}>Added By </Text>
+                    <Text style={styles.lightText}>{I18n.t('added_by')}</Text>
                     <TouchableHighlight
                       underlayColor="transparent"
                       onPress={() => loadProfile(property.user)}
@@ -236,20 +237,20 @@ export default class PropertyDetailScene extends Component {
                 <View style={styles.extraInfo}>
 
                   <View style={styles.infoRow}>
-                    <Text style={styles.infoTitle}>Area</Text>
+                    <Text style={styles.infoTitle}>{I18n.t('area')}</Text>
                     <Text style={styles.infoResult}>
                       {property.meta.area} metre
                     </Text>
                   </View>
                   <View style={styles.infoRow}>
-                    <Text style={styles.infoTitle}>Social Status</Text>
+                    <Text style={styles.infoTitle}>{I18n.t('social_status')}</Text>
                     <Text style={styles.infoResult}>
                       {property.meta.gender}
                     </Text>
                   </View>
 
                   <View style={styles.infoRow}>
-                    <Text style={styles.infoTitle}>Address</Text>
+                    <Text style={styles.infoTitle}>{I18n.t('address')}</Text>
 
                     <Text style={styles.infoResult}>
                       {property.address.city}
@@ -266,7 +267,7 @@ export default class PropertyDetailScene extends Component {
                 <Separator />
 
                 <View>
-                  <Text style={styles.descTitle}>Description</Text>
+                  <Text style={styles.descTitle}>{I18n.t('description')}</Text>
                   <Text style={styles.description}>
                     {property.meta.description}
                   </Text>
@@ -289,7 +290,7 @@ export default class PropertyDetailScene extends Component {
 
                     <View style={{flex: 1, alignItems: 'center'}}>
                       <Text style={[styles.descTitle, {marginBottom: 10}]}>
-                        Near By Places
+                        {I18n.t('near_by_places')}
                       </Text>
                       {property.nearByPlaces.map(place => (
                         <Text key={place} style={styles.amenity}>{place}</Text>
@@ -303,7 +304,7 @@ export default class PropertyDetailScene extends Component {
                   <View>
                     <View style={{flex: 1, alignItems: 'center'}}>
                       <Text style={[styles.descTitle, {marginBottom: 10}]}>
-                        Property Amenities
+                        {I18n.t('amenities')}
                       </Text>
                       {property.amenities.map(amenity => (
                         <Text key={amenity} style={styles.amenity}>
@@ -326,7 +327,7 @@ export default class PropertyDetailScene extends Component {
                       style={{width: 20, height: 15, alignSelf: 'center'}}
                       color={colors.smokeGreyDark}
                     />
-                    <Text style={styles.infoTitle}>Email</Text>
+                    <Text style={styles.infoTitle}>{I18n.t('email')}</Text>
                     <Text
                       style={styles.infoResult}
                       onPress={() => {
@@ -350,7 +351,7 @@ export default class PropertyDetailScene extends Component {
                     }}
                     color={colors.smokeGreyDark}
                   />
-                  <Text style={styles.infoTitle}>Mobile</Text>
+                  <Text style={styles.infoTitle}>{I18n.t('mobile')}</Text>
                   <Text
                     style={styles.infoResult}
                     onPress={() => {
@@ -379,7 +380,7 @@ export default class PropertyDetailScene extends Component {
                         }}
                         color={colors.smokeGreyDark}
                       />
-                      <Text style={styles.infoTitle}>Phone</Text>
+                      <Text style={styles.infoTitle}>{I18n.t('phone')}</Text>
                       <Text
                         style={styles.infoResult}
                         onPress={() => {
@@ -432,6 +433,7 @@ const styles = StyleSheet.create({
     color: '#2c2d30',
     fontWeight: '600',
     marginBottom: 10,
+    textAlign:'left'
   },
   descTitle: {
     textAlign: 'center',
@@ -447,9 +449,9 @@ const styles = StyleSheet.create({
   description: {
     marginTop: 10,
     fontSize: 15,
-    textAlign: 'justify',
     color: '#384760',
     fontFamily: 'Avenir-Light',
+    textAlign:'left'
   },
   amenity: {
     fontSize: 15,
@@ -459,6 +461,7 @@ const styles = StyleSheet.create({
   },
   username: {
     color: colors.darkGrey,
+    textAlign:'left'
   },
   label: {
     color: colors.grey,
@@ -475,6 +478,7 @@ const styles = StyleSheet.create({
     fontWeight: '100',
     fontSize: 12,
     paddingVertical: 2,
+    textAlign:'left'
   },
   hero: {
     position: 'absolute',
@@ -497,6 +501,7 @@ const styles = StyleSheet.create({
   },
   infoTitle: {
     fontWeight: '100',
+
   },
   infoResult: {
     fontWeight: '500',

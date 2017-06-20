@@ -285,8 +285,9 @@ export default class PropertyFilterScene extends Component {
                     paddingLeft: 10,
                     fontWeight: '500',
                     color: colors.white,
+                    textAlign:'left'
                   }}>
-                {I18n.t('Search by Location')}
+                {I18n.t('search_by_location')}
               </Text>
               : <View
                   style={{
