@@ -45,7 +45,7 @@ export default class PropertyFilterScene extends Component {
     onCountryChange: PropTypes.func.isRequired,
     onCategorySelect: PropTypes.func.isRequired,
     countries: PropTypes.array.isRequired,
-    categories: PropTypes.object.isRequired,
+    categories: PropTypes.array.isRequired,
     onTypeChange: PropTypes.func.isRequired,
     propertyType: PropTypes.string.isRequired,
     mapView: PropTypes.bool.isRequired,
@@ -61,7 +61,6 @@ export default class PropertyFilterScene extends Component {
   constructor(props) {
     super(props);
     let selectedIndex = this.getTabIndex();
-    console.log('selectedIndex',selectedIndex);
     this.state = {
       menuValue: new Animated.Value(0),
       menuIsVisible: false,
@@ -79,7 +78,6 @@ export default class PropertyFilterScene extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.propertyType !== this.props.propertyType) {
       let selectedIndex = this.getTabIndex();
-      console.log('');
       if (this.state.tabs.index !== selectedIndex) {
         this.setState({
           tabs: {
@@ -93,14 +91,6 @@ export default class PropertyFilterScene extends Component {
 
   getTabIndex() {
     let selectedIndex;
-    console.log('this.props.propertyType',this.props.propertyType);
-    console.log('I18n.t_for_sale',I18n.t('for_sale'));
-    console.log('I18n.t_for_rent',I18n.t('for_rent'));
-    console.log('I18n.t_for_share',I18n.t('for_share'));
-    console.log('is matching sale',this.props.propertyType === I18n.t('for_sale'));
-    console.log('is matching rent',this.props.propertyType === I18n.t('for_rent'));
-    console.log('is matching share',this.props.propertyType === I18n.t('for_share'));
-
     switch (this.props.propertyType) {
       case I18n.t('for_sale'):
         selectedIndex = 0;
@@ -119,6 +109,7 @@ export default class PropertyFilterScene extends Component {
   }
 
   handleChangeTab = index => {
+    console.log('i',index);
     let selectedType;
     switch (index) {
       case 0:

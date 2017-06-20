@@ -30,7 +30,7 @@ class PropertyList extends PureComponent {
       headerLeft: (
         <NavButton
           icon={isRTL ? 'ios-arrow-forward' : 'ios-arrow-back'}
-          style={{width: 33, height: 33, marginLeft: -20, marginRight: -20}}
+          style={{width: 33, height: 33, marginLeft: -5}}
           iconSize={33}
           onPress={() =>
             navigation.state.params &&

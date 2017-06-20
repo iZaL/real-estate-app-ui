@@ -47,7 +47,7 @@ export default class LocationSearchScene extends Component {
           left={
             <NavButton
               icon={isRTL ? 'ios-arrow-forward' : 'ios-arrow-back'}
-              style={{width: 33, height: 33, marginLeft: -40}}
+              style={{width: 33, height: 33, marginLeft: -10}}
               iconSize={33}
               onPress={() => onLeftButtonPress()}
             />
