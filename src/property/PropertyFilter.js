@@ -38,9 +38,6 @@ class PropertyFilter extends Component {
   };
 
   onCategorySelect = value => {
-
-    let item = this.props.ca
-
     this.updateFilterProps('category', value);
   };
 
@@ -116,9 +113,7 @@ class PropertyFilter extends Component {
     const {searchMode} = this.state;
 
     let currentCategories = categories[propertyType];
-    console.log('c',currentCategories);
     let categoriesWithAny = currentCategories.concat(I18n.t('any')).reverse();
-    // let categoriesWithAny = currentCategories;
 
     return (
       <View style={{flex: 1}}>

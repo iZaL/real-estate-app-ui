@@ -49,8 +49,7 @@ const PropertyTab = StackNavigator(
   {
     headerBackTitle: null,
     headerMode: 'screen',
-    initialRouteName: 'PropertyListScene',
-
+    // initialRouteName: 'PropertyListScene',
   },
 );
 

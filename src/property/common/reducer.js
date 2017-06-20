@@ -6,7 +6,6 @@ import map from 'lodash/map';
 import union from 'lodash/union';
 import isEqual from 'lodash/isEqual';
 import I18n from './../../app/common/locale';
-
 import {ar, en} from './reducerHelper';
 
 let currentFilter = I18n.locale === 'en' ? en : ar;

@@ -72,6 +72,9 @@
   "for_rent":"للايجار",
   "for_share":"للشراكة",
   "for_sale":"للبيع",
+//  "for_rent":"For Rent",
+//  "for_share":"For Share",
+//  "for_sale":"For Sale",
   "any" : "جميع",
 
 }

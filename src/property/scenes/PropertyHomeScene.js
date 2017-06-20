@@ -101,12 +101,12 @@ export default class PropertyHomeScene extends Component {
 
           <TouchableHighlight
             underlayColor="transparent"
-            onPress={() => this.changeTab('For Sale')}
-            style={[styles.tab, activeTab === 'For Sale' && styles.tabActive]}>
+            onPress={() => this.changeTab(I18n.t('for_sale'))}
+            style={[styles.tab, activeTab === I18n.t('for_sale') && styles.tabActive]}>
             <Text
               style={[
                 styles.tabTitle,
-                activeTab === 'For Sale' && styles.tabTitleActive,
+                activeTab === I18n.t('for_sale') && styles.tabTitleActive,
               ]}>
               {I18n.t('buy')}
             </Text>
@@ -114,12 +114,12 @@ export default class PropertyHomeScene extends Component {
 
           <TouchableHighlight
             underlayColor="transparent"
-            onPress={() => this.changeTab('For Rent')}
-            style={[styles.tab, activeTab === 'For Rent' && styles.tabActive]}>
+            onPress={() => this.changeTab(I18n.t('for_rent'))}
+            style={[styles.tab, activeTab === I18n.t('for_rent') && styles.tabActive]}>
             <Text
               style={[
                 styles.tabTitle,
-                activeTab === 'For Rent' && styles.tabTitleActive,
+                activeTab === I18n.t('for_rent') && styles.tabTitleActive,
               ]}>
               {I18n.t('rent')}
             </Text>
@@ -127,12 +127,12 @@ export default class PropertyHomeScene extends Component {
 
           <TouchableHighlight
             underlayColor="transparent"
-            onPress={() => this.changeTab('For Share')}
-            style={[styles.tab, activeTab === 'For Share' && styles.tabActive]}>
+            onPress={() => this.changeTab(I18n.t('for_share'))}
+            style={[styles.tab, activeTab === I18n.t('for_share') && styles.tabActive]}>
             <Text
               style={[
                 styles.tabTitle,
-                activeTab === 'For Share' && styles.tabTitleActive,
+                activeTab === I18n.t('for_share') && styles.tabTitleActive,
               ]}>
               {I18n.t('share')}
             </Text>
