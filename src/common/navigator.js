@@ -20,6 +20,7 @@ import CountryList from './../user/CountryList';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {StackNavigator, TabNavigator} from 'react-navigation';
 import colors from './colors';
+import I18n from './../app/common/locale';
 
 const PropertyTab = StackNavigator(
   {
@@ -32,7 +33,7 @@ const PropertyTab = StackNavigator(
     PropertyListScene: {
       screen: PropertyList,
       navigationOptions: {
-        title:'Property Search',
+        title:I18n.t('property_search'),
       },
     },
     PropertyDetailScene: {
@@ -55,9 +56,9 @@ const FavoriteTab = StackNavigator(
   {
     FavoritesScene: {
       screen: PropertyFavorites,
-      // navigationOptions: {
-      //   title: () => 'Favorites',
-      // },
+      navigationOptions: {
+        title:I18n.t('favorites'),
+      },
     },
     PropertyDetailScene: {
       screen: PropertyDetail,
@@ -80,7 +81,7 @@ const PropertyCreateTab = StackNavigator(
     PropertyCreateScene: {
       screen: PropertyCreate,
       navigationOptions: {
-        title:'Add Property',
+        title:I18n.t('add_property'),
       },
     },
   },
@@ -94,13 +95,13 @@ const SettingTab = StackNavigator(
     SettingsScene: {
       screen: Settings,
       navigationOptions: {
-        title: 'Settings',
+        title: I18n.t('settings'),
       },
     },
     CountryListScene: {
       screen: CountryList,
       navigationOptions: {
-        title:'Choose Country',
+        title:I18n.t('choose_country'),
       },
     },
     UserDetailScene: {
@@ -114,7 +115,7 @@ const SettingTab = StackNavigator(
     PropertyManager: {
       screen: PropertyManager,
       navigationOptions: {
-        title:'Manage Your Listings',
+        title:I18n.t('manage_your_listings'),
       },
     },
     PropertyDetailScene: {
@@ -143,7 +144,7 @@ const Tabs = TabNavigator(
     PropertyTab: {
       screen: PropertyTab,
       navigationOptions: {
-        tabBarLabel: 'Home',
+        tabBarLabel: I18n.t('home'),
         tabBarIcon: ({tintColor, focused}) => (
           <Ionicons
             name={focused ? 'ios-home' : 'ios-home-outline'}
@@ -151,13 +152,12 @@ const Tabs = TabNavigator(
             style={{color: focused ? colors.accent : colors.smokeGreyDark}}
           />
         ),
-      }
-,
+      },
     },
     FavoritesTab: {
       screen: FavoriteTab,
       navigationOptions: {
-        tabBarLabel: 'Favorites',
+        tabBarLabel: I18n.t('favorites'),
         tabBarIcon: ({tintColor, focused}) => (
           <Ionicons
             name={focused ? 'ios-star' : 'ios-star-outline'}
@@ -171,7 +171,7 @@ const Tabs = TabNavigator(
     CreateTab: {
       screen: PropertyCreateTab,
       navigationOptions: {
-        tabBarLabel: 'Add Property',
+        tabBarLabel: I18n.t('add_property'),
         tabBarIcon: ({tintColor, focused}) => (
           <Ionicons
             name={focused ? 'ios-cloud-upload' : 'ios-cloud-upload-outline'}
@@ -184,7 +184,7 @@ const Tabs = TabNavigator(
     SettingsTab: {
       screen: SettingTab,
       navigationOptions: {
-        tabBarLabel: 'More',
+        tabBarLabel: I18n.t('more'),
         tabBarIcon: ({tintColor, focused}) => (
           <Ionicons
             name={focused ? 'ios-more' : 'ios-more'}

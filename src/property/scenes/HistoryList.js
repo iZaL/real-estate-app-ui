@@ -10,6 +10,7 @@ import Separator from '../../components/Separator';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import colors from '../../common/colors';
 import PropertyIcons from '../components/PropertyIcons';
+import I18n from './../../app/common/locale';
 
 export default class HistoryList extends Component {
   constructor(props) {
@@ -33,7 +34,7 @@ export default class HistoryList extends Component {
             removeFilter(rowID, rowData);
           }}
           underlayColor="transparent">
-          <Text style={styles.buttonText}>Remove</Text>
+          <Text style={styles.buttonText}>{I18n.t('remove')}</Text>
         </TouchableHighlight>
       </View>
     );
@@ -68,7 +69,7 @@ export default class HistoryList extends Component {
                   : `${filter.category} `}
                 {`${type}`}
                 {' '}
-                in
+                {I18n.t('in')}
                 {' '}
                 {filter.searchString ? filter.searchString : filter.country}
               </Text>
@@ -77,7 +78,7 @@ export default class HistoryList extends Component {
                 items={['bedroom', 'bathroom', 'parking']}
               />
               <Text style={styles.title}>
-                <Text style={{fontWeight: '500'}}>Price:</Text>
+                <Text style={{fontWeight: '500'}}>{I18n.t('price')}:</Text>
                 {' '}
                 {filter.priceFrom}
                 {' '}
@@ -86,15 +87,13 @@ export default class HistoryList extends Component {
                 {filter.priceTo}
               </Text>
               <Text style={styles.title}>
-                <Text style={{fontWeight: '500'}}>Sort by:</Text>
+                <Text style={{fontWeight: '500'}}>{I18n.t('sort_by')} :</Text>
                 {' '}
                 {filter.sortBy}
                 {' '}
                 |
                 {' '}
-                {filter.total ? filter.total : 'No'}
-                {' '}
-                properties found
+                {filter.total ? filter.total + ' ' + I18n.t('properties_found') : I18n.t('no_properties_found') }
               </Text>
 
             </View>

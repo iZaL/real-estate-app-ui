@@ -1,3 +1,4 @@
+import I18n from './../../app/common/locale';
 let salePrice1 = [
   'Any',
   '10K',
@@ -154,7 +155,7 @@ let priceForSale = {
   [QA]: salePrice2,
 };
 
-let categoriesArr = {
+let categoriesArr_en = {
   [ForSale]: [
     'Villa',
     'House',
@@ -186,6 +187,70 @@ let categoriesArr = {
     'Office',
   ],
 };
+let categoriesArr_ar = {
+  [ForSale]: [
+    'شسيشس',
+    'ششسي',
+    'Aparشسيtment',
+    'Chalشسيشسيشet',
+    'شيشيشسي',
+    'Store',
+    'Storage',
+    'Office',
+  ],
+  [ForRent]: [
+    'Villa',
+    'House',
+    'Apartment',
+    'Chalet',
+    'Land & Farm',
+    'Store',
+    'Storage',
+    'Office',
+  ],
+  [ForShare]: [
+    'Villa',
+    'House',
+    'Apartment',
+    'Chalet',
+    'Land & Farm',
+    'Store',
+    'Storage',
+    'Office',
+  ],
+};
+// let categoriesArr = {
+//   [ForSale]: [
+//     'Villa',
+//     'House',
+//     'Apartment',
+//     'Chalet',
+//     'Land & Farm',
+//     'Store',
+//     'Storage',
+//     'Office',
+//   ],
+//   [ForRent]: [
+//     'Villa',
+//     'House',
+//     'Apartment',
+//     'Chalet',
+//     'Land & Farm',
+//     'Store',
+//     'Storage',
+//     'Office',
+//   ],
+//   [ForShare]: [
+//     'Villa',
+//     'House',
+//     'Apartment',
+//     'Chalet',
+//     'Land & Farm',
+//     'Store',
+//     'Storage',
+//     'Office',
+//   ],
+// };
 
 let pricesArr = {
   [ForSale]: priceForSale,
@@ -260,15 +325,30 @@ let attributes = {
 };
 
 module.exports = {
-  filters,
-  amenities,
-  nearByPlaces,
-  attributes,
-  propertyTypes,
-  genders,
-  searchMetas,
-  addMetas,
-  sortOptions,
-  categories: categoriesArr,
-  prices: pricesArr,
+  'ar' : {
+    filters,
+    amenities,
+    nearByPlaces,
+    attributes,
+    propertyTypes,
+    genders,
+    searchMetas,
+    addMetas,
+    sortOptions,
+    categories: categoriesArr_ar,
+    prices: pricesArr,
+  },
+  'en' : {
+    filters,
+    amenities,
+    nearByPlaces,
+    attributes,
+    propertyTypes,
+    genders,
+    searchMetas,
+    addMetas,
+    sortOptions,
+    categories: categoriesArr_ar,
+    prices: pricesArr,
+  }
 };

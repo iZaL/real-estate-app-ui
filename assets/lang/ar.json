@@ -45,6 +45,13 @@
   "list" : "List",
   "apply_filter": "Apply Filter",
 
-
+  "home" : "الريسية",
+  "add_property" : "اضف العقار",
+  "more" : "اعدادات",
+  "buy" : "شراء",
+  "rent" : "ايجار",
+  "share" : "اشتراك",
+  "in" : "في",
+  "search_history": "Search History",
 
 }

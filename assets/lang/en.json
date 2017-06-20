@@ -43,5 +43,23 @@
   "sort" : "Sort",
   "map" : "Map",
   "list" : "List",
-  "apply_filter": "Apply Filter"
+  "apply_filter": "Apply Filter",
+
+
+  "home" : "Home",
+  "add_property" : "Add Property",
+  "more" : "More",
+  "buy" : "Buy",
+  "rent" : "Rent",
+  "share" : "Share",
+  "in" : "In",
+  "search_history" : "Search History",
+  "price" : "Price",
+  "sort_by" : "Sort By",
+  "properties_found": "Properties Found",
+  "no_properties_found" :"No Properties Found",
+  "property_search" :"Property Search",
+  "manage_your_listings" :"Manage Your Listings",
+  "choose_country" :"Manage Your Listings",
+  "remove":"Remove",
 }

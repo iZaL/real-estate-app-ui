@@ -10,6 +10,7 @@ import {ACTIONS as APP_ACTIONS} from './../app/common/actions';
 import {SELECTORS} from './common/selectors';
 import {SELECTORS as APP_SELECTORS} from './../app/common/selectors';
 import PropertyHomeScene from './scenes/PropertyHomeScene';
+import I18n from './../app/common/locale';
 
 class PropertyHome extends Component {
   static propTypes = {
@@ -59,6 +60,7 @@ class PropertyHome extends Component {
   };
 
   render() {
+    console.log('locale',I18n.locale);
     let {searchHistory, propertyType, filters, countries, country} = this.props;
     return (
       <PropertyHomeScene

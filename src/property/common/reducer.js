@@ -5,7 +5,14 @@ import concat from 'lodash/concat';
 import map from 'lodash/map';
 import union from 'lodash/union';
 import isEqual from 'lodash/isEqual';
-import {
+import I18n from './../../app/common/locale';
+
+import {ar,en} from './reducerHelper';
+
+let currentFilter = I18n.locale === 'en' ? en : ar;
+
+// console.log('currentFilter',currentFilter);
+let {
   filters,
   amenities,
   nearByPlaces,
@@ -17,7 +24,7 @@ import {
   sortOptions,
   categories,
   prices,
-} from './reducerHelper';
+} = currentFilter;
 
 const initialState = {
   isFetching: false,
@@ -47,6 +54,7 @@ const initialState = {
 };
 
 export default function propertyReducer(state = initialState, action = {}) {
+  console.log('c',categories);
   switch (action.type) {
     case ACTION_TYPES.PROPERTY_REQUEST:
       return {

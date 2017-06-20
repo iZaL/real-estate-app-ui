@@ -17,6 +17,7 @@ import isEmpty from 'lodash/isEmpty';
 import CountryPicker from '../components/filters/CountryPicker';
 import HistoryList from './../scenes/HistoryList';
 import CountryBackgrounds from './../../common/countryBackground';
+import I18n from './../../app/common/locale';
 
 export default class PropertyHomeScene extends Component {
   static propTypes = {
@@ -107,7 +108,7 @@ export default class PropertyHomeScene extends Component {
                 styles.tabTitle,
                 activeTab === 'For Sale' && styles.tabTitleActive,
               ]}>
-              BUY
+              {I18n.t('buy')}
             </Text>
           </TouchableHighlight>
 
@@ -120,7 +121,7 @@ export default class PropertyHomeScene extends Component {
                 styles.tabTitle,
                 activeTab === 'For Rent' && styles.tabTitleActive,
               ]}>
-              RENT
+              {I18n.t('rent')}
             </Text>
           </TouchableHighlight>
 
@@ -133,7 +134,7 @@ export default class PropertyHomeScene extends Component {
                 styles.tabTitle,
                 activeTab === 'For Share' && styles.tabTitleActive,
               ]}>
-              SHARE
+              {I18n.t('share')}
             </Text>
           </TouchableHighlight>
 
@@ -155,7 +156,7 @@ export default class PropertyHomeScene extends Component {
             <Text style={styles.searchText}>
               {filters && filters.searchString
                 ? filters.searchString
-                : 'Search'}
+                : I18n.t('search')}
             </Text>
             <Text>
               {filters &&
@@ -183,7 +184,6 @@ export default class PropertyHomeScene extends Component {
       country,
       onCountryChange,
       removeFilter,
-      loadPropertyScene,
     } = this.props;
     let emptyIcon = require('./../../../assets/logo.png');
 
@@ -211,9 +211,7 @@ export default class PropertyHomeScene extends Component {
                 justifyContent: 'space-between',
                 alignItems: 'center',
               }}>
-              <Text style={[styles.historyTitle]}>
-                Search History
-              </Text>
+              <Text style={[styles.historyTitle]}>{I18n.t('search_history')}</Text>
               <CountryPicker
                 {...this.state}
                 toggleMenuVisible={this.toggleMenuVisible}
@@ -237,12 +235,6 @@ export default class PropertyHomeScene extends Component {
                       <Image
                         source={emptyIcon}
                         style={{width: 150, height: 150}}
-                      />
-                      <Text
-                        style={{
-                          color: colors.smokeGreyLight,
-                          fontSize: 20,
-                        }}
                       />
                     </View>
                   </TouchableHighlight>
